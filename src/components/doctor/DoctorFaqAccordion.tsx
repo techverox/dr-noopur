@@ -38,7 +38,7 @@ export const HOMEPAGE_FAQS: FaqItemData[] = [
   {
     question: "Can a fibroadenoma require surgery?",
     answer:
-      "Most small, asymptomatic fibroadenomas (<2-3 cm) confirmed benign by core needle biopsy do not require surgery and can be safely monitored with periodic ultrasounds. Surgery or scarless vacuum-assisted biopsy (VABB) is considered if the lump grows rapidly, causes physical pain, or causes persistent anxiety.",
+      "Most small, asymptomatic fibroadenomas confirmed benign by core needle biopsy do not require surgery and can be safely monitored with periodic ultrasounds. Surgery or scarless vacuum-assisted biopsy (VABB) is considered if the lump grows rapidly, causes physical pain, or causes persistent anxiety.",
   },
   {
     question: "How is a breast lump diagnosed accurately?",

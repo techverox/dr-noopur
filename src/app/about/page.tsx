@@ -320,8 +320,8 @@ export default async function AboutPage() {
               <div className="bg-[#FFF8F9] border border-[#F5D6DE] rounded-2xl overflow-hidden p-5 shadow-xs">
                 <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden mb-4 bg-slate-100">
                   <Image
-                    src={DOCTOR_PROFILE_IMAGES.consulting.src}
-                    alt={DOCTOR_PROFILE_IMAGES.consulting.alt}
+                    src="/images/doctor/user-updates/dr-noopur-yellow-consultation.jpg"
+                    alt="Dr. Noopur Patel conducting detailed clinical consultation in professional yellow blazer"
                     fill
                     className="object-cover object-top"
                     sizes="350px"
@@ -338,8 +338,8 @@ export default async function AboutPage() {
               <div className="bg-[#FFF8F9] border border-[#F5D6DE] rounded-2xl overflow-hidden p-5 shadow-xs">
                 <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden mb-4 bg-slate-100">
                   <Image
-                    src={DOCTOR_PROFILE_IMAGES.fellowship.src}
-                    alt={DOCTOR_PROFILE_IMAGES.fellowship.alt}
+                    src="/images/doctor/user-updates/surgical-care-fellowship.jpg"
+                    alt="Dr. Noopur Patel in surgical scrubs providing advanced surgical care"
                     fill
                     className="object-cover object-top"
                     sizes="350px"
@@ -356,10 +356,10 @@ export default async function AboutPage() {
               <div className="bg-[#FFF8F9] border border-[#F5D6DE] rounded-2xl overflow-hidden p-5 shadow-xs">
                 <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden mb-4 bg-slate-100">
                   <Image
-                    src={HOSPITAL_MEDIA.mammography.src}
-                    alt={HOSPITAL_MEDIA.mammography.alt}
+                    src="/images/doctor/user-updates/accurate-diagnosis-clinical.jpg"
+                    alt="Accurate clinical breast diagnosis and imaging correlation"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     sizes="350px"
                   />
                 </div>

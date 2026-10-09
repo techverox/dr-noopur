@@ -58,8 +58,11 @@ export default function ClinicLocationSection() {
                   </div>
                   <span>OPD Timings</span>
                 </div>
-                <p className="text-xs font-bold text-slate-900 mt-2">Mon - Sat: 10:00 AM – 6:00 PM</p>
-                <p className="text-[11px] text-emerald-700 font-semibold mt-0.5">Prior appointment advised</p>
+                <div className="mt-2 space-y-0.5 text-xs text-slate-900">
+                  <p className="font-bold">Morning: 10:00 AM – 2:00 PM</p>
+                  <p className="font-bold">Evening: 2:00 PM – 6:00 PM</p>
+                </div>
+                <p className="text-[11px] text-emerald-700 font-semibold mt-1">Mon - Sat &middot; Prior appointment advised</p>
               </div>
 
               {/* Card 3: Call Us */}

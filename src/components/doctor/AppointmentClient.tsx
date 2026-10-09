@@ -39,8 +39,8 @@ export default function AppointmentClient({
     phone: "",
     email: "",
     date: "",
-    time: "10:00 AM - 01:00 PM (Morning)",
-    consultationType: "In-Clinic Consultation",
+    time: "10:00 AM - 02:00 PM (Morning)",
+    consultationType: "In-Hospital / Clinic Consultation (Marengo CIMS Hospital)",
     message: "",
   });
 
@@ -206,8 +206,8 @@ export default function AppointmentClient({
                           phone: "",
                           email: "",
                           date: "",
-                          time: "10:00 AM - 01:00 PM (Morning)",
-                          consultationType: "In-Clinic Consultation",
+                          time: "10:00 AM - 02:00 PM (Morning)",
+                          consultationType: "In-Hospital / Clinic Consultation (Marengo CIMS Hospital)",
                           message: "",
                         });
                       }}
@@ -226,29 +226,30 @@ export default function AppointmentClient({
                     </div>
                   )}
 
-                  {/* Consultation Type Selector */}
+                  {/* Consultation Type Selector - Strictly 2 Clean Options */}
                   <div>
                     <label className="block text-[13px] font-semibold text-slate-700 mb-2">
                       Consultation Type <span className="text-[#D84C70]">*</span>
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {[
-                        "In-Clinic Consultation",
-                        "Second Opinion for Breast Cancer",
-                        "Benign Lump Evaluation",
-                        "Mammography Review",
+                        "In-Hospital / Clinic Consultation (Marengo CIMS Hospital)",
+                        "Online Consultation (Video Call)",
                       ].map((type) => (
                         <button
                           key={type}
                           type="button"
                           onClick={() => setFormData({ ...formData, consultationType: type })}
-                          className={`p-3 rounded-xl border text-[13px] font-medium text-left transition-all cursor-pointer ${
+                          className={`p-3.5 rounded-xl border text-[13px] font-semibold text-left transition-all cursor-pointer ${
                             formData.consultationType === type
-                              ? "bg-white border-[#D84C70] text-[#D84C70] shadow-xs ring-1 ring-[#D84C70]"
-                              : "bg-white/60 border-[#F5D6DE] text-slate-600 hover:bg-white"
+                              ? "bg-white border-[#D84C70] text-[#D84C70] shadow-sm ring-2 ring-[#D84C70]/30"
+                              : "bg-white/70 border-[#F5D6DE] text-slate-700 hover:bg-white hover:border-[#D84C70]/50"
                           }`}
                         >
-                          {type}
+                          <div className="flex items-center gap-2">
+                            <span className={`w-2.5 h-2.5 rounded-full ${formData.consultationType === type ? "bg-[#D84C70]" : "bg-slate-300"}`} />
+                            <span>{type}</span>
+                          </div>
                         </button>
                       ))}
                     </div>
@@ -342,7 +343,7 @@ export default function AppointmentClient({
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {[
-                        "10:00 AM - 01:00 PM (Morning)",
+                        "10:00 AM - 02:00 PM (Morning)",
                         "02:00 PM - 06:00 PM (Evening)",
                       ].map((slot) => (
                         <button
@@ -450,22 +451,28 @@ export default function AppointmentClient({
                     <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-[#D84C70] group-hover:translate-x-1 transition-all" />
                   </a>
 
-                  {/* Visit Clinic */}
-                  <div className="flex items-center justify-between p-3.5 rounded-2xl bg-[#FFF8F9] border border-[#F5D6DE]">
+                  {/* Visit Clinic - Direct Google Maps 1-Click Link */}
+                  <a
+                    href="https://maps.google.com/?q=Marengo+CIMS+Hospital+Ahmedabad"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-3.5 rounded-2xl bg-[#FFF8F9] hover:bg-[#FDF2F4] border border-[#F5D6DE] transition-all group cursor-pointer"
+                  >
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-[#9B2846] text-white flex items-center justify-center flex-shrink-0 shadow-xs">
+                      <div className="w-10 h-10 rounded-xl bg-[#9B2846] text-white flex items-center justify-center flex-shrink-0 shadow-xs group-hover:scale-105 transition-transform">
                         <MapPin className="w-5 h-5" />
                       </div>
                       <div>
-                        <span className="text-[14px] font-bold text-slate-800 block">
-                          Visit the Clinic
+                        <span className="text-[14px] font-bold text-slate-800 block group-hover:text-[#88213B] transition-colors">
+                          Visit the Clinic (Marengo CIMS)
                         </span>
                         <span className="text-[12px] text-slate-500">
-                          {content.address || "Marengo CIMS Hospital, Sola"}
+                          Science City Road, Sola, Ahmedabad &middot; Open Maps
                         </span>
                       </div>
                     </div>
-                  </div>
+                    <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-[#D84C70] group-hover:translate-x-1 transition-all" />
+                  </a>
                 </div>
               </div>
 
@@ -477,12 +484,22 @@ export default function AppointmentClient({
                 <div className="flex items-center gap-2 text-[#D84C70]">
                   <Clock className="w-5 h-5" />
                   <h3 className="font-serif text-[18px] font-bold text-[#1A202C]">
-                    Consultation Timings
+                    Marengo CIMS Hospital OPD Timings
                   </h3>
                 </div>
 
-                <div className="text-[13.5px] text-slate-700 space-y-1">
-                  <p className="font-semibold text-slate-900">{content.workingHours || "Monday - Saturday: 10:00 AM - 6:00 PM"}</p>
+                <div className="text-[13px] text-slate-700 space-y-2">
+                  <div className="flex items-center justify-between bg-white px-3.5 py-2 rounded-xl border border-[#F5D6DE]">
+                    <span className="font-semibold text-slate-800">Morning OPD:</span>
+                    <span className="font-bold text-[#88213B]">10:00 AM – 02:00 PM</span>
+                  </div>
+                  <div className="flex items-center justify-between bg-white px-3.5 py-2 rounded-xl border border-[#F5D6DE]">
+                    <span className="font-semibold text-slate-800">Evening OPD:</span>
+                    <span className="font-bold text-[#88213B]">02:00 PM – 06:00 PM</span>
+                  </div>
+                  <p className="text-[11.5px] text-slate-500 pt-1 text-center font-medium">
+                    Monday to Saturday &middot; Prior appointment recommended
+                  </p>
                 </div>
 
                 <div className="pt-2 border-t border-[#F5D6DE]/60 text-[12.5px] text-slate-600">

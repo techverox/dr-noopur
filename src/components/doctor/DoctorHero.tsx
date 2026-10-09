@@ -89,17 +89,17 @@ export default function DoctorHero({
                   </div>
 
                   {/* Bottom Mobile Tagline */}
-                  <div className="absolute bottom-2.5 left-2.5 right-2.5 bg-slate-950/75 backdrop-blur-sm px-3 py-1.5 rounded-xl border border-white/10 text-white flex items-center justify-between">
+                  <div className="absolute bottom-2.5 left-2.5 right-2.5 bg-slate-950/80 backdrop-blur-sm px-3 py-2 rounded-xl border border-white/10 text-white flex items-center justify-between">
                     <div>
-                      <p className="text-[10px] font-bold tracking-wider uppercase text-rose-300 leading-none">
-                        Surgical Breast Oncology
+                      <p className="text-[12px] font-bold text-white leading-none">
+                        Dr. Noopur Patel
                       </p>
-                      <p className="text-[11px] font-medium text-white/90 leading-tight mt-0.5">
-                        Marengo CIMS Hospital, Ahmedabad
+                      <p className="text-[9.5px] font-medium text-rose-300 mt-1">
+                        Marengo CIMS · 10AM–2PM &amp; 2PM–6PM
                       </p>
                     </div>
                     <span className="text-[9.5px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-2 py-0.5 rounded-full">
-                      OPD Available
+                      OPD Mon-Sat
                     </span>
                   </div>
                 </div>
@@ -116,15 +116,20 @@ export default function DoctorHero({
                   <span>{badge}</span>
                 </div>
 
-                {/* 2. Main Heading - Dynamic CMS Content */}
-                <h1 className="font-serif text-[28px] sm:text-[40px] md:text-[46px] lg:text-[48px] xl:text-[54px] font-bold text-slate-900 leading-[1.15] tracking-tight">
-                  <span className="text-slate-900 block">{headline}</span>
-                  {headlineHighlight && (
-                    <span className="text-[#D84C70] block text-[24px] sm:text-[34px] md:text-[40px] lg:text-[42px] xl:text-[46px] mt-1">
-                      {headlineHighlight}
-                    </span>
-                  )}
-                </h1>
+                {/* 2. Main Heading with Prominent Doctor Name - Bold & Large */}
+                <div className="space-y-1">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-[#88213B] tracking-tight">
+                    Dr. Noopur Patel
+                  </div>
+                  <h1 className="font-serif text-[28px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[52px] font-bold text-slate-900 leading-[1.15] tracking-tight">
+                    <span className="text-slate-900 block">{headline}</span>
+                    {headlineHighlight && (
+                      <span className="text-[#D84C70] block text-[24px] sm:text-[32px] md:text-[38px] lg:text-[42px] xl:text-[46px] mt-1">
+                        {headlineHighlight}
+                      </span>
+                    )}
+                  </h1>
+                </div>
 
                 {/* 3. Supporting Description */}
                 <p className="text-slate-700 text-[14px] sm:text-[16px] lg:text-[17px] leading-relaxed font-normal max-w-2xl">
@@ -219,10 +224,22 @@ export default function DoctorHero({
                   </div>
                 )}
 
-                {/* 7. Hospital Practice Location Badge */}
-                <div className="flex items-center gap-2 text-[12px] sm:text-[13px] text-slate-600 pt-1 font-medium">
-                  <MapPin className="w-4 h-4 text-[#D84C70] shrink-0" />
-                  <span>Marengo CIMS Hospital, Off Science City Road, Sola, Ahmedabad</span>
+                {/* 7. Hospital Practice Location & OPD Timings Badge */}
+                <div className="space-y-1.5 pt-1">
+                  <div className="flex items-center gap-2 text-[12px] sm:text-[13px] text-slate-700 font-medium">
+                    <MapPin className="w-4 h-4 text-[#D84C70] shrink-0" />
+                    <span>Marengo CIMS Hospital, Off Science City Road, Sola, Ahmedabad</span>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-2 text-[11.5px] sm:text-[12px] text-slate-600 pl-6">
+                    <span className="font-bold text-slate-800">OPD Timings:</span>
+                    <span className="bg-white px-2.5 py-0.5 rounded-full border border-[#F5CAD5] font-semibold text-[#88213B] shadow-2xs">
+                      Morning: 10:00 AM – 2:00 PM
+                    </span>
+                    <span className="bg-white px-2.5 py-0.5 rounded-full border border-[#F5CAD5] font-semibold text-[#88213B] shadow-2xs">
+                      Evening: 2:00 PM – 6:00 PM
+                    </span>
+                    <span className="text-slate-500 font-medium">(Mon – Sat)</span>
+                  </div>
                 </div>
 
               </div>

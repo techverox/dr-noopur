@@ -42,7 +42,7 @@ export const BREAST_CONDITIONS: BreastConditionCard[] = [
     subtitle: "Cyclical & non-cyclical discomfort",
     description:
       "Tenderness or heaviness related to hormonal changes or fibrocystic tissue. Detailed evaluation provides reassuring relief.",
-    href: "/breast-specialist-doctor-ahmedabad",
+    href: "/breast-pain-management",
     badge: "Symptom Care",
     image: "/images/doctor/assets/service-3.png",
   },
@@ -62,7 +62,7 @@ export const BREAST_CONDITIONS: BreastConditionCard[] = [
     subtitle: "Cysts, infections & changes",
     description:
       "Care for simple fluid cysts, lactational mastitis, breast abscesses, and fibrocystic changes with minimal intervention.",
-    href: "/breast-lump-treatment-ahmedabad",
+    href: "/benign-breast-conditions",
     badge: "Non-Cancerous",
     image: "/images/doctor/assets/condition-benign.png",
   },

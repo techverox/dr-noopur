@@ -123,9 +123,12 @@ export default function DoctorFooter() {
                   Marengo CIMS Hospital, Off Science City Road, Sola, Ahmedabad, Gujarat 380060
                 </span>
               </li>
-              <li className="flex items-center gap-2.5 text-slate-600">
-                <Clock className="w-4 h-4 text-[#D84C70] flex-shrink-0" />
-                <span>Mon – Sat: 10:00 AM – 6:00 PM</span>
+              <li className="flex items-start gap-2.5 text-slate-600">
+                <Clock className="w-4 h-4 text-[#D84C70] flex-shrink-0 mt-0.5" />
+                <span>
+                  Morning: 10:00 AM – 2:00 PM<br />
+                  Evening: 2:00 PM – 6:00 PM (Mon – Sat)
+                </span>
               </li>
             </ul>
           </div>

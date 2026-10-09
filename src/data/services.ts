@@ -1,6 +1,7 @@
 import { ServiceItem } from "@/types";
 
 export const SERVICES_DATA: ServiceItem[] = [
+  // 1. Breast Cancer Diagnosis & Treatment
   {
     id: "service-1",
     title: "Breast Cancer Diagnosis & Treatment",
@@ -9,7 +10,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDescription:
       "Accurate diagnostic assessment, mammography & biopsy evaluation, and individualized surgical management for breast malignancies.",
     detailedDescription:
-      "A complete multidisciplinary approach to breast cancer diagnosis and treatment. Dr. Noopur Patel conducts thorough clinical examinations, reviews advanced imaging and pathology, and crafts personalized surgical care plans tailored to each patient's stage and personal goals.",
+      "A complete multidisciplinary approach to breast cancer diagnosis and treatment. Dr. Noopur Patel conducts thorough clinical examinations, reviews advanced imaging and pathology, and crafts personalized surgical care plans tailored to each patient's cancer biology, stage, and personal goals at Marengo CIMS Hospital.",
     problemStatement:
       "A new breast symptom, abnormal mammogram, or cancer diagnosis can create anxiety and uncertainty regarding next clinical steps.",
     solutionStatement:
@@ -22,16 +23,16 @@ export const SERVICES_DATA: ServiceItem[] = [
     icon: "/images/doctor/assets/service-1.png",
     capabilities: [
       {
-        title: "Triple Assessment",
-        description: "Clinical breast examination, digital mammography/ultrasound correlation, and image-guided core biopsy.",
+        title: "Triple Assessment Protocol",
+        description: "Clinical breast examination, digital 3D mammography/ultrasound correlation, and image-guided core biopsy.",
       },
       {
-        title: "Multidisciplinary Tumor Board Coordination",
-        description: "Collaborative staging and treatment planning alongside medical oncologists and radiation specialists.",
+        title: "Multidisciplinary Tumor Board (MDT)",
+        description: "Collaborative staging and treatment planning alongside medical oncologists, radiation oncologists, and pathologists.",
       },
       {
         title: "Sentinel Lymph Node Biopsy (SLNB)",
-        description: "Targeted lymph node evaluation to minimize axillary dissection and decrease lymphedema risk.",
+        description: "Targeted lymph node evaluation using dual tracer to minimize axillary dissection and decrease lymphedema risk.",
       },
       {
         title: "Personalized Surgical Planning",
@@ -51,239 +52,317 @@ export const SERVICES_DATA: ServiceItem[] = [
     createdAt: "2026-01-01T00:00:00Z",
     updatedAt: "2026-01-01T00:00:00Z",
   },
+
+  // 2. Breast Pain Management (Mastalgia)
   {
     id: "service-2",
+    title: "Breast Pain Management (Mastalgia)",
+    subtitle: "Evaluation, reassurance & relief for cyclical and non-cyclical breast pain",
+    slug: "breast-pain-management",
+    shortDescription:
+      "Comprehensive diagnostic evaluation to distinguish hormonal mastalgia from structural conditions, providing effective clinical management and reassurance.",
+    detailedDescription:
+      "Breast pain (mastalgia) is one of the most frequent breast complaints among women. While rarely a sign of breast cancer, it causes significant anxiety and physical discomfort. Dr. Noopur Patel conducts methodical clinical evaluations and diagnostic imaging to pinpoint the cause—whether cyclical (hormonal) or non-cyclical (musculoskeletal or ductal)—and provides targeted relief.",
+    problemStatement:
+      "Persistent or severe breast tenderness creates fear of cancer and disrupts sleep, exercise, and daily comfort.",
+    solutionStatement:
+      "Systematic evaluation to rule out underlying pathology, followed by evidence-based lifestyle, dietary, and pharmacological management.",
+    outcomeStatement:
+      "Definitive peace of mind, elimination of cancer fear, and measurable symptom reduction.",
+    order: 2,
+    isPublished: true,
+    isFeatured: true,
+    icon: "/images/doctor/assets/service-3.png",
+    capabilities: [
+      {
+        title: "Cyclical Mastalgia Evaluation",
+        description: "Identifying hormone-sensitive discomfort associated with menstrual cycle variations.",
+      },
+      {
+        title: "Non-Cyclical & Chest Wall Pain Differentiation",
+        description: "Distinguishing localized breast pain from costochondritis, muscular strain, and cervical spine referred pain.",
+      },
+      {
+        title: "Targeted High-Resolution Ultrasound",
+        description: "Immediate imaging correlation to ensure no underlying localized cysts, fibrocystic changes, or lesions exist.",
+      },
+      {
+        title: "Evidence-Based Medical Therapy",
+        description: "Personalized guidance on supportive brassiere fit, dietary adjustments, evening primrose oil, and medication.",
+      },
+    ],
+    benefits: [
+      {
+        title: "Cancer Fear Elimination",
+        description: "Confirmation from a specialist providing immediate relief from anxiety.",
+      },
+      {
+        title: "Holistic Symptom Control",
+        description: "Practical non-surgical solutions that restore everyday comfort.",
+      },
+    ],
+    createdAt: "2026-01-01T00:00:00Z",
+    updatedAt: "2026-01-01T00:00:00Z",
+  },
+
+  // 3. Benign Breast Conditions
+  {
+    id: "service-3",
+    title: "Benign Breast Conditions",
+    subtitle: "Evaluation and gentle care for non-cancerous breast concerns",
+    slug: "benign-breast-conditions",
+    shortDescription:
+      "Comprehensive assessment and gentle treatment for fibroadenomas, breast cysts, mastitis, abscesses, and nipple discharge.",
+    detailedDescription:
+      "The vast majority of breast symptoms and lumps are non-cancerous. Dr. Noopur Patel provides thorough, reassuring clinical evaluations for common conditions such as fibroadenomas, fluid cysts, lactational mastitis, breast abscesses, and benign nipple discharge, emphasizing minimally invasive solutions.",
+    problemStatement:
+      "Discovering a breast lump or nipple discharge causes acute panic, even though over 80% of lumps are entirely benign.",
+    solutionStatement:
+      "Prompt clinical assessment, accurate imaging, and scarless or daycare intervention when treatment is required.",
+    outcomeStatement:
+      "Complete clarity, symptom resolution, and avoidance of unnecessary surgical scars.",
+    order: 3,
+    isPublished: true,
+    isFeatured: true,
+    icon: "/images/doctor/assets/service-5.png",
+    capabilities: [
+      {
+        title: "Fibroadenoma Monitoring & Excision",
+        description: "Careful monitoring or gentle micro-surgical excision through cosmetically hidden periareolar incisions.",
+      },
+      {
+        title: "Vacuum-Assisted Breast Biopsy (VABB)",
+        description: "Scarless, stitchless removal of benign lumps under ultrasound guidance through a single 3 mm pinhole.",
+      },
+      {
+        title: "Ultrasound-Guided Cyst Aspiration",
+        description: "Quick, in-office needle drainage of painful, tense fluid cysts.",
+      },
+      {
+        title: "Mastitis & Breast Abscess Drainage",
+        description: "Medical therapy and ultrasound-guided aspiration to prevent surgical scars in lactating mothers.",
+      },
+    ],
+    benefits: [
+      {
+        title: "Definitive Reassurance",
+        description: "Rapid confirmation eliminating fear and anxiety.",
+      },
+      {
+        title: "Cosmetic Preservation",
+        description: "Minimal interventions prioritizing natural breast aesthetics.",
+      },
+    ],
+    createdAt: "2026-01-01T00:00:00Z",
+    updatedAt: "2026-01-01T00:00:00Z",
+  },
+
+  // 4. Breast Conservation Surgery (BCS / Lumpectomy)
+  {
+    id: "service-4",
+    title: "Breast Conservation Surgery (BCS / Lumpectomy)",
+    subtitle: "Targeted tumor excision preserving natural breast tissue and sensation",
+    slug: "breast-conservation-surgery-bcs",
+    shortDescription:
+      "Surgical removal of the breast tumor with a healthy margin of surrounding tissue, preserving the maximum amount of natural breast form.",
+    detailedDescription:
+      "Breast Conservation Surgery (lumpectomy or wide local excision) is the international standard of care for early-stage breast cancer. Clinical trials confirm that BCS followed by radiotherapy yields overall survival rates equivalent to total mastectomy while protecting body image.",
+    problemStatement:
+      "Many women mistakenly assume that curing breast cancer always requires removing the entire breast.",
+    solutionStatement:
+      "Oncologically sound tumor clearance with clear margins, preserving natural breast contours and sensory nerve pathways.",
+    outcomeStatement:
+      "Equal cure rates, minimal tissue loss, rapid recovery, and preserved feminine wholeness.",
+    order: 4,
+    isPublished: true,
+    isFeatured: true,
+    icon: "/images/doctor/assets/service-3.png",
+    capabilities: [
+      {
+        title: "Wide Local Excision with Safe Margins",
+        description: "Precise margin-guided tumor clearance under continuous palpation and radiological guidance.",
+      },
+      {
+        title: "Hidden Scar Techniques",
+        description: "Incisions strategically placed along natural creases, areolar borders, or underarm folds.",
+      },
+      {
+        title: "Intraoperative Specimen Radiography",
+        description: "Immediate confirmation of complete lesion removal and clear margins before closing.",
+      },
+      {
+        title: "Concurrent Sentinel Node Biopsy",
+        description: "Precise axillary staging through the same cosmetic incision to safeguard arm lymphatic health.",
+      },
+    ],
+    benefits: [
+      {
+        title: "Faster Functional Recovery",
+        description: "Short hospital stay (often 24-48 hours) and rapid resumption of everyday routines.",
+      },
+      {
+        title: "Preserved Natural Sensation",
+        description: "Protects native skin and sensory innervation of the breast.",
+      },
+    ],
+    createdAt: "2026-01-01T00:00:00Z",
+    updatedAt: "2026-01-01T00:00:00Z",
+  },
+
+  // 5. Oncoplastic Breast Surgery
+  {
+    id: "service-5",
     title: "Oncoplastic Breast Surgery",
-    subtitle: "Harmonizing cancer clearance with aesthetic breast preservation",
+    subtitle: "Harmonizing cancer clearance with delicate aesthetic breast preservation",
     slug: "oncoplastic-breast-surgery",
     shortDescription:
-      "Specialized surgical techniques that combine complete cancer removal with plastic surgery principles to preserve natural breast shape.",
+      "Specialized surgical techniques uniting complete cancer removal with plastic surgery principles to prevent tissue defect and maintain symmetry.",
     detailedDescription:
-      "Oncoplastic breast surgery unites the rigorous standards of surgical oncology with delicate plastic and reconstructive techniques. This allows Dr. Noopur Patel to excise larger or complex tumors while maintaining natural contour, symmetry, and breast shape.",
+      "Oncoplastic breast surgery combines the rigorous standards of surgical oncology with plastic surgery principles. This allows Dr. Noopur Patel to excise larger or complex tumors while reshaping remaining glandular tissue to prevent post-surgical dents, asymmetry, or nipple distortion.",
     problemStatement:
-      "Conventional surgery can sometimes lead to breast deformities, asymmetry, or tissue indentation after tumor excision.",
+      "Conventional lumpectomy for larger tumors can cause noticeable breast indentation, bird-beak deformities, or significant asymmetry.",
     solutionStatement:
-      "Advanced oncoplastic tissue rearrangement and volume displacement techniques designed to optimize both oncological safety and cosmetic appearance.",
+      "Advanced oncoplastic glandular reshaping, tissue rearrangement, and chest wall perforator flaps designed for safety and symmetry.",
     outcomeStatement:
-      "Clean surgical margins with preserved body confidence, symmetry, and natural breast contour.",
-    order: 2,
+      "Clear oncologic margins with preserved body confidence, symmetry, and natural breast contour.",
+    order: 5,
     isPublished: true,
     isFeatured: true,
     icon: "/images/doctor/assets/service-2.png",
     capabilities: [
       {
         title: "Volume Displacement Techniques",
-        description: "Local glandular flaps and reshaping to fill surgical defects seamlessly.",
+        description: "Local glandular flaps and tissue rotation to fill the surgical defect seamlessly without external tissue.",
+      },
+      {
+        title: "Volume Replacement Techniques",
+        description: "Importing adjacent tissue to replace substantial volume deficit after larger tumor resections.",
       },
       {
         title: "Therapeutic Mammoplasty",
-        description: "Combining breast reduction/lift with wide tumor excision for larger breasts.",
+        description: "Combining wide tumor clearance with breast reduction and mastopexy (lift) for women with larger breasts.",
       },
       {
         title: "Contralateral Symmetry Procedures",
-        description: "Balancing surgery on the opposite breast when indicated to maintain symmetry.",
+        description: "Balancing surgery on the opposite healthy breast to ensure identical bilateral size, height, and shape.",
+      },
+      {
+        title: "Level 3: Local Chest Wall Flaps",
+        description: "Advanced local perforator flaps including LICAP, AICAP, MICAP, and LTAP to replace volume in partial breast defects.",
       },
     ],
     benefits: [
       {
-        title: "Preserved Natural Aesthetics",
-        description: "Avoids post-surgical cosmetic defects without compromising cancer safety.",
+        title: "No Post-Surgical Deformity",
+        description: "Eliminates tissue depressions and contour deformities without sacrificing oncologic safety.",
       },
       {
         title: "Restored Emotional Confidence",
-        description: "Supports patient body image and emotional well-being throughout recovery.",
+        description: "Supports body image, self-esteem, and quality of life during and after cancer recovery.",
       },
     ],
     createdAt: "2026-01-01T00:00:00Z",
     updatedAt: "2026-01-01T00:00:00Z",
   },
+
+  // 6. Breast Reconstruction Surgery
   {
-    id: "service-3",
-    title: "Breast Conservation Surgery (BCS)",
-    subtitle: "Targeted lumpectomy preserving healthy breast tissue",
-    slug: "breast-conservation-surgery-bcs",
-    shortDescription:
-      "Surgical removal of the tumor with a rim of healthy tissue, preserving the maximum amount of natural breast tissue.",
-    detailedDescription:
-      "Breast Conservation Surgery (lumpectomy or partial mastectomy) is an established, evidence-based standard of care for suitable early-stage breast cancers. The aim is to completely remove the cancer while preserving the natural appearance of the breast.",
-    problemStatement:
-      "Many patients mistakenly believe that an entire breast must always be removed to treat breast cancer.",
-    solutionStatement:
-      "Clinical evidence confirms that BCS followed by radiotherapy yields survival rates equivalent to total mastectomy in eligible patients.",
-    outcomeStatement:
-      "High cure rates with minimal tissue loss and faster functional physical recovery.",
-    order: 3,
-    isPublished: true,
-    isFeatured: true,
-    icon: "/images/doctor/assets/service-3.png",
-    capabilities: [
-      {
-        title: "Wide Local Excision",
-        description: "Precise margin-guided tumor excision with aesthetic incision placement.",
-      },
-      {
-        title: "Hidden Scar Techniques",
-        description: "Strategically placed incisions along the natural folds, areola border, or axilla.",
-      },
-      {
-        title: "Specimen Radiography",
-        description: "Intraoperative confirmation of complete lesion removal and margin clearance.",
-      },
-    ],
-    benefits: [
-      {
-        title: "Less Invasive Recovery",
-        description: "Shorter hospital stay and quicker return to regular daily routines.",
-      },
-      {
-        title: "Maximized Tissue Preservation",
-        description: "Maintains natural breast sensation and form.",
-      },
-    ],
-    createdAt: "2026-01-01T00:00:00Z",
-    updatedAt: "2026-01-01T00:00:00Z",
-  },
-  {
-    id: "service-4",
+    id: "service-6",
     title: "Breast Reconstruction Surgery",
-    subtitle: "Immediate and delayed reconstructive options",
+    subtitle: "Immediate and delayed reconstructive options following mastectomy",
     slug: "breast-reconstruction-surgery",
     shortDescription:
       "Rebuilding the breast mound following mastectomy using advanced implant-based or autologous tissue flap procedures.",
     detailedDescription:
-      "For women who require or choose mastectomy, breast reconstruction restores breast form, volume, and symmetry. Dr. Noopur Patel discusses all options—including immediate reconstruction at the time of mastectomy or delayed reconstruction after adjuvant therapy.",
+      "For women who require or choose mastectomy, breast reconstruction restores breast form, volume, and symmetry. Dr. Noopur Patel discusses all reconstructive options—including immediate reconstruction at the time of mastectomy or delayed reconstruction after completion of adjuvant therapies.",
     problemStatement:
-      "Losing a breast to cancer can cause profound physical and emotional distress for women.",
+      "Losing a breast to mastectomy can lead to profound physical imbalance, difficulty with clothing fit, and emotional distress.",
     solutionStatement:
-      "Comprehensive reconstructive planning tailored to individual anatomy, body habitus, and treatment timelines.",
+      "Comprehensive reconstructive planning tailored to individual anatomy, body habitus, and adjuvant oncologic treatment schedules.",
     outcomeStatement:
-      "A renewed sense of wholeness, restored clothing fit, and empowered survivorship.",
-    order: 4,
+      "Restored feminine wholeness, natural clothing drape, and empowered cancer survivorship.",
+    order: 6,
     isPublished: true,
     isFeatured: true,
     icon: "/images/doctor/assets/service-4.png",
     capabilities: [
       {
         title: "Implant-Based Reconstruction",
-        description: "Utilizing modern cohesive silicone gel implants or tissue expanders.",
+        description: "Utilizing modern cohesive silicone gel implants or tissue expanders beneath the pectoral muscle or pre-pectoral plane.",
       },
       {
-        title: "Autologous Flap Reconstruction",
-        description: "Reconstructing the breast using the patient's own tissue (LD or abdominal flaps).",
+        title: "Back Flap — Latissimus Dorsi (LD Flap)",
+        description: "Autologous tissue reconstruction transferring skin and muscle from the back to reconstruct the breast mound.",
       },
       {
-        title: "Nipple-Sparing Mastectomy",
-        description: "Preserving the patient's natural skin envelope and nipple-areola complex when clinically safe.",
+        title: "Abdominal Flap — DIEP / TRAM Flap",
+        description: "Advanced autologous reconstruction using the patient's lower abdominal tissue (DIEP or TRAM) for a soft, natural result.",
+      },
+      {
+        title: "Skin & Nipple-Sparing Mastectomy",
+        description: "Preserving the patient's natural breast skin envelope and nipple-areola complex when clinically safe.",
       },
     ],
     benefits: [
       {
-        title: "Immediate Rebuilding",
-        description: "Waking up from surgery with a restored breast mound whenever feasible.",
+        title: "Immediate Rebuilding Option",
+        description: "Waking up from surgery with a restored breast contour whenever clinically suitable.",
       },
       {
-        title: "Lifelong Symmetry",
-        description: "Restores balance in clothing and daily physical movement.",
+        title: "Lifelong Balance & Symmetry",
+        description: "Eliminates external breast prostheses and restores physical symmetry in clothing.",
       },
     ],
     createdAt: "2026-01-01T00:00:00Z",
     updatedAt: "2026-01-01T00:00:00Z",
   },
+
+  // 7. Nipple Reconstruction Surgery
   {
-    id: "service-5",
-    title: "Benign Breast Conditions",
-    subtitle: "Evaluation and management of non-cancerous breast concerns",
-    slug: "benign-breast-conditions",
+    id: "service-7",
+    title: "Nipple Reconstruction Surgery",
+    subtitle: "Finalizing breast reconstruction with natural projection, symmetry & 3D tattooing",
+    slug: "nipple-reconstruction-surgery",
     shortDescription:
-      "Comprehensive assessment and gentle treatment for fibroadenomas, breast cysts, mastitis, breast pain, and nipple discharge.",
+      "Surgical recreation of the nipple-areola complex following mastectomy and breast reconstruction to achieve complete aesthetic restoration.",
     detailedDescription:
-      "The vast majority of breast symptoms and lumps are non-cancerous. Dr. Noopur Patel provides thorough, reassuring clinical evaluations for common conditions such as fibroadenomas, cysts, cyclical mastalgia (breast pain), and benign nipple discharge.",
+      "Nipple reconstruction represents the final artistic step in the journey of breast restoration. Once the reconstructed breast mound has settled into its natural position, Dr. Noopur Patel utilizes delicate local skin flaps and medical areolar micropigmentation (3D tattooing) to recreate a projecting, symmetrical nipple-areola complex.",
     problemStatement:
-      "Discovering a breast lump causes immediate anxiety, even though 80%+ of lumps are entirely benign.",
+      "Following mastectomy without nipple preservation, patients often feel that the reconstructed breast mound remains incomplete.",
     solutionStatement:
-      "Prompt clinical evaluation and imaging to deliver accurate diagnosis, definitive reassurance, and minimally invasive care.",
+      "Precision outpatient local skin flap procedures combined with medical 3D color-matching micropigmentation to complete the restoration.",
     outcomeStatement:
-      "Peace of mind, symptom relief, and non-operative or minimally invasive management.",
-    order: 5,
-    isPublished: true,
-    isFeatured: true,
-    icon: "/images/doctor/assets/service-5.png",
-    capabilities: [
-      {
-        title: "Fibroadenoma Evaluation & Excision",
-        description: "Careful monitoring or gentle micro-surgical excision for symptomatic lumps.",
-      },
-      {
-        title: "Cyst Aspiration",
-        description: "Quick, in-office ultrasound-guided fluid drainage for painful cysts.",
-      },
-      {
-        title: "Mastitis & Abscess Treatment",
-        description: "Medical therapy and ultrasound-guided needle drainage to avoid scarring.",
-      },
-      {
-        title: "Cyclical Breast Pain Management",
-        description: "Evidence-based dietary, lifestyle, and medical guidance for breast pain.",
-      },
-    ],
-    benefits: [
-      {
-        title: "Definitive Reassurance",
-        description: "Fast-tracked confirmation eliminating fear and anxiety.",
-      },
-      {
-        title: "Conservative Care",
-        description: "Surgery is recommended only when genuinely beneficial.",
-      },
-    ],
-    createdAt: "2026-01-01T00:00:00Z",
-    updatedAt: "2026-01-01T00:00:00Z",
-  },
-  {
-    id: "service-6",
-    title: "Follow-up & Long-Term Care",
-    subtitle: "Dedicated survivorship care, surveillance, and genetic guidance",
-    slug: "follow-up-and-long-term-care",
-    shortDescription:
-      "Continuous post-treatment surveillance, lymphedema monitoring, lifestyle counselling, and high-risk genetic evaluation.",
-    detailedDescription:
-      "Completing surgery is just one milestone. Dr. Noopur Patel provides continuous, structured follow-up care for long-term health, surveillance for recurrence, management of treatment side effects, and genetic risk assessment for family members.",
-    problemStatement:
-      "Cancer survivorship brings long-term questions regarding recurrence risk, post-surgical recovery, and emotional health.",
-    solutionStatement:
-      "Structured clinical follow-up schedules, regular imaging surveillance, and accessible ongoing support.",
-    outcomeStatement:
-      "Confidence in survivorship, proactive monitoring, and lifelong clinical companionship.",
-    order: 6,
+      "A natural, realistic nipple-areola complex that restores total visual completeness and emotional closure.",
+    order: 7,
     isPublished: true,
     isFeatured: true,
     icon: "/images/doctor/assets/service-6.png",
     capabilities: [
       {
-        title: "Scheduled Surveillance Protocol",
-        description: "Structured clinical check-ups and annual imaging to ensure ongoing health.",
+        title: "Local Skin Flap Reconstruction",
+        description: "Forming a permanent, projecting nipple mound using specialized local flap designs (skate flap or C-V flap).",
       },
       {
-        title: "Genetic Counselling Guidance",
-        description: "Risk assessment and BRCA1/2 testing recommendations for high-risk families.",
+        title: "Areolar Reconstruction & 3D Medical Tattooing",
+        description: "Medical micropigmentation with customized pigments to match natural areolar coloration, shade, and texture.",
       },
       {
-        title: "Lymphedema Prevention",
-        description: "Early detection, arm measurement protocols, and physical therapy guidance.",
+        title: "Full Contour Harmonization",
+        description: "Calibrated positioning ensuring exact bilateral height, projection, and symmetry with the contralateral breast.",
       },
       {
-        title: "Survivorship Lifestyle Coaching",
-        description: "Nutritional and physical wellness advice to support healthy longevity.",
+        title: "Outpatient Daycare Procedure",
+        description: "Performed comfortably under local anesthesia with minimal recovery downtime.",
       },
     ],
     benefits: [
       {
-        title: "Ongoing Peace of Mind",
-        description: "Direct access to your surgical oncologist for any new symptoms.",
+        title: "Complete Aesthetic Closure",
+        description: "Restores natural visual completeness, marking the empowering conclusion of the treatment journey.",
       },
       {
-        title: "Family Risk Awareness",
-        description: "Proactive screening strategies to safeguard family members.",
+        title: "Gentle In-Office Recovery",
+        description: "Safe, rapid procedure requiring only local anesthesia with swift return to daily routines.",
       },
     ],
     createdAt: "2026-01-01T00:00:00Z",

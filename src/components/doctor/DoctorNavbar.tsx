@@ -53,9 +53,10 @@ export default function DoctorNavbar() {
     }
   }, [isMobileMenuOpen]);
 
-  // Clean, minimalist, uncluttered navigation links (5 essential items)
+  // Clean, minimalist, uncluttered navigation links (Conditions before Treatments)
   const navLinks = [
     { label: "About", href: "/about" },
+    { label: "Conditions", href: "/#conditions" },
     { 
       label: "Treatments", 
       href: "/services",
@@ -93,7 +94,6 @@ export default function DoctorNavbar() {
         },
       ]
     },
-    { label: "Conditions", href: "/#conditions" },
     { label: "Patient Stories", href: "/patient-stories" },
     { label: "Feedback (QR)", href: "/#feedback" },
     { label: "Contact", href: "/contact" },
@@ -180,9 +180,9 @@ export default function DoctorNavbar() {
             <Image
               src="/images/doctor/assets/logo.png"
               alt="Dr. Noopur Patel — Breast Cancer Surgeon & Surgical Breast Oncologist"
-              width={260}
-              height={86}
-              className="h-12 sm:h-12 md:h-13 w-auto object-contain transition-transform group-hover:scale-[1.01]"
+              width={300}
+              height={96}
+              className="h-14 sm:h-16 md:h-16 w-auto object-contain transition-transform group-hover:scale-[1.01]"
               priority
             />
           </Link>
@@ -327,16 +327,17 @@ export default function DoctorNavbar() {
       </nav>
 
       {/* 3. MOBILE SLIDE-OVER DRAWER */}
+      {/* 4. MOBILE SLIDE-OUT DRAWER */}
       {isMobileMenuOpen && (
         <div
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation"
-          className="lg:hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex justify-end animate-in fade-in duration-200"
+          className="lg:hidden fixed inset-0 z-[100] bg-black/60 backdrop-blur-xs flex justify-end animate-in fade-in duration-200"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <div
-            className="w-[85%] max-w-sm bg-white h-full shadow-2xl p-6 flex flex-col justify-between overflow-y-auto"
+            className="w-[85%] max-w-sm bg-white h-full shadow-2xl p-6 pb-32 sm:pb-28 flex flex-col justify-between overflow-y-auto z-[101]"
             onClick={(e) => e.stopPropagation()}
           >
             <div>
@@ -344,14 +345,14 @@ export default function DoctorNavbar() {
                 <Image
                   src="/images/doctor/assets/logo.png"
                   alt="Dr. Noopur Patel Logo"
-                  width={220}
-                  height={74}
-                  className="h-11 sm:h-12 w-auto object-contain"
+                  width={260}
+                  height={84}
+                  className="h-13 w-auto object-contain"
                 />
                 <button
                   type="button"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 text-slate-500 hover:text-slate-800 min-w-[44px] min-h-[44px] flex items-center justify-center"
+                  className="p-2 text-slate-500 hover:text-slate-800 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-slate-100"
                   aria-label="Close menu"
                 >
                   <X className="w-5 h-5" />
@@ -382,6 +383,13 @@ export default function DoctorNavbar() {
                   About Dr. Noopur Patel
                 </Link>
                 <Link
+                  href="/#conditions"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-[14.5px] font-medium px-4 py-2.5 rounded-xl text-slate-800 hover:bg-slate-50 transition-colors"
+                >
+                  Breast Conditions
+                </Link>
+                <Link
                   href="/services"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`text-[14.5px] font-medium px-4 py-2.5 rounded-xl transition-colors ${
@@ -391,13 +399,6 @@ export default function DoctorNavbar() {
                   }`}
                 >
                   Treatments &amp; Surgery
-                </Link>
-                <Link
-                  href="/#conditions"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-[14.5px] font-medium px-4 py-2.5 rounded-xl text-slate-800 hover:bg-slate-50 transition-colors"
-                >
-                  Breast Conditions
                 </Link>
                 <Link
                   href="/patient-stories"

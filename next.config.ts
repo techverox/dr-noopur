@@ -48,6 +48,36 @@ const nextConfig: NextConfig = {
         destination: "/patient-guide",
         permanent: true,
       },
+      {
+        source: "/pricing",
+        destination: "/appointments",
+        permanent: true,
+      },
+      {
+        source: "/breast-lump-removal-surgery-cost-ahmedabad",
+        destination: "/breast-lump-removal-surgery-ahmedabad",
+        permanent: true,
+      },
+      {
+        source: "/fibroadenoma-surgery-cost-ahmedabad",
+        destination: "/fibroadenoma-surgery-ahmedabad",
+        permanent: true,
+      },
+      {
+        source: "/breast-biopsy-cost-ahmedabad",
+        destination: "/breast-biopsy-procedure-ahmedabad",
+        permanent: true,
+      },
+      {
+        source: "/mastectomy-surgery-cost-ahmedabad",
+        destination: "/mastectomy-surgery-guide-ahmedabad",
+        permanent: true,
+      },
+      {
+        source: "/chemo-port-insertion-cost-ahmedabad",
+        destination: "/chemo-port-insertion-procedure-ahmedabad",
+        permanent: true,
+      },
     ];
   },
   async headers() {

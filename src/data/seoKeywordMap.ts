@@ -240,8 +240,8 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     relatedSlugs: [
       "breast-conservation-surgery-ahmedabad",
       "oncoplastic-breast-surgery-ahmedabad",
-      "mastectomy-surgery-cost-ahmedabad",
-      "breast-biopsy-cost-ahmedabad",
+      "mastectomy-surgery-guide-ahmedabad",
+      "breast-biopsy-procedure-ahmedabad",
     ],
     ctaText: "Schedule Cancer Staging & Treatment Consultation",
     schemaType: "Physician",
@@ -307,7 +307,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     relatedSlugs: [
       "breast-specialist-doctor-ahmedabad",
       "female-breast-surgeon-ahmedabad",
-      "breast-biopsy-cost-ahmedabad",
+      "breast-biopsy-procedure-ahmedabad",
       "locations/sola-science-city-breast-surgeon",
     ],
     ctaText: "Book an Appointment at Breast Clinic",
@@ -338,43 +338,48 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
       "SG Highway medical corridor",
     ],
     heroBadge: "CONVENIENT LOCATION · URGENT EVALUATIONS",
-    heroSubtitle: "Prompt medical attention for urgent breast concerns, painful lumps, or abnormal screening reports in Ahmedabad.",
-    quickOverview: "When you discover an unexpected breast symptom or receive an alarming mammogram report, finding an experienced, accessible breast surgeon is your top priority. Dr. Noopur Patel is centrally accessible on the Science City / SG Highway corridor.",
+    heroSubtitle: "Prompt medical attention for breast symptoms, painful lumps, or abnormal mammograms at Marengo CIMS Hospital.",
+    quickOverview: "When you discover a breast symptom or receive an abnormal scan, finding an experienced, accessible breast surgical oncologist is paramount. Dr. Noopur Patel practices at Marengo CIMS Hospital, Sola, offering advanced oncoplastic care in close association with Dr. Natoo Patel, esteemed senior surgical faculty.",
     keySections: [
       {
         heading: "Urgent Breast Symptoms That Require Prompt Assessment",
         content: "If you experience any of the following acute signs, avoid delays and book a priority consultation:",
         bulletPoints: [
-          "Rapidly growing lump or breast firmness",
-          "Redness, heat, or skin inflammation resembling an orange peel (peau d'orange)",
-          "Sudden nipple retraction or spontaneous blood-stained discharge",
-          "Painful swelling or abscess during or after lactation",
-          "Palpable swelling or lump in the armpit (axilla)",
+          "Rapidly growing lump or localized breast firmness",
+          "Redness, heat, or skin changes resembling an orange peel (peau d'orange)",
+          "Sudden nipple retraction or spontaneous clear/bloody discharge",
+          "Persistent breast pain (mastalgia) or inflammatory changes",
+          "Palpable swelling or lymph node enlargement in the armpit (axilla)",
         ],
       },
       {
-        heading: "Clinic Accessibility Across Ahmedabad",
-        content: "Located at Marengo CIMS Hospital, Sola, the clinic is easily accessible from Thaltej, Bodakdev, SG Highway, Science City, Satellite, and Prahlad Nagar.",
+        heading: "Clinic Accessibility & OPD Timings at Marengo CIMS Hospital",
+        content: "Centrally located at Marengo CIMS Hospital, Sola, Ahmedabad, easily accessible from SG Highway, Science City, Thaltej, Bodakdev, and Satellite.",
         bulletPoints: [
-          "Ample on-site parking and wheel-chair assistance",
-          "Full outpatient consultation hours Monday to Saturday",
-          "Emergency cancer care and hospital admission support",
+          "OPD Timings: Morning 10:00 AM – 2:00 PM | Evening 2:00 PM – 6:00 PM (Monday to Saturday)",
+          "Direct Google Maps navigation for seamless hospital arrival",
+          "100% Cashless Mediclaim & Corporate TPA facilitation desk",
+          "Same-day Triple Assessment (Clinical exam, Ultrasound, Core Biopsy)",
         ],
       },
     ],
     faqs: [
       {
+        question: "What are Dr. Noopur Patel's OPD consultation timings?",
+        answer: "Dr. Noopur Patel is available for outpatient consultations at Marengo CIMS Hospital from Monday to Saturday during two daily shifts: Morning: 10:00 AM – 2:00 PM and Evening: 2:00 PM – 6:00 PM.",
+      },
+      {
         question: "How quickly can I get an appointment with Dr. Noopur Patel?",
-        answer: "Same-day or next-day consultations are routinely prioritized for patients with newly discovered lumps or suspicious biopsy reports.",
+        answer: "Same-day or next-day priority consultations are arranged for patients with newly detected lumps, severe breast pain, or suspicious mammography/biopsy reports.",
       },
     ],
     relatedSlugs: [
       "breast-clinic-ahmedabad",
-      "locations/sg-highway-breast-surgeon",
-      "locations/sola-science-city-breast-surgeon",
+      "breast-pain-management",
       "breast-lump-treatment-ahmedabad",
+      "locations/sola-science-city-breast-surgeon",
     ],
-    ctaText: "Book Same-Day Consultation",
+    ctaText: "Book Same-Day OPD Consultation",
     schemaType: "Physician",
   },
 
@@ -440,7 +445,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
       "breast-conservation-surgery-ahmedabad",
       "breast-cancer-specialist-ahmedabad",
       "breast-reconstruction-surgery-ahmedabad",
-      "mastectomy-surgery-cost-ahmedabad",
+      "mastectomy-surgery-guide-ahmedabad",
     ],
     ctaText: "Discuss Oncoplastic Options with Dr. Noopur Patel",
     schemaType: "MedicalProcedure",
@@ -547,8 +552,9 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
         heading: "Diagnostic & Treatment Options",
         content: "Treatment depends entirely on the pathology, size, symptoms, and age of the patient.",
         bulletPoints: [
-          "Clinical observation: Small, asymptomatic, confirmed benign lumps can often be safely monitored without surgery",
-          "Cyst Aspiration: Rapid in-clinic needle drainage for painful tense cysts",
+          "Clinical observation: Confirmed benign, asymptomatic lumps can often be safely monitored with periodic ultrasound without surgery",
+          "VABB (Vacuum-Assisted Breast Biopsy): Scarless, stitchless removal of benign lumps via a tiny 3 mm pinhole under local anesthesia with ultrasound guidance",
+          "Cyst Aspiration: Rapid in-clinic needle drainage for painful, tense fluid-filled cysts",
           "Minimally Invasive Daycare Excision: Clean surgical removal through hidden, cosmetically favorable incisions",
         ],
       },
@@ -556,7 +562,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     faqs: [
       {
         question: "Does every breast lump need to be removed surgically?",
-        answer: "No. Confirmed benign lumps (such as small fibroadenomas under 2 cm) that are asymptomatic and stable on imaging can often be monitored safely without surgery.",
+        answer: "No. Confirmed benign lumps that are asymptomatic and stable on imaging can often be monitored safely without surgery. Intervention is indicated if the lump grows, causes pain, or causes persistent concern.",
       },
       {
         question: "How long does breast lump removal surgery take?",
@@ -564,59 +570,58 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
       },
     ],
     relatedSlugs: [
-      "breast-lump-removal-surgery-cost-ahmedabad",
+      "breast-lump-removal-surgery-ahmedabad",
       "fibroadenoma-treatment-ahmedabad",
-      "breast-biopsy-cost-ahmedabad",
+      "breast-biopsy-procedure-ahmedabad",
       "blog/is-every-breast-lump-cancerous",
     ],
     ctaText: "Consult for Breast Lump Evaluation",
     schemaType: "MedicalProcedure",
   },
 
-  // 9. Breast Lump Removal Surgery Cost
-  "breast-lump-removal-surgery-cost-ahmedabad": {
-    slug: "breast-lump-removal-surgery-cost-ahmedabad",
-    targetKeyword: "breast lump removal surgery cost in ahmedabad",
-    silo: "Pricing / Cost",
-    searchIntent: "High Transactional",
+  // 9. Breast Lump Removal Surgery
+  "breast-lump-removal-surgery-ahmedabad": {
+    slug: "breast-lump-removal-surgery-ahmedabad",
+    targetKeyword: "breast lump removal surgery in ahmedabad",
+    silo: "Surgical Excision",
+    searchIntent: "Transactional",
     competition: "Medium",
-    metaTitle: "Breast Lump Removal Surgery Cost in Ahmedabad | Packages & Insurance",
-    metaDescription: "Transparent breast lump removal surgery cost in Ahmedabad. Typical range Rs 30,000 - Rs 1,00,000. Mediclaim cashless TPA assistance with Dr. Noopur Patel.",
-    h1: "Breast Lump Removal Surgery Cost in Ahmedabad – Packages & Mediclaim Coverage",
-    focusOnPageElements: "Cost range (Rs 30000 - Rs 100000), Mediclaim and cashless TPA coverage",
+    metaTitle: "Breast Lump Removal Surgery in Ahmedabad | Daycare & Insurance Guidance",
+    metaDescription: "Safe & minimally invasive breast lump removal surgery in Ahmedabad by Dr. Noopur Patel. Daycare discharge, cosmetic incisions & cashless Mediclaim TPA assistance.",
+    h1: "Breast Lump Removal Surgery in Ahmedabad – Daycare & Cashless Coverage",
+    focusOnPageElements: "Daycare surgical excision, cosmetic wound closure, Mediclaim and cashless TPA coverage",
     secondaryKeywords: [
-      "breast lump surgery cost ahmedabad",
-      "benign breast surgery price cims",
-      "lumpectomy cost in ahmedabad",
+      "breast lump surgery ahmedabad",
+      "benign breast surgery cims",
+      "lumpectomy in ahmedabad",
       "mediclaim coverage for breast lump surgery",
     ],
     semanticEntities: [
       "Daycare surgical excision",
-      "Anesthesia charges",
+      "Cosmetic sub-cuticular sutures",
       "Cashless TPA insurance",
-      "Histopathology examination fee",
+      "Histopathology examination",
       "Post-operative recovery",
     ],
-    heroBadge: "TRANSPARENT PRICING · CASHLESS INSURANCE",
-    heroSubtitle: "Clear, honest financial guidance for elective and therapeutic breast lump surgeries in Ahmedabad.",
-    quickOverview: "The cost of breast lump removal surgery in Ahmedabad typically ranges between Rs 30,000 and Rs 1,00,000 depending on lump size, surgical approach, anesthesia type, and hospital room category.",
+    heroBadge: "DAYCARE SURGICAL EXCISION · CASHLESS INSURANCE",
+    heroSubtitle: "Expert clinical care for elective and therapeutic breast lump surgeries with full Mediclaim support at Marengo CIMS Hospital.",
+    quickOverview: "Breast lump removal surgery is a safe, routine procedure to excise benign or suspicious breast lumps while prioritizing tissue preservation and cosmetic incision lines. Performed as a daycare surgery at Marengo CIMS Hospital, Ahmedabad.",
     keySections: [
       {
-        heading: "Factors Influencing the Total Cost",
-        content: "We believe in complete pricing transparency before any clinical procedure is scheduled.",
+        heading: "Key Clinical & Surgical Considerations",
+        content: "Every breast lump excision is carefully planned to ensure complete clearance while preserving natural breast aesthetics:",
         bulletPoints: [
           "Type and Location of Lump: Single small superficial lump vs multiple deep-seated or bilateral lesions",
           "Surgical Approach: Open cosmetic excision vs vacuum-assisted breast biopsy (VABB)",
-          "Anesthesia Mode: Local anesthesia with sedation (daycare) vs General Anesthesia",
-          "Hospital Stay: Daycare discharge (4-6 hours post-op) vs overnight observation in private room",
-          "Pathology / Histopathology: Mandatory microscopic biopsy examination of excised tissue",
+          "Anesthesia Mode: Local anesthesia with sedation (daycare) or General Anesthesia depending on patient preference",
+          "Hospital Stay: Daycare discharge (4-6 hours post-op) with prompt return to daily activities",
+          "Histopathology: Mandatory microscopic biopsy examination to provide definitive pathological confirmation",
         ],
       },
     ],
     costAndInsurance: {
-      indicativeRange: "Rs 30,000 to Rs 1,00,000 (Indicative range depending on clinical factors)",
       tpaNotes: "Most major health insurance policies and corporate TPAs cover medically indicated breast lump excision. Our hospital insurance desk assists with pre-authorization and cashless claims.",
-      disclaimer: "Final surgical costs depend on clinical assessment, hospital admission category, and insurer approval. Exact estimates are provided after in-person consultation.",
+      disclaimer: "Cashless approval depends on individual insurance policy terms and clinical indications. Our TPA desk provides full documentation support.",
     },
     faqs: [
       {
@@ -630,11 +635,11 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     ],
     relatedSlugs: [
       "breast-lump-treatment-ahmedabad",
-      "fibroadenoma-surgery-cost-ahmedabad",
-      "breast-biopsy-cost-ahmedabad",
-      "blog/breast-surgery-mediclaim-coverage",
+      "fibroadenoma-surgery-ahmedabad",
+      "breast-biopsy-procedure-ahmedabad",
+      "blog/is-every-breast-lump-cancerous",
     ],
-    ctaText: "Request Treatment Cost Estimate",
+    ctaText: "Consult for Breast Lump Surgery",
     schemaType: "MedicalProcedure",
   },
 
@@ -669,7 +674,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
         heading: "Observation vs Surgical Excision",
         content: "Not all fibroadenomas require surgical removal. We adopt a scientifically validated protocol:",
         bulletPoints: [
-          "Conservative Observation: Recommended for small fibroadenomas (<2-3 cm) confirmed benign by core biopsy, with periodic 6-monthly ultrasound checks",
+          "Conservative Observation: Recommended for asymptomatic fibroadenomas confirmed benign by core biopsy, with periodic 6-monthly ultrasound checks",
           "Surgical Excision: Indicated if the lump grows rapidly, causes physical pain, distorts breast contour, or causes persistent patient anxiety",
           "Aesthetic Incisions: Incisions are carefully hidden along the periareolar margin or inframammary fold for minimal visible scarring",
         ],
@@ -686,7 +691,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
       },
     ],
     relatedSlugs: [
-      "fibroadenoma-surgery-cost-ahmedabad",
+      "fibroadenoma-surgery-ahmedabad",
       "breast-lump-treatment-ahmedabad",
       "vacuum-assisted-breast-biopsy-ahmedabad",
       "blog/fibroadenoma-vs-breast-cancer",
@@ -695,49 +700,48 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     schemaType: "MedicalProcedure",
   },
 
-  // 11. Fibroadenoma Surgery Cost
-  "fibroadenoma-surgery-cost-ahmedabad": {
-    slug: "fibroadenoma-surgery-cost-ahmedabad",
-    targetKeyword: "fibroadenoma surgery cost in ahmedabad",
-    silo: "Pricing / Cost",
-    searchIntent: "High Transactional",
+  // 11. Fibroadenoma Surgery
+  "fibroadenoma-surgery-ahmedabad": {
+    slug: "fibroadenoma-surgery-ahmedabad",
+    targetKeyword: "fibroadenoma surgery in ahmedabad",
+    silo: "Benign Surgical Care",
+    searchIntent: "Transactional",
     competition: "Low-Medium",
-    metaTitle: "Fibroadenoma Surgery Cost in Ahmedabad | Daycare Surgery Details",
-    metaDescription: "Affordable fibroadenoma surgery cost in Ahmedabad. Transparent package pricing Rs 15,000 - Rs 60,000. Daycare discharge, cashless Mediclaim accepted.",
-    h1: "Fibroadenoma Surgery Cost in Ahmedabad – Packages & Daycare Details",
-    focusOnPageElements: "Package pricing (Rs 15000 - Rs 60000), daycare discharge, painless recovery",
+    metaTitle: "Fibroadenoma Surgery in Ahmedabad | Daycare & Cosmetic Excision",
+    metaDescription: "Painless fibroadenoma surgery in Ahmedabad by Dr. Noopur Patel. Daycare discharge, cosmetic sub-cuticular sutures, and full cashless Mediclaim assistance.",
+    h1: "Fibroadenoma Surgery in Ahmedabad – Daycare Excision & Recovery",
+    focusOnPageElements: "Daycare excision, cosmetic sub-cuticular sutures, painless recovery, cashless Mediclaim",
     secondaryKeywords: [
-      "fibroadenoma operation cost ahmedabad",
-      "daycare fibroadenoma surgery charges",
+      "fibroadenoma operation ahmedabad",
+      "daycare fibroadenoma surgery",
       "cashless fibroadenoma removal ahmedabad",
-      "breast lump excision packages sola",
+      "breast lump excision sola",
     ],
     semanticEntities: [
-      "Daycare package pricing",
+      "Daycare surgical excision",
       "Local anesthesia sedation",
       "Cosmetic sub-cuticular sutures",
       "Mediclaim cashless TPA",
     ],
-    heroBadge: "DAYCARE SURGERY · AFFORDABLE PACKAGES",
-    heroSubtitle: "Painless, rapid recovery with clear transparent hospital packages at Marengo CIMS Hospital.",
-    quickOverview: "The cost of fibroadenoma surgery in Ahmedabad generally ranges from Rs 15,000 to Rs 60,000 depending on lump complexity, number of lumps, anesthesia, and room type.",
+    heroBadge: "DAYCARE SURGERY · COSMETIC EXCISION",
+    heroSubtitle: "Painless, rapid recovery with specialized periareolar techniques at Marengo CIMS Hospital.",
+    quickOverview: "Fibroadenoma surgery (excision or enucleation) is a safe, minor procedure performed as a daycare case. Dr. Noopur Patel utilizes cosmetically hidden incision lines and sub-cuticular dissolvable sutures for minimal visible markings.",
     keySections: [
       {
-        heading: "What is Included in Daycare Surgery Packages?",
-        content: "We ensure no hidden surprises through itemized package explanations:",
+        heading: "What to Expect During Daycare Excision",
+        content: "Our surgical protocol ensures clinical safety and swift recovery without unnecessary hospitalization:",
         bulletPoints: [
-          "Pre-operative anesthetic assessment and daycare recovery bed",
-          "Surgeon, assistant, and operating theater charges",
-          "Advanced cosmetic dissolvable sutures leaving minimal scar marks",
-          "Standard post-operative medications and follow-up consultation",
-          "Histopathology examination to provide definitive pathological confirmation",
+          "Pre-operative clinical and anesthetic assessment with daycare bed admission",
+          "Specialized periareolar or hidden inframammary incisions to minimize visible markings",
+          "Advanced cosmetic dissolvable sutures that eliminate the need for stitch removal",
+          "Rapid mobilization and discharge home within 4 to 6 hours after procedure",
+          "Definitive histopathology analysis providing complete diagnostic peace of mind",
         ],
       },
     ],
     costAndInsurance: {
-      indicativeRange: "Rs 15,000 to Rs 60,000 (Daycare surgical packages)",
       tpaNotes: "Pre-authorization support available for all major health insurers and corporate TPAs.",
-      disclaimer: "Pricing varies based on patient medical history, single vs bilateral lumps, and hospital category.",
+      disclaimer: "Cashless approval depends on individual insurance policy terms and medical indications.",
     },
     faqs: [
       {
@@ -747,30 +751,30 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     ],
     relatedSlugs: [
       "fibroadenoma-treatment-ahmedabad",
-      "breast-lump-removal-surgery-cost-ahmedabad",
-      "breast-biopsy-cost-ahmedabad",
-      "blog/breast-surgery-mediclaim-coverage",
+      "breast-lump-removal-surgery-ahmedabad",
+      "breast-biopsy-procedure-ahmedabad",
+      "vacuum-assisted-breast-biopsy-ahmedabad",
     ],
-    ctaText: "Check Fibroadenoma Surgery Packages",
+    ctaText: "Consult for Daycare Fibroadenoma Excision",
     schemaType: "MedicalProcedure",
   },
 
-  // 12. Breast Biopsy Cost
-  "breast-biopsy-cost-ahmedabad": {
-    slug: "breast-biopsy-cost-ahmedabad",
-    targetKeyword: "breast biopsy cost in ahmedabad",
-    silo: "Diagnostic / Cost",
+  // 12. Breast Biopsy Procedure
+  "breast-biopsy-procedure-ahmedabad": {
+    slug: "breast-biopsy-procedure-ahmedabad",
+    targetKeyword: "breast biopsy in ahmedabad",
+    silo: "Diagnostic Precision",
     searchIntent: "Commercial",
     competition: "Medium",
-    metaTitle: "Breast Biopsy Cost in Ahmedabad | FNAC & Core Needle Biopsy",
-    metaDescription: "Accurate breast biopsy cost in Ahmedabad by Dr. Noopur Patel. Core needle biopsy (CNB) & FNAC pricing Rs 4,000 - Rs 35,000 with quick report turnaround.",
-    h1: "Breast Biopsy Cost in Ahmedabad – FNAC, Core Needle & Vacuum Biopsy",
-    focusOnPageElements: "Core needle and FNAC pricing (Rs 4000 - Rs 35000), report turnaround times",
+    metaTitle: "Breast Biopsy in Ahmedabad | FNAC, Core Needle & Vacuum Biopsy",
+    metaDescription: "Accurate breast biopsy in Ahmedabad by Dr. Noopur Patel. Ultrasound-guided core needle biopsy (CNB) & FNAC with rapid histopathology report turnaround.",
+    h1: "Breast Biopsy in Ahmedabad – FNAC, Core Needle & Vacuum Biopsy",
+    focusOnPageElements: "Core needle and FNAC diagnostic precision, ultrasound guidance, report turnaround times",
     secondaryKeywords: [
-      "core needle biopsy breast cost ahmedabad",
-      "fnac breast test cost ahmedabad",
-      "trucut biopsy price ahmedabad",
-      "ultrasound guided breast biopsy cost",
+      "core needle biopsy breast ahmedabad",
+      "fnac breast test ahmedabad",
+      "trucut biopsy ahmedabad",
+      "ultrasound guided breast biopsy sola",
     ],
     semanticEntities: [
       "Core Needle Biopsy (CNB)",
@@ -781,22 +785,21 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     ],
     heroBadge: "ACCURATE HISTOPATHOLOGY · RAPID RESULTS",
     heroSubtitle: "Precise diagnostic confirmation with ultrasound guidance for maximum safety and comfort.",
-    quickOverview: "A breast biopsy is the only definitive method to distinguish benign conditions from malignancies. In Ahmedabad, the cost ranges between Rs 4,000 for simple FNAC to Rs 15,000 - Rs 35,000 for advanced ultrasound-guided core needle or stereotactic biopsies.",
+    quickOverview: "A breast biopsy is the only definitive method to distinguish benign conditions from malignancies. Dr. Noopur Patel performs real-time ultrasound-guided core needle biopsy, ensuring painless tissue sampling under local anesthesia with fast histopathology results.",
     keySections: [
       {
-        heading: "Biopsy Types & Comparative Costs",
+        heading: "Diagnostic Biopsy Types & Clinical Indications",
         content: "Choosing the correct biopsy method is critical for clinical decision making:",
         bulletPoints: [
-          "FNAC (Fine Needle Aspiration): Rs 3,000 - Rs 6,000. Samples cells; primarily used for fluid-filled cysts or lymph nodes.",
-          "Core Needle Biopsy (CNB / Tru-Cut): Rs 8,000 - Rs 18,000. The global gold-standard; removes small tissue cylinders to evaluate tissue architecture and tumor receptors.",
-          "Vacuum-Assisted Biopsy (VABB): Rs 25,000 - Rs 45,000. High-volume scarless tissue sampling for non-palpable calcifications.",
+          "FNAC (Fine Needle Aspiration): Samples cells; primarily used for fluid-filled cysts or palpable lymph nodes.",
+          "Core Needle Biopsy (CNB / Tru-Cut): The global gold-standard; removes small tissue cylinders to evaluate tissue architecture and tumor receptors (ER, PR, HER2-neu).",
+          "Vacuum-Assisted Biopsy (VABB): High-volume scarless tissue sampling for non-palpable microcalcifications or complete excision of benign lumps.",
         ],
       },
     ],
     costAndInsurance: {
-      indicativeRange: "Rs 4,000 to Rs 35,000 depending on biopsy technique and immunohistochemistry (IHC) tests",
       tpaNotes: "Diagnostic biopsies prescribed by specialists are covered under OPD/daycare insurance depending on policy terms.",
-      disclaimer: "Pathology charges may include specialized staining (ER, PR, HER2-neu) if tumor cells are detected.",
+      disclaimer: "Specialized immunohistochemistry (IHC) profiling (ER, PR, HER2-neu) is performed when clinically indicated for personalized therapy.",
     },
     faqs: [
       {
@@ -812,7 +815,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
       "vacuum-assisted-breast-biopsy-ahmedabad",
       "breast-lump-treatment-ahmedabad",
       "breast-cancer-specialist-ahmedabad",
-      "blog/is-every-breast-lump-cancerous",
+      "breast-lump-removal-surgery-ahmedabad",
     ],
     ctaText: "Book Ultrasound Guided Biopsy",
     schemaType: "MedicalProcedure",
@@ -863,7 +866,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
       },
     ],
     relatedSlugs: [
-      "breast-biopsy-cost-ahmedabad",
+      "breast-biopsy-procedure-ahmedabad",
       "fibroadenoma-treatment-ahmedabad",
       "breast-lump-treatment-ahmedabad",
       "oncoplastic-breast-surgery-ahmedabad",
@@ -919,7 +922,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     ],
     relatedSlugs: [
       "oncoplastic-breast-surgery-ahmedabad",
-      "mastectomy-surgery-cost-ahmedabad",
+      "mastectomy-surgery-guide-ahmedabad",
       "sentinel-lymph-node-biopsy",
       "blog/fibroadenoma-vs-breast-cancer",
     ],
@@ -927,21 +930,21 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     schemaType: "MedicalProcedure",
   },
 
-  // 15. Mastectomy Surgery Cost
-  "mastectomy-surgery-cost-ahmedabad": {
-    slug: "mastectomy-surgery-cost-ahmedabad",
-    targetKeyword: "mastectomy surgery cost in ahmedabad",
+  // 15. Mastectomy Surgery Guide
+  "mastectomy-surgery-guide-ahmedabad": {
+    slug: "mastectomy-surgery-guide-ahmedabad",
+    targetKeyword: "mastectomy surgery in ahmedabad",
     silo: "Radical Surgery",
-    searchIntent: "Commercial / Financial",
+    searchIntent: "Transactional",
     competition: "Medium",
-    metaTitle: "Mastectomy Surgery Cost in Ahmedabad | Radical Cancer Surgery",
-    metaDescription: "Comprehensive mastectomy surgery cost in Ahmedabad by Dr. Noopur Patel. Typical packages Rs 90,000 - Rs 2,00,000+. Cashless Mediclaim & hospital details.",
-    h1: "Mastectomy Surgery Cost in Ahmedabad – MRM, Simple Mastectomy & Insurance",
-    focusOnPageElements: "Radical surgery cost breakdown (Rs 90000 - Rs 200000+), hospital stay, recovery",
+    metaTitle: "Mastectomy Surgery in Ahmedabad | Surgical Planning & Guide",
+    metaDescription: "Comprehensive mastectomy surgery guide in Ahmedabad by Dr. Noopur Patel. Simple, MRM & skin-sparing procedures with cashless Mediclaim TPA assistance.",
+    h1: "Mastectomy Surgery Guide in Ahmedabad – MRM, Simple Mastectomy & Insurance",
+    focusOnPageElements: "Radical surgery techniques, hospital stay, post-surgery drain management, cashless insurance",
     secondaryKeywords: [
-      "modified radical mastectomy cost ahmedabad",
-      "breast cancer surgery cost sola",
-      "skin sparing mastectomy price ahmedabad",
+      "modified radical mastectomy ahmedabad",
+      "breast cancer surgery sola",
+      "skin sparing mastectomy ahmedabad",
       "mrm surgery package cims hospital",
     ],
     semanticEntities: [
@@ -952,38 +955,41 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
       "Mediclaim cashless hospitalization",
     ],
     heroBadge: "DEFINITIVE CANCER CLEARANCE · CASHLESS CLAIMS",
-    heroSubtitle: "Transparent surgical packages and dedicated cashless insurance facilitation at Marengo CIMS Hospital.",
-    quickOverview: "The cost of mastectomy surgery in Ahmedabad typically ranges between Rs 90,000 and Rs 2,00,000+ depending on whether axillary lymph node dissection, skin-sparing techniques, or immediate reconstruction are included.",
+    heroSubtitle: "Comprehensive surgical planning and dedicated cashless insurance facilitation at Marengo CIMS Hospital.",
+    quickOverview: "A mastectomy is an oncologically sound surgical operation removing breast tissue for complete cancer control. At Marengo CIMS Hospital, Ahmedabad, Dr. Noopur Patel tailors each procedure—whether Simple Mastectomy, MRM, or Skin-Sparing—with meticulous surgical clearance and comprehensive insurance assistance.",
     keySections: [
       {
-        heading: "What Influences Mastectomy Costs?",
-        content: "Understanding the financial components of cancer surgery:",
+        heading: "What Influences Mastectomy Planning?",
+        content: "Understanding the clinical components of breast cancer surgery:",
         bulletPoints: [
           "Surgical Complexity: Simple mastectomy vs Modified Radical Mastectomy (MRM) with full axillary node clearance",
-          "Reconstruction: Standalone mastectomy vs simultaneous immediate flap or implant reconstruction",
-          "Hospital Duration: Typically 2 to 4 days hospitalization including drain management",
-          "Room Category: General, Semi-private, Single Deluxe, or Suite accommodation",
+          "Reconstruction Options: Standalone mastectomy vs simultaneous immediate flap or implant reconstruction",
+          "Hospital Duration & Drain Care: Typically 1 to 2 days hospitalization; drain is safely removed within 7 to 15 days",
+          "Multidisciplinary Team: Tumor Board discussion for personalized adjuvant chemotherapy and radiotherapy sequencing",
         ],
       },
     ],
     costAndInsurance: {
-      indicativeRange: "Rs 90,000 to Rs 2,00,000+ (Comprehensive inpatient surgical packages)",
-      tpaNotes: "100% cashless Mediclaim processing available for all major insurance companies and corporate TPAs.",
-      disclaimer: "Final package costs depend on individual surgical needs, comorbidities, and chosen room category.",
+      tpaNotes: "100% cashless Mediclaim processing available for all major insurance companies and corporate TPAs at Marengo CIMS Hospital.",
+      disclaimer: "Our hospital insurance desk assists with complete pre-authorization paperwork for a seamless experience.",
     },
     faqs: [
       {
         question: "How many days will I stay in the hospital after a mastectomy?",
-        answer: "Most patients remain in the hospital for 2 to 3 days post-surgery until the surgical drain is stabilized and pain is well controlled.",
+        answer: "Most patients remain in the hospital for 1 to 2 nights post-surgery until the surgical drain is stabilized and pain is well controlled.",
+      },
+      {
+        question: "How is post-operative drain care managed at home?",
+        answer: "Our nursing team provides detailed, hands-on instructions on measuring and emptying the drain bulb before discharge. The drain is typically removed painlessly in our OPD within 7 to 15 days.",
       },
     ],
     relatedSlugs: [
       "breast-cancer-specialist-ahmedabad",
       "breast-conservation-surgery-ahmedabad",
       "breast-reconstruction-surgery-ahmedabad",
-      "chemo-port-insertion-cost-ahmedabad",
+      "chemo-port-insertion-procedure-ahmedabad",
     ],
-    ctaText: "Get Mastectomy Cost Estimate",
+    ctaText: "Schedule Consultation with Dr. Noopur Patel",
     schemaType: "MedicalProcedure",
   },
 
@@ -1033,7 +1039,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     ],
     relatedSlugs: [
       "oncoplastic-breast-surgery-ahmedabad",
-      "mastectomy-surgery-cost-ahmedabad",
+      "mastectomy-surgery-guide-ahmedabad",
       "breast-cancer-specialist-ahmedabad",
       "breast-conservation-surgery-ahmedabad",
     ],
@@ -1067,16 +1073,27 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     ],
     heroBadge: "SYMPTOM EVALUATION · MICRO-DUCT CARE",
     heroSubtitle: "Accurate distinction between benign hormonal discharge and surgical duct conditions.",
-    quickOverview: "Nipple discharge is a common symptom that causes immediate cancer fear. While most cases stem from benign causes like duct ectasia, intraductal papillomas, or hormonal elevations, bloody or clear spontaneous discharge from a single duct warrants urgent specialist assessment.",
+    quickOverview: "Nipple discharge is a common symptom that causes immediate cancer fear. While most cases stem from benign causes like duct ectasia, intraductal papillomas, or hormonal elevations, bloody or clear spontaneous discharge warrants urgent specialist assessment.",
     keySections: [
+      {
+        heading: "Nipple Discharge Colors & Clinical Causes",
+        content: "The visual appearance of nipple discharge provides critical diagnostic guidance:",
+        bulletPoints: [
+          "Milky: Commonly physiological (galactorrhea), elevated blood prolactin levels, thyroid irregularities, or post-lactational changes.",
+          "Clear / Water-like: May represent benign ductal secretions or intraductal papilloma requiring high-resolution ultrasound.",
+          "Yellow: Frequently linked to mild ductal inflammation, fibrocystic breast changes, or resolving infection.",
+          "Green / Brown / Black: Classical indicators of benign Mammary Duct Ectasia (inspissated fluid in dilated aging ducts), usually harmless and non-cancerous.",
+          "Pink / Red / Bloody: Most commonly caused by a benign intraductal papilloma, but requires prompt specialist assessment and targeted duct excision to rule out underlying malignancy.",
+        ],
+      },
       {
         heading: "When is Nipple Discharge Concerning?",
         content: "Key clinical indicators that guide our diagnostic pathway:",
         bulletPoints: [
-          "Spontaneous vs Expressed: Fluid that leaks without squeezing requires closer evaluation",
-          "Single Duct vs Multiple Ducts: Single-duct discharge is more often linked to local papilloma",
-          "Color: Bloody, pink, or water-clear discharge requires immediate ductal imaging",
-          "Bilateral milky discharge: Frequently related to hormonal causes (elevated prolactin or thyroid issues)",
+          "Spontaneous vs Expressed: Fluid that leaks without squeezing requires closer clinical evaluation.",
+          "Single Duct vs Multiple Ducts: Single-duct discharge is more often linked to local intraductal papilloma.",
+          "Unilateral vs Bilateral: Discharge from one breast warrants focused ductal imaging.",
+          "Associated Palpable Lump: Discharge accompanied by an underlying mass requires urgent Triple Assessment.",
         ],
       },
     ],
@@ -1085,32 +1102,36 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
         question: "Does bloody nipple discharge always mean cancer?",
         answer: "No. The most common cause of bloody nipple discharge is a benign (non-cancerous) growth inside the milk duct called an intraductal papilloma.",
       },
+      {
+        question: "What tests are needed for nipple discharge?",
+        answer: "Initial evaluation includes clinical duct examination, high-resolution bilateral ultrasound, digital mammography, and serum prolactin/TSH tests when discharge is milky.",
+      },
     ],
     relatedSlugs: [
       "breast-clinic-ahmedabad",
       "breast-lump-treatment-ahmedabad",
-      "breast-biopsy-cost-ahmedabad",
+      "breast-biopsy-procedure-ahmedabad",
       "female-breast-surgeon-ahmedabad",
     ],
     ctaText: "Book Nipple Discharge Evaluation",
     schemaType: "MedicalProcedure",
   },
 
-  // 18. Chemo Port Insertion Cost
-  "chemo-port-insertion-cost-ahmedabad": {
-    slug: "chemo-port-insertion-cost-ahmedabad",
-    targetKeyword: "chemo port insertion cost in ahmedabad",
+  // 18. Chemo Port Insertion Procedure
+  "chemo-port-insertion-procedure-ahmedabad": {
+    slug: "chemo-port-insertion-procedure-ahmedabad",
+    targetKeyword: "chemo port insertion in ahmedabad",
     silo: "Supportive Oncology",
     searchIntent: "Transactional",
     competition: "Low",
-    metaTitle: "Chemo Port Insertion Cost in Ahmedabad | Painless Chemo Line",
-    metaDescription: "Safe chemo port insertion in Ahmedabad by Dr. Noopur Patel. Protect your veins during chemotherapy. Transparent cost Rs 20,000 - Rs 45,000, daycare procedure.",
-    h1: "Chemo Port Insertion Cost in Ahmedabad – Painless IV Access & Port Care",
-    focusOnPageElements: "Port placement pricing (Rs 20000 - Rs 45000), port care and safety protocols",
+    metaTitle: "Chemo Port Insertion in Ahmedabad | Painless Chemo Line & Vein Care",
+    metaDescription: "Safe chemo port insertion in Ahmedabad by Dr. Noopur Patel. Protect delicate veins during chemotherapy. Daycare procedure with cashless Mediclaim assistance.",
+    h1: "Chemo Port Insertion in Ahmedabad – Painless IV Access & Port Care",
+    focusOnPageElements: "Port placement technique, vein preservation, port maintenance and safety protocols",
     secondaryKeywords: [
-      "chemo port surgery price ahmedabad",
+      "chemo port surgery ahmedabad",
       "chemoport placement cims hospital",
-      "port a cath surgery cost sola",
+      "port a cath surgery sola",
       "vein access for chemotherapy ahmedabad",
     ],
     semanticEntities: [
@@ -1122,7 +1143,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     ],
     heroBadge: "VEIN PROTECTION · COMFORTABLE CHEMOTHERAPY",
     heroSubtitle: "Say goodbye to painful repeated needle pricks and collapsed veins during chemotherapy cycles.",
-    quickOverview: "A chemo port (Port-a-Cath) is a small medical device implanted beneath the skin of the upper chest to provide reliable, painless venous access for chemotherapy, blood draws, and medications.",
+    quickOverview: "A chemo port (Port-a-Cath) is a small medical device implanted beneath the skin of the upper chest to provide reliable, painless venous access for chemotherapy, blood draws, and medications. Performed as a daycare procedure under local anesthesia at Marengo CIMS Hospital, Ahmedabad.",
     keySections: [
       {
         heading: "Why a Chemo Port is Recommended",
@@ -1136,9 +1157,8 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
       },
     ],
     costAndInsurance: {
-      indicativeRange: "Rs 20,000 to Rs 45,000 (Includes imported titanium/plastic port device & daycare OT charges)",
-      tpaNotes: "Covered under health insurance as a necessary supportive oncology surgical procedure.",
-      disclaimer: "Device brand and hospital stay options can influence final pricing.",
+      tpaNotes: "Covered under health insurance as a necessary supportive oncology surgical procedure with cashless TPA support.",
+      disclaimer: "Pre-authorization is handled directly through our hospital insurance desk before daycare admission.",
     },
     faqs: [
       {
@@ -1148,11 +1168,11 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     ],
     relatedSlugs: [
       "breast-cancer-specialist-ahmedabad",
-      "mastectomy-surgery-cost-ahmedabad",
+      "mastectomy-surgery-guide-ahmedabad",
       "breast-conservation-surgery-ahmedabad",
       "locations/sola-science-city-breast-surgeon",
     ],
-    ctaText: "Inquire About Chemo Port Insertion",
+    ctaText: "Consult for Chemo Port Placement",
     schemaType: "MedicalProcedure",
   },
 
@@ -1333,7 +1353,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     relatedSlugs: [
       "breast-cancer-specialist-ahmedabad",
       "breast-conservation-surgery-ahmedabad",
-      "mastectomy-surgery-cost-ahmedabad",
+      "mastectomy-surgery-guide-ahmedabad",
       "locations/sg-highway-breast-surgeon",
     ],
     ctaText: "Book Consultation at Marengo CIMS Hospital",
@@ -1454,7 +1474,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     ],
     relatedSlugs: [
       "breast-lump-treatment-ahmedabad",
-      "mastectomy-surgery-cost-ahmedabad",
+      "mastectomy-surgery-guide-ahmedabad",
       "female-breast-surgeon-ahmedabad",
       "breast-clinic-ahmedabad",
     ],
@@ -1493,7 +1513,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     keySections: [
       {
         heading: "Why is Sentinel Lymph Node Biopsy Done?",
-        content: "Traditionally, breast cancer surgery required removing all 15-30 lymph nodes from the armpit (Axillary Clearance), often causing permanent, painful arm swelling (lymphedema). SLNB changes this completely:",
+        content: "Traditionally, breast cancer surgery required removing all 10-30 lymph nodes from the armpit (Axillary Clearance), often causing permanent, painful arm swelling (lymphedema). SLNB changes this completely:",
         bulletPoints: [
           "Identifies the primary 'gatekeeper' lymph nodes draining the tumor area",
           "If sentinel nodes are negative, sparing the remaining nodes prevents chronic arm lymphedema and shoulder numbness",
@@ -1523,9 +1543,9 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
       },
     ],
     relatedSlugs: [
-      "breast-cancer-surgery",
       "breast-conservation-surgery-ahmedabad",
       "mastectomy-ahmedabad",
+      "axillary-lymph-node-dissection-ahmedabad",
       "oncoplastic-breast-surgery-ahmedabad",
     ],
     ctaText: "Consult for SLNB Staging",
@@ -1644,7 +1664,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
         content: "Modern surgical recovery protocols at Marengo CIMS Hospital emphasize rapid mobilization, minimal discomfort, and compassionate nursing care:",
         bulletPoints: [
           "Hospital stay is typically 1 to 2 days under continuous clinical observation",
-          "A small closed-suction drain is placed during surgery to collect fluid, usually removed comfortably in OPD within 7 to 10 days",
+          "A small closed-suction drain is placed during surgery to collect fluid, usually removed comfortably in OPD within 7 to 15 days",
           "Guided gentle shoulder and arm physiotherapy begins on day 1 to prevent stiffness",
           "Most women resume light sedentary activities within 10 to 14 days post-surgery",
         ],
@@ -1660,7 +1680,6 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
       },
     ],
     costAndInsurance: {
-      indicativeRange: "Cashless Mediclaim & Corporate TPA Empaneled",
       tpaNotes: "Mastectomy is 100% covered under all major health insurance policies, corporate TPAs, and Ayushman Bharat / PMJAY where applicable at Marengo CIMS Hospital.",
       disclaimer: "Final surgical estimates depend on room category, procedure complexity (simple vs MRM vs reconstructive flap), and length of hospital stay.",
     },
@@ -1683,17 +1702,234 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
       },
       {
         question: "How is post-operative drain care managed at home?",
-        answer: "Our nursing team provides detailed, hands-on instructions on measuring and emptying the drain bulb before discharge. The drain is typically removed painlessly in our OPD within 7 to 10 days.",
+        answer: "Our nursing team provides detailed, hands-on instructions on measuring and emptying the drain bulb before discharge. The drain is typically removed painlessly in our OPD within 7 to 15 days.",
       },
     ],
     relatedSlugs: [
-      "mastectomy-surgery-cost-ahmedabad",
-      "breast-cancer-surgery",
+      "mastectomy-surgery-guide-ahmedabad",
+      "breast-cancer-specialist-ahmedabad",
       "breast-reconstruction-surgery-ahmedabad",
       "breast-conservation-surgery-ahmedabad",
       "sentinel-lymph-node-biopsy",
     ],
     ctaText: "Schedule Consultation with Dr. Noopur Patel",
+    schemaType: "MedicalProcedure",
+  },
+  // 27. Breast Pain Management (Mastalgia)
+  "breast-pain-management": {
+    slug: "breast-pain-management",
+    targetKeyword: "breast pain treatment in ahmedabad",
+    silo: "Mastalgia Care",
+    searchIntent: "Problem-Solving",
+    competition: "Low",
+    metaTitle: "Breast Pain Treatment in Ahmedabad | Mastalgia Care | Dr. Noopur Patel",
+    metaDescription: "Expert breast pain (mastalgia) diagnosis & treatment in Ahmedabad by Dr. Noopur Patel. Differentiate cyclical vs non-cyclical breast pain, hormonal care & clinical reassurance.",
+    h1: "Breast Pain Management (Mastalgia) in Ahmedabad",
+    focusOnPageElements: "Cyclical vs non-cyclical pain, breast cancer risk reassurance, lifestyle and medical management",
+    secondaryKeywords: [
+      "breast pain specialist doctor ahmedabad",
+      "cyclical mastalgia treatment sola",
+      "pain in breast lady doctor ahmedabad",
+      "mastalgia clinic marengo cims",
+    ],
+    semanticEntities: [
+      "Mastalgia (Breast Pain)",
+      "Cyclical Breast Pain",
+      "Non-Cyclical Breast Pain",
+      "Costochondritis & Musculoskeletal Pain",
+      "Bilateral Breast Ultrasound",
+      "Hormonal Fluctuation Assessment",
+    ],
+    heroBadge: "SYMPTOM RELIEF · COMPREHENSIVE EVALUATION",
+    heroSubtitle: "Distinguish cyclical vs non-cyclical discomfort and receive calm, reassuring clinical clarity.",
+    quickOverview: "Breast pain (mastalgia) is one of the most common reasons women consult a breast specialist. In over 90% of cases, breast pain is not associated with breast cancer. Dr. Noopur Patel provides thorough clinical examination, diagnostic ultrasound when indicated, and personalized symptom relief.",
+    keySections: [
+      {
+        heading: "Types of Breast Pain Evaluated",
+        content: "Accurate treatment begins with categorizing your pain pattern:",
+        bulletPoints: [
+          "Cyclical Mastalgia: Linked directly to menstrual hormone shifts, usually bilateral and intensifying the week before periods.",
+          "Non-Cyclical Mastalgia: Constant or intermittent localized tenderness unrelated to menstrual cycles, often seen in women aged 30-50.",
+          "Extramammary / Musculoskeletal Pain: Discomfort originating from chest wall muscles, ribs (costochondritis), or cervical spine referred pain.",
+        ],
+      },
+      {
+        heading: "Clinical Evaluation & Treatment Approach",
+        content: "We focus on reassuring assessment and targeted medical therapy:",
+        bulletPoints: [
+          "Gentle clinical breast examination to rule out focal lumps or infection.",
+          "High-resolution breast ultrasound for precise tissue imaging without radiation.",
+          "Supportive bra fitting recommendations and dietary guidance (reducing caffeine and saturated fats).",
+          "Medical management with Evening Primrose Oil, topical NSAIDs, or hormonal modulators for severe persistent cases.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Is breast pain usually a sign of breast cancer?",
+        answer: "No. Isolated breast pain without an underlying palpable lump is very rarely a symptom of breast cancer (less than 1% of cases). However, clinical evaluation is advised to confirm peace of mind.",
+      },
+      {
+        question: "How is cyclical breast pain treated?",
+        answer: "Management typically involves supportive brassieres, dietary modifications, evening primrose oil (gamma-linolenic acid), and mild anti-inflammatory gels. Most women find significant relief with simple lifestyle adjustments.",
+      },
+      {
+        question: "When should I see a doctor for breast pain?",
+        answer: "You should consult Dr. Noopur Patel if the pain is localized to one specific spot, is persistent throughout the month, interferes with daily activities, or is accompanied by a lump or nipple discharge.",
+      },
+    ],
+    relatedSlugs: [
+      "benign-breast-conditions",
+      "breast-lump-treatment-ahmedabad",
+      "nipple-discharge-treatment-ahmedabad",
+      "breast-clinic-ahmedabad",
+    ],
+    ctaText: "Book Breast Pain Consultation",
+    schemaType: "MedicalProcedure",
+  },
+
+  // 28. Axillary Lymph Node Dissection (ALND)
+  "axillary-lymph-node-dissection-ahmedabad": {
+    slug: "axillary-lymph-node-dissection-ahmedabad",
+    targetKeyword: "axillary lymph node dissection ahmedabad",
+    silo: "Surgical Oncology",
+    searchIntent: "Transactional / Educational",
+    competition: "Low-Medium",
+    metaTitle: "Axillary Lymph Node Dissection (ALND) in Ahmedabad | Dr. Noopur Patel",
+    metaDescription: "Axillary Lymph Node Dissection (ALND) in Ahmedabad by Dr. Noopur Patel at Marengo CIMS Hospital. Precise surgical clearance, nerve preservation & proactive lymphedema care.",
+    h1: "Axillary Lymph Node Dissection (ALND) in Ahmedabad",
+    focusOnPageElements: "Indications for ALND, nerve-sparing technique, lymphedema prevention, hospital recovery",
+    secondaryKeywords: [
+      "alnd breast cancer surgery ahmedabad",
+      "axillary clearance surgery sola",
+      "lymph node removal armpit breast cancer",
+      "lymphedema prevention after alnd",
+    ],
+    semanticEntities: [
+      "Axillary Lymph Node Dissection (ALND)",
+      "Level I and Level II Axillary Clearance",
+      "Long Thoracic Nerve Preservation",
+      "Thoracodorsal Nerve Preservation",
+      "Lymphedema Prevention Protocol",
+      "Post-Surgical Arm Physiotherapy",
+    ],
+    heroBadge: "SURGICAL PRECISION · LYMPHATIC CLEARANCE",
+    heroSubtitle: "Complete underarm lymph node clearance when required with meticulous nerve sparing and proactive rehabilitation.",
+    quickOverview: "Axillary Lymph Node Dissection (ALND) is a specialized surgical oncology procedure that removes Level I and Level II underarm lymph nodes when breast cancer has spread to the axilla. Dr. Noopur Patel combines complete oncologic clearance with meticulous preservation of key arm nerves and early physiotherapy.",
+    keySections: [
+      {
+        heading: "When is Full Axillary Dissection Necessary?",
+        content: "While Sentinel Lymph Node Biopsy is preferred for early-stage disease, full axillary clearance is indicated in specific oncologic situations:",
+        bulletPoints: [
+          "Pre-operatively confirmed multiple positive lymph nodes on ultrasound or core biopsy.",
+          "Patients with positive sentinel nodes who do not meet criteria for trial-based node preservation.",
+          "Persistent nodal disease following neoadjuvant chemotherapy.",
+          "Locally advanced or inflammatory breast cancer requiring definitive regional control.",
+        ],
+      },
+      {
+        heading: "Nerve Sparing & Lymphedema Prevention Protocol",
+        content: "Minimizing long-term arm morbidity is a paramount clinical priority:",
+        bulletPoints: [
+          "Meticulous identification and preservation of the Long Thoracic Nerve (Bell's nerve) to prevent winged scapula.",
+          "Preservation of the Thoracodorsal nerve to maintain latissimus dorsi muscle strength.",
+          "Placement of a gentle closed-suction drain, removed comfortably in OPD within 7 to 15 days.",
+          "Structured day-1 shoulder physiotherapy and lymphatic care guidance to minimize lymphedema risk.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How does ALND differ from Sentinel Lymph Node Biopsy?",
+        answer: "Sentinel Node Biopsy removes only the first 1 to 3 gatekeeper nodes for staging, whereas ALND clears 10 to 30 nodes across Level I and II when cancer spread is confirmed.",
+      },
+      {
+        question: "How is lymphedema prevented after axillary surgery?",
+        answer: "Dr. Noopur Patel utilizes careful surgical dissection avoiding high axillary lymphatic trunks, followed by dedicated post-operative arm exercises, avoidance of blood pressure cuffs on the operative arm, and early physiotherapy.",
+      },
+      {
+        question: "How long is the hospital stay for ALND?",
+        answer: "Most patients remain in the hospital for 1 to 2 days with a surgical drain, which is managed at home and removed comfortably in OPD within 7 to 15 days.",
+      },
+    ],
+    relatedSlugs: [
+      "sentinel-lymph-node-biopsy",
+      "breast-conservation-surgery-ahmedabad",
+      "mastectomy-ahmedabad",
+      "breast-cancer-specialist-ahmedabad",
+    ],
+    ctaText: "Consult for Axillary Surgery",
+    schemaType: "MedicalProcedure",
+  },
+
+  // 29. Benign Breast Conditions
+  "benign-breast-conditions": {
+    slug: "benign-breast-conditions",
+    targetKeyword: "benign breast conditions treatment in ahmedabad",
+    silo: "Benign Breast Care",
+    searchIntent: "Educational / Problem-Solving",
+    competition: "Low",
+    metaTitle: "Benign Breast Conditions Treatment in Ahmedabad | Dr. Noopur Patel",
+    metaDescription: "Comprehensive care for benign breast conditions in Ahmedabad by Dr. Noopur Patel. Treatment for fibroadenomas, cysts, mastitis, breast abscess & fibrocystic changes.",
+    h1: "Benign Breast Conditions Care & Treatment in Ahmedabad",
+    focusOnPageElements: "Non-cancerous conditions, clinical reassurance, VABB scarless biopsy, gentle daycare treatment",
+    secondaryKeywords: [
+      "benign breast disease doctor ahmedabad",
+      "breast cyst treatment sola",
+      "mastitis lady doctor ahmedabad",
+      "fibrocystic breast disease specialist",
+    ],
+    semanticEntities: [
+      "Benign Breast Diseases",
+      "Fibroadenoma",
+      "Simple & Complex Breast Cysts",
+      "Lactational Mastitis & Breast Abscess",
+      "Fibrocystic Breast Condition",
+      "Mammary Duct Ectasia",
+      "Vacuum-Assisted Breast Biopsy (VABB)",
+    ],
+    heroBadge: "COMPREHENSIVE BENIGN CARE · NON-CANCEROUS",
+    heroSubtitle: "Over 80% of breast complaints are non-cancerous. Get prompt, calm, and accurate medical solutions.",
+    quickOverview: "The vast majority of breast symptoms—such as lumps, nipple discharge, tenderness, and inflammation—stem from harmless benign conditions. Dr. Noopur Patel provides gentle clinical examinations, high-resolution ultrasound evaluations, and minimally invasive treatments.",
+    keySections: [
+      {
+        heading: "Common Benign Breast Conditions Managed",
+        content: "We provide comprehensive diagnosis and gentle management for all benign breast disorders:",
+        bulletPoints: [
+          "Fibroadenomas: Smooth, rubbery benign tumors common in young women aged 15-35, managed via observation or daycare excision.",
+          "Breast Cysts: Fluid-filled sacs that fluctuate with hormonal cycles; treated with simple in-office aspiration.",
+          "Fibrocystic Changes: Generalized ropey or glandular breast texture influenced by monthly hormones.",
+          "Mastitis & Breast Abscess: Painful breast infections during lactation; managed with targeted antibiotics, ultrasound-guided aspiration, or minimal drainage.",
+          "Mammary Duct Ectasia: Benign widening of milk ducts near menopause causing thick green or dark discharge.",
+        ],
+      },
+      {
+        heading: "Modern Minimally Invasive Treatment Options",
+        content: "Whenever intervention is necessary, cosmetic preservation is prioritized:",
+        bulletPoints: [
+          "Vacuum-Assisted Breast Biopsy (VABB): Scarless, stitchless removal of benign lumps through a 3 mm pinhole.",
+          "Daycare Excision: Performed with hidden circumareolar incisions and cosmetic dissolvable sutures.",
+          "In-Clinic Cyst Aspiration: Instant pain relief without scars or surgical cuts.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Do benign breast conditions increase breast cancer risk?",
+        answer: "Most benign conditions, including simple cysts and ordinary fibroadenomas, do not increase your risk of breast cancer. Certain complex proliferative lesions may slightly elevate risk, which Dr. Noopur Patel will assess based on histology.",
+      },
+      {
+        question: "Can a painful breast abscess be treated without surgery?",
+        answer: "Yes. Early mastitis is treated with targeted antibiotics. If an abscess forms, ultrasound-guided needle aspiration is often successful, avoiding painful surgical cuts and preserving breastfeeding.",
+      },
+    ],
+    relatedSlugs: [
+      "breast-lump-treatment-ahmedabad",
+      "fibroadenoma-treatment-ahmedabad",
+      "breast-pain-management",
+      "nipple-discharge-treatment-ahmedabad",
+    ],
+    ctaText: "Consult for Benign Breast Care",
     schemaType: "MedicalProcedure",
   },
 };
@@ -1702,12 +1938,24 @@ export function getSeoPageData(slug: string): SeoPageData | undefined {
   const cleanSlug = slug.replace(/^\/+|\/+$/g, "");
   if (cleanSlug === "") return SEO_KEYWORD_MAP["home"];
   
-  // Safe alias routing for mastectomy and common variations
-  if (cleanSlug === "mastectomy" || cleanSlug === "mastectomy-surgery") {
-    return SEO_KEYWORD_MAP["mastectomy-ahmedabad"];
+  // Safe alias routing for renamed cost slugs & common variations
+  if (cleanSlug === "mastectomy" || cleanSlug === "mastectomy-surgery" || cleanSlug === "mastectomy-surgery-cost-ahmedabad") {
+    return SEO_KEYWORD_MAP["mastectomy-surgery-guide-ahmedabad"] || SEO_KEYWORD_MAP["mastectomy-ahmedabad"];
   }
   if (cleanSlug === "bcs" || cleanSlug === "lumpectomy") {
     return SEO_KEYWORD_MAP["breast-conservation-surgery-ahmedabad"];
+  }
+  if (cleanSlug === "breast-lump-removal-surgery-cost-ahmedabad") {
+    return SEO_KEYWORD_MAP["breast-lump-removal-surgery-ahmedabad"];
+  }
+  if (cleanSlug === "fibroadenoma-surgery-cost-ahmedabad") {
+    return SEO_KEYWORD_MAP["fibroadenoma-surgery-ahmedabad"];
+  }
+  if (cleanSlug === "breast-biopsy-cost-ahmedabad") {
+    return SEO_KEYWORD_MAP["breast-biopsy-procedure-ahmedabad"];
+  }
+  if (cleanSlug === "chemo-port-insertion-cost-ahmedabad") {
+    return SEO_KEYWORD_MAP["chemo-port-insertion-procedure-ahmedabad"];
   }
 
   return SEO_KEYWORD_MAP[cleanSlug];

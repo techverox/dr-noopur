@@ -285,7 +285,7 @@ export default async function SeoProcedurePage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* Pricing / Cost & Insurance Box (When applicable) */}
+        {/* Cashless Mediclaim & Insurance Support Box (When applicable) */}
         {pageData.costAndInsurance && (
           <section className="py-8 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -294,16 +294,11 @@ export default async function SeoProcedurePage({ params }: PageProps) {
                   <div className="space-y-2 max-w-3xl">
                     <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-[#9B2846] text-xs font-bold border border-[#EED7DC]">
                       <CreditCard className="w-3.5 h-3.5" />
-                      Transparent Financial Guidance
+                      Insurance &amp; Mediclaim Support
                     </div>
                     <h3 className="text-xl sm:text-2xl font-serif font-bold text-slate-900">
-                      Estimated Cost & Cashless Mediclaim Information
+                      Cashless Mediclaim &amp; Insurance Coverage Assistance
                     </h3>
-                    {pageData.costAndInsurance.indicativeRange && (
-                      <div className="text-lg font-bold text-[#88213B] pt-1">
-                        {pageData.costAndInsurance.indicativeRange}
-                      </div>
-                    )}
                     <p className="text-sm text-slate-700 leading-relaxed">
                       {pageData.costAndInsurance.tpaNotes}
                     </p>
@@ -316,7 +311,7 @@ export default async function SeoProcedurePage({ params }: PageProps) {
                       href="/appointments"
                       className="block text-center px-6 py-3 rounded-xl bg-[#88213B] text-white text-xs font-bold hover:bg-[#731930] transition-colors shadow"
                     >
-                      Get Accurate Insurance Estimate
+                      Check Insurance Pre-Authorization
                     </Link>
                   </div>
                 </div>
