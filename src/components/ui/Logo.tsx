@@ -20,9 +20,9 @@ export function Logo({
   const isDark = variant === "dark";
 
   const scaleMap = {
-    sm: { height: 30, width: 90, gap: "0.4rem" },
-    md: { height: 42, width: 126, gap: "0.5rem" },
-    lg: { height: 54, width: 162, gap: "0.6rem" },
+    sm: { height: 30, width: 101, gap: "0.4rem" },
+    md: { height: 42, width: 142, gap: "0.5rem" },
+    lg: { height: 54, width: 183, gap: "0.6rem" },
   };
 
   const currentScale = scaleMap[size];

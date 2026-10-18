@@ -75,6 +75,21 @@ export default function MedicalDisclaimerPage() {
                   Medicine and surgical oncology involve inherent clinical complexities. Dr. Noopur Patel makes no warranties, express or implied, regarding guaranteed cure, pain-free outcomes, or specific treatment results. All surgical options and risks are discussed transparently with each patient prior to any procedure.
                 </p>
               </section>
+
+              <section className="space-y-2">
+                <h2 className="font-serif text-[20px] font-bold text-[#1A202C]">
+                  5. National Medical Commission (NMC) Ethical Advertising Compliance
+                </h2>
+                <p>
+                  This website is designed strictly in accordance with the National Medical Commission (NMC) Guidelines on Ethical Advertising and Public Communication by Hospitals/Medical Institutions and Registered Medical Practitioners (October 2026). In full compliance with these statutory standards:
+                </p>
+                <ul className="list-disc pl-5 space-y-1.5 text-[14px] text-slate-600">
+                  <li><strong>Verified Practitioner Credentials:</strong> Dr. Noopur Patel is a Registered Medical Practitioner with the Gujarat Medical Council (Reg. No. G-22533), holding recognized qualifications: MBBS, MS (General Surgery), MCh (Surgical Oncology), and Fellowship in Breast Surgical Oncology.</li>
+                  <li><strong>No Commercial Testimonials or Endorsements:</strong> Patient reviews, star ratings, and promotional testimonials are omitted from public marketing. Any clinical guidance is strictly educational.</li>
+                  <li><strong>No Unverifiable Superiority Claims:</strong> This platform avoids terms such as &ldquo;best&rdquo;, &ldquo;No. 1&rdquo;, or claims of clinical supremacy. Information is factual, transparent, and verifiable.</li>
+                  <li><strong>Clinical Establishment Affiliation:</strong> Primary clinical practice is situated at the Department of Surgical Breast Oncology, Marengo CIMS Hospital, Off Science City Road, Sola, Ahmedabad, Gujarat 380060.</li>
+                </ul>
+              </section>
             </div>
 
             <div className="pt-6 border-t border-[#F5D6DE] flex flex-wrap items-center justify-between gap-4">

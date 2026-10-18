@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { SlotImage } from "@/components/common/SlotImage";
 import { 
   Calendar, 
   Clock, 
@@ -146,7 +147,8 @@ export default function AppointmentClient({
               {/* Right Side: Doctor Visual */}
               <div className="lg:col-span-4 flex justify-center lg:justify-end">
                 <div className="relative w-[240px] h-[200px] rounded-2xl overflow-hidden border border-[#F5D6DE] shadow-sm bg-white">
-                  <Image
+                  <SlotImage
+                    slot={45}
                     src="/images/doctor/optimized/dr-noopur-patel-portrait-clinical.webp"
                     alt="Dr. Noopur Patel, Breast Cancer Surgeon at Marengo CIMS Hospital"
                     fill

@@ -15,9 +15,9 @@ export default function MobileBottomNav() {
   }
 
   const isHomeActive = pathname === "/";
+  const isTreatmentsActive = pathname?.startsWith("/treatments") || pathname?.startsWith("/breast-conditions");
   const isAppointmentActive = pathname?.startsWith("/appointments");
   const isContactActive = pathname?.startsWith("/contact");
-  const isFeedbackActive = pathname?.startsWith("/patient-stories") || pathname?.startsWith("/share-story");
 
   const whatsappUrl = `https://wa.me/${SITE_CONFIG.contact.whatsappNumber}?text=${encodeURIComponent(
     "Hello Dr. Noopur Patel, I would like to consult regarding breast health."
@@ -50,7 +50,46 @@ export default function MobileBottomNav() {
           )}
         </Link>
 
-        {/* 2. WHATSAPP */}
+        {/* 2. TREATMENTS */}
+        <Link
+          href="/treatments"
+          className={`flex flex-col items-center justify-center py-1 transition-colors duration-200 select-none ${
+            isTreatmentsActive
+              ? "text-[#D84C70] font-bold"
+              : "text-slate-500 hover:text-slate-800"
+          }`}
+        >
+          <CalendarDays
+            className={`w-5 h-5 transition-transform duration-200 ${
+              isTreatmentsActive ? "scale-110 text-[#D84C70]" : ""
+            }`}
+            strokeWidth={isTreatmentsActive ? 2.5 : 2}
+          />
+          <span className="text-[10px] mt-1 tracking-tight leading-none">Care</span>
+          {isTreatmentsActive && (
+            <span className="w-1 h-1 rounded-full bg-[#D84C70] mt-1" />
+          )}
+        </Link>
+
+        {/* 3. OPD CONSULT (Center Elevated Prominent Button) */}
+        <div className="flex flex-col items-center justify-center relative -top-3">
+          <Link
+            href="/appointments"
+            className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#88213B] via-[#D84C70] to-[#E25C82] text-white flex items-center justify-center shadow-lg shadow-[#D84C70]/40 ring-4 ring-white active:scale-95 transition-transform duration-200 select-none"
+            aria-label="OPD Consultation Schedule"
+          >
+            <CalendarDays className="w-6 h-6 text-white" />
+          </Link>
+          <span
+            className={`text-[10px] mt-1 tracking-tight leading-none font-semibold ${
+              isAppointmentActive ? "text-[#D84C70]" : "text-slate-700"
+            }`}
+          >
+            Consult
+          </span>
+        </div>
+
+        {/* 4. WHATSAPP */}
         <a
           href={whatsappUrl}
           target="_blank"
@@ -71,47 +110,6 @@ export default function MobileBottomNav() {
           </svg>
           <span className="text-[10px] mt-1 tracking-tight leading-none">WhatsApp</span>
         </a>
-
-        {/* 3. FEEDBACK (Center Elevated Prominent Button) */}
-        <div className="flex flex-col items-center justify-center relative -top-3">
-          <Link
-            href="/#feedback"
-            className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#9B2846] via-[#D84C70] to-[#E25C82] text-white flex items-center justify-center shadow-lg shadow-[#D84C70]/40 ring-4 ring-white active:scale-95 transition-transform duration-200 select-none"
-            aria-label="Submit Patient Feedback"
-          >
-            <MessageSquarePlus className="w-6 h-6 text-white" />
-          </Link>
-          <span
-            className={`text-[10px] mt-1 tracking-tight leading-none font-semibold ${
-              isFeedbackActive ? "text-[#D84C70]" : "text-slate-700"
-            }`}
-          >
-            Feedback
-          </span>
-        </div>
-
-        {/* 4. BOOK APPOINTMENT */}
-        <Link
-          href="/appointments"
-          className={`flex flex-col items-center justify-center py-1 transition-colors duration-200 select-none ${
-            isAppointmentActive
-              ? "text-[#D84C70] font-bold"
-              : "text-slate-500 hover:text-slate-800"
-          }`}
-        >
-          <CalendarDays
-            className={`w-5 h-5 transition-transform duration-200 ${
-              isAppointmentActive ? "scale-110 text-[#D84C70]" : ""
-            }`}
-            strokeWidth={isAppointmentActive ? 2.5 : 2}
-          />
-          <span className="text-[10px] mt-1 tracking-tight leading-none text-center">
-            Appointment
-          </span>
-          {isAppointmentActive && (
-            <span className="w-1 h-1 rounded-full bg-[#D84C70] mt-1" />
-          )}
-        </Link>
 
         {/* 5. CONTACT */}
         <Link

@@ -35,6 +35,9 @@ import {
 
 type MediaCategory =
   | "all"
+  | "doctor_gallery"
+  | "certificates"
+  | "testimonials"
   | "logos"
   | "hero"
   | "blog"
@@ -234,10 +237,25 @@ export default function AdminMediaLibraryPage() {
     const name = (item.name || "").toLowerCase();
     const fileName = (item.fileName || "").toLowerCase();
 
+    if (url.includes("/certificate") || name.includes("certificate") || name.includes("degree")) {
+      return "certificates";
+    }
+    if (url.includes("/testimonial") || name.includes("testimonial") || name.includes("patient")) {
+      return "testimonials";
+    }
+    if (
+      url.includes("/gallery/") ||
+      url.includes("/doctor/") ||
+      url.includes("dr_noopur") ||
+      url.includes("dr noopur") ||
+      url.includes("profile")
+    ) {
+      return "doctor_gallery";
+    }
     if (url.includes("/awards/") || name.includes("award") || name.includes("badge") || name.includes("seal")) {
       return "awards";
     }
-    if (url.includes("/team/") || name.includes("team") || name.includes("profile") || name.includes("portrait")) {
+    if (url.includes("/team/") || name.includes("team") || name.includes("portrait")) {
       return "team";
     }
     if (url.includes("/portfolio/") || name.includes("case study") || name.includes("portfolio")) {
@@ -249,7 +267,14 @@ export default function AdminMediaLibraryPage() {
     if (url.includes("/showcase/") || name.includes("card") || name.includes("command")) {
       return "showcase";
     }
-    if (name.includes("logo") || fileName.includes("logo") || name.includes("symbol") || name.includes("wordmark")) {
+    if (
+      name.includes("logo") ||
+      fileName.includes("logo") ||
+      name.includes("symbol") ||
+      name.includes("wordmark") ||
+      url.includes("logo") ||
+      url.includes("icon")
+    ) {
       return "logos";
     }
     if (name.includes("hero") || fileName.includes("hero") || fileName.includes("banner") || name.includes("social card")) {
@@ -289,6 +314,21 @@ export default function AdminMediaLibraryPage() {
   const categories: { key: MediaCategory; label: string; icon: React.ReactNode }[] = [
     { key: "all", label: `All Media (${items.length})`, icon: <FolderOpen className="w-3.5 h-3.5" /> },
     {
+      key: "doctor_gallery",
+      label: `Doctor & Clinic Gallery (${items.filter((i) => getItemCategory(i) === "doctor_gallery").length})`,
+      icon: <Users className="w-3.5 h-3.5 text-[#88213B]" />,
+    },
+    {
+      key: "certificates",
+      label: `Credentials & Degrees (${items.filter((i) => getItemCategory(i) === "certificates").length})`,
+      icon: <Award className="w-3.5 h-3.5 text-amber-600" />,
+    },
+    {
+      key: "testimonials",
+      label: `Patient Testimonials (${items.filter((i) => getItemCategory(i) === "testimonials").length})`,
+      icon: <Sparkles className="w-3.5 h-3.5 text-emerald-600" />,
+    },
+    {
       key: "logos",
       label: `Brand & Logos (${items.filter((i) => getItemCategory(i) === "logos").length})`,
       icon: <Tag className="w-3.5 h-3.5 text-rose-600" />,
@@ -309,19 +349,9 @@ export default function AdminMediaLibraryPage() {
       icon: <Briefcase className="w-3.5 h-3.5 text-amber-600" />,
     },
     {
-      key: "team",
-      label: `Medical Team (${items.filter((i) => getItemCategory(i) === "team").length})`,
-      icon: <Users className="w-3.5 h-3.5 text-teal-600" />,
-    },
-    {
       key: "awards",
       label: `Hospital Accreditations (${items.filter((i) => getItemCategory(i) === "awards").length})`,
       icon: <Award className="w-3.5 h-3.5 text-rose-600" />,
-    },
-    {
-      key: "showcase",
-      label: `Features & Badges (${items.filter((i) => getItemCategory(i) === "showcase").length})`,
-      icon: <Layers className="w-3.5 h-3.5 text-indigo-600" />,
     },
   ];
 
@@ -347,17 +377,30 @@ export default function AdminMediaLibraryPage() {
               </h1>
               <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200/80">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                Live Media Cloud: Connected & Synced
+                Local &amp; Cloud Disk Auto-Synced ({items.length} Images)
               </span>
             </div>
             <p className="text-xs sm:text-sm text-slate-500">
-              Manage doctor portraits, surgical illustrations, blog infographics, and hospital accreditation assets.
+              Manage doctor portraits, surgical illustrations, certificates, and clinical gallery photos in real-time.
             </p>
           </div>
         </div>
 
         {/* Top Actions */}
         <div className="flex flex-wrap items-center gap-2 self-end lg:self-center">
+          <button
+            type="button"
+            onClick={() => {
+              loadMedia();
+              setFeedback({ message: "Rescanned local media folders from disk!", type: "success" });
+              setTimeout(() => setFeedback(null), 3000);
+            }}
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold border border-rose-200 bg-rose-50/50 text-[#88213B] hover:bg-rose-100 transition-colors shadow-2xs cursor-pointer"
+            title="Rescan public/images/doctor folders on computer"
+          >
+            <RotateCcw className="w-3.5 h-3.5 text-[#88213B]" />
+            Rescan Local Folders
+          </button>
           <button
             type="button"
             onClick={() => setIsResetConfirmOpen(true)}
@@ -376,6 +419,41 @@ export default function AdminMediaLibraryPage() {
             Upload New Media
           </button>
         </div>
+      </div>
+
+      {/* Local Folder Auto-Discovery System Banner */}
+      <div className="bg-gradient-to-r from-rose-50/90 via-pink-50/70 to-amber-50/60 p-4 sm:p-5 rounded-2xl border border-rose-200/80 shadow-2xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="flex items-start gap-3">
+          <div className="w-10 h-10 rounded-xl bg-white border border-rose-200 text-[#88213B] flex items-center justify-center shrink-0 shadow-2xs">
+            <FolderOpen className="w-5 h-5 text-[#D84C70]" />
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <h3 className="text-sm font-bold text-slate-900">
+                Automatic Local Folder Discovery Active
+              </h3>
+              <span className="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-200">
+                100% Real-Time
+              </span>
+            </div>
+            <p className="text-xs text-slate-600 mt-0.5 leading-relaxed max-w-3xl">
+              Doctor Noopur website ke sabhi image folders automatically scan ho rahe hain. Computer ke kisi bhi folder se photos copy karke <code className="bg-white px-1.5 py-0.5 rounded border border-rose-200 font-mono text-[11px] text-[#88213B]">public/images/doctor/gallery/</code> me paste karein — system turant media library me load kar dega!
+            </p>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => {
+            loadMedia();
+            setFeedback({ message: "Rescanned all media folders from disk!", type: "success" });
+            setTimeout(() => setFeedback(null), 3000);
+          }}
+          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-[#88213B] hover:bg-rose-50 border border-rose-200 transition-colors shadow-2xs shrink-0 cursor-pointer"
+        >
+          <RotateCcw className="w-3.5 h-3.5" />
+          <span>Rescan Folder Now</span>
+        </button>
       </div>
 
       {/* 2. Bento KPI Cards */}

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { SlotImage } from "@/components/common/SlotImage";
 import { ArrowRight, CheckCircle2, Stethoscope, Play, GraduationCap, Award, X } from "lucide-react";
 import { DOCTOR_PROFILE_IMAGES } from "@/data/mediaManifest";
 
@@ -58,11 +59,14 @@ export default function DoctorAboutSpotlight() {
               <div className="p-4 rounded-2xl bg-[#FAF7F8] border border-[#F0D5DC]">
                 <div className="flex items-center gap-2 text-xs font-bold text-slate-900 mb-1">
                   <GraduationCap className="w-4 h-4 text-[#D84C70]" />
-                  <span>Education &amp; Training</span>
+                  <span>Education &amp; Qualifications</span>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  MBBS, MS (General Surgery), and dedicated Fellowship in Breast Oncology from Max Healthcare Institute.
+                  MBBS, MS (General Surgery), MCh (Surgical Oncology), Fellowship in Breast Surgical Oncology.
                 </p>
+                <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#FFF5F7] border border-[#F5CAD5] text-[11px] font-bold text-[#88213B]">
+                  <span>GMC Reg. No: G-22533</span>
+                </div>
               </div>
 
               <div className="p-4 rounded-2xl bg-[#FAF7F8] border border-[#F0D5DC]">
@@ -73,6 +77,9 @@ export default function DoctorAboutSpotlight() {
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Breast Conservation Surgery (BCS), Oncoplastic Reshaping, Sentinel Node Biopsy (SLNB), and Mastectomy.
                 </p>
+                <div className="mt-2 text-[11px] font-semibold text-slate-500">
+                  Marengo CIMS Hospital, Ahmedabad
+                </div>
               </div>
             </div>
 
@@ -93,7 +100,8 @@ export default function DoctorAboutSpotlight() {
             <div className="w-full max-w-[420px] bg-[#FAF7F8] p-3 sm:p-5 rounded-3xl border border-[#F0D5DC] shadow-sm space-y-4">
               {/* Doctor Office Photo with Video Play Overlay */}
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-[#F0D0D8] group">
-                <Image
+                <SlotImage
+                  slot={2}
                   src={DOCTOR_PROFILE_IMAGES.spotlightCrossedArms.src}
                   alt={DOCTOR_PROFILE_IMAGES.spotlightCrossedArms.alt}
                   fill

@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { SlotImage } from "@/components/common/SlotImage";
 import { 
   Phone, 
   Mail, 
@@ -29,11 +30,12 @@ export default function DoctorFooter() {
           {/* Column 1: Doctor Identity & Mission (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-block group py-1" aria-label="Dr. Noopur Patel — Home">
-              <Image
+              <SlotImage
+                slot={48}
                 src="/images/doctor/assets/logo.png"
                 alt="Dr. Noopur Patel — Breast Cancer Surgeon & Surgical Breast Oncologist"
-                width={250}
-                height={84}
+                width={280}
+                height={83}
                 className="h-12 sm:h-14 w-auto object-contain transition-opacity hover:opacity-95"
               />
             </Link>
@@ -61,33 +63,33 @@ export default function DoctorFooter() {
             </h3>
             <ul className="space-y-2 text-[13.5px]">
               <li>
-                <Link href="/services#breast-cancer-diagnosis-and-treatment" className="text-slate-600 hover:text-[#D84C70] transition-colors">
-                  Breast Cancer Diagnosis &amp; Surgery
+                <Link href="/treatments" className="text-slate-600 hover:text-[#D84C70] transition-colors">
+                  All Treatment Options &amp; Surgeries
                 </Link>
               </li>
               <li>
-                <Link href="/services#oncoplastic-breast-surgery" className="text-slate-600 hover:text-[#D84C70] transition-colors">
-                  Oncoplastic Breast Surgery
+                <Link href="/breast-conditions" className="text-slate-600 hover:text-[#D84C70] transition-colors">
+                  Breast Conditions &amp; Symptoms
                 </Link>
               </li>
               <li>
-                <Link href="/services#breast-conservation-surgery-bcs" className="text-slate-600 hover:text-[#D84C70] transition-colors">
+                <Link href="/screening-diagnosis" className="text-slate-600 hover:text-[#D84C70] transition-colors">
+                  Screening &amp; Diagnostic Modalities
+                </Link>
+              </li>
+              <li>
+                <Link href="/patient-education" className="text-slate-600 hover:text-[#D84C70] transition-colors">
+                  Patient Education Guides &amp; Awareness
+                </Link>
+              </li>
+              <li>
+                <Link href="/treatments#oncoplastic-surgery" className="text-slate-600 hover:text-[#D84C70] transition-colors">
+                  Oncoplastic &amp; Breast Reconstruction
+                </Link>
+              </li>
+              <li>
+                <Link href="/treatments#bcs" className="text-slate-600 hover:text-[#D84C70] transition-colors">
                   Breast Conservation Surgery (BCS)
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#breast-reconstruction-surgery" className="text-slate-600 hover:text-[#D84C70] transition-colors">
-                  Breast Reconstruction Surgery
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#benign-breast-conditions" className="text-slate-600 hover:text-[#D84C70] transition-colors">
-                  Benign Breast Disease Care
-                </Link>
-              </li>
-              <li>
-                <Link href="/patient-guide" className="text-slate-600 hover:text-[#D84C70] transition-colors">
-                  Self-Exam Guide &amp; Screening
                 </Link>
               </li>
             </ul>
@@ -145,23 +147,28 @@ export default function DoctorFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/patient-stories" className="text-slate-600 hover:text-[#D84C70] transition-colors">
-                  Patient Stories
+                <Link href="/about/journey" className="text-slate-600 hover:text-[#D84C70] transition-colors">
+                  Professional Journey &amp; Credentials
                 </Link>
               </li>
               <li>
-                <Link href="/#feedback" className="text-slate-600 hover:text-[#D84C70] transition-colors font-medium">
-                  Review &amp; Feedback (QR)
+                <Link href="/patient-education" className="text-slate-600 hover:text-[#D84C70] transition-colors">
+                  Patient Awareness &amp; Guides
                 </Link>
               </li>
               <li>
-                <Link href="/share-story" className="text-slate-600 hover:text-[#D84C70] transition-colors">
-                  Submit Full Story (Form)
+                <Link href="/screening-diagnosis" className="text-slate-600 hover:text-[#D84C70] transition-colors">
+                  Screening &amp; Early Detection
                 </Link>
               </li>
               <li>
                 <Link href="/appointments" className="text-slate-600 hover:text-[#D84C70] transition-colors font-semibold">
-                  Book Appointment
+                  OPD Schedule &amp; Consultation
+                </Link>
+              </li>
+              <li>
+                <Link href="/medical-disclaimer" className="text-slate-600 hover:text-[#D84C70] transition-colors">
+                  NMC Compliance &amp; Disclaimer
                 </Link>
               </li>
             </ul>
@@ -227,12 +234,12 @@ export default function DoctorFooter() {
 
         </div>
 
-        {/* Clinical Medical Disclaimer Advisory Box */}
+        {/* Clinical Medical Disclaimer Advisory Box (NMC Compliance) */}
         <div className="mt-12 p-4 sm:p-5 rounded-2xl bg-[#FFF8F9] border border-[#F5D6DE]/70 text-[11.5px] text-slate-600 leading-relaxed">
           <div className="flex items-start gap-2.5">
             <ShieldCheck className="w-4 h-4 text-[#D84C70] flex-shrink-0 mt-0.5" />
             <p>
-              <strong className="text-slate-800">Medical Disclaimer:</strong> The clinical educational materials, surgical descriptions, and patient guides provided on this website are for general awareness regarding breast oncology and breast health. They do not substitute for formal in-person clinical examination, diagnostic imaging, biopsy, or a personalized doctor-patient consultation. For acute medical concerns or breast symptoms, please schedule an OPD consultation at Marengo CIMS Hospital or contact the hospital casualty department immediately.
+              <strong className="text-slate-800">Medical Disclaimer &amp; NMC Regulatory Compliance:</strong> The educational content, procedure guides, and breast health resources on this website are published solely for general awareness in accordance with the National Medical Commission (NMC) Guidelines on Ethical Advertising and Public Communication (October 2026). They do not constitute formal medical diagnosis, guarantee clinical outcomes, or replace an in-person clinical consultation. Dr. Noopur Patel is a Registered Medical Practitioner (Gujarat Medical Council, Reg. No. G-22533) practicing at Marengo CIMS Hospital, Sola, Ahmedabad. In case of acute medical emergencies, please visit the nearest hospital casualty department immediately.
             </p>
           </div>
         </div>

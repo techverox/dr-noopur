@@ -19,5 +19,6 @@ export * from "./redirect";
 export * from "./landingPage";
 export * from "./rbac";
 export * from "./instagram";
+export * from "./imageSlots";
 
 

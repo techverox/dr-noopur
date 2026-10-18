@@ -11,20 +11,18 @@ import FeaturedProceduresSection from "@/components/doctor/FeaturedProceduresSec
 import CareJourneyTimeline from "@/components/doctor/CareJourneyTimeline";
 import InstagramAwarenessFeed from "@/components/doctor/InstagramAwarenessFeed";
 import CommunityInitiativesSection from "@/components/doctor/CommunityInitiativesSection";
-import PatientStoriesSection from "@/components/doctor/PatientStoriesSection";
-import PatientReviewQrSection from "@/components/doctor/PatientReviewQrSection";
+import EthicalCareStandardsSection from "@/components/doctor/EthicalCareStandardsSection";
 import DoctorFaqAccordion from "@/components/doctor/DoctorFaqAccordion";
 import ClinicLocationSection from "@/components/doctor/ClinicLocationSection";
+import HomePatientEducationGuides from "@/components/doctor/HomePatientEducationGuides";
 import HopeCtaBanner from "@/components/doctor/HopeCtaBanner";
 import DoctorFooter from "@/components/doctor/DoctorFooter";
 import {
-  getCmsTestimonials,
   getCmsFaqs,
   getCmsPageContent,
 } from "@/lib/services/cmsService";
 import { DEFAULT_HOME_PAGE_CONTENT } from "@/data/pagesContent";
 import { HomePageContent } from "@/types";
-import { TESTIMONIALS_DATA } from "@/data/testimonials";
 import { FAQS_DATA } from "@/data/faqs";
 import { getSeoPageData } from "@/data/seoKeywordMap";
 import { SITE_CONFIG } from "@/config/site";
@@ -35,7 +33,7 @@ export const revalidate = 60;
 
 export async function generateMetadata(): Promise<Metadata> {
   const homeSeo = getSeoPageData("home");
-  const title = homeSeo?.metaTitle || "Best Breast Surgeon in Ahmedabad | Dr. Noopur Patel";
+  const title = homeSeo?.metaTitle || "Dr. Noopur Patel | Breast Cancer Surgeon & Oncoplastic Specialist in Ahmedabad";
   const description =
     homeSeo?.metaDescription ||
     "Dr. Noopur Patel is a Breast Cancer Surgeon and Oncoplastic Specialist at Marengo CIMS Hospital, Ahmedabad. Specialised breast cancer surgery and compassionate care.";
@@ -59,7 +57,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: `${SITE_CONFIG.url}/images/doctor/optimized/dr-noopur-patel-hero-portrait.webp`,
           width: 1200,
           height: 630,
-          alt: "Dr. Noopur Patel - Best Breast Cancer Surgeon in Ahmedabad",
+          alt: "Dr. Noopur Patel - Breast Cancer Surgeon & Surgical Oncologist in Ahmedabad",
         },
       ],
       type: "website",
@@ -68,20 +66,17 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Home() {
-  let testimonials = TESTIMONIALS_DATA;
   let faqs = FAQS_DATA;
   let homeContent: HomePageContent = DEFAULT_HOME_PAGE_CONTENT;
   let instagramPosts: InstagramPost[] = DEFAULT_INSTAGRAM_POSTS;
 
   try {
-    const [cmsTestimonials, cmsFaqs, cmsHomeContent, cmsInstagramPosts] = await Promise.all([
-      getCmsTestimonials().catch(() => TESTIMONIALS_DATA),
+    const [cmsFaqs, cmsHomeContent, cmsInstagramPosts] = await Promise.all([
       getCmsFaqs().catch(() => FAQS_DATA),
       getCmsPageContent("home").catch(() => DEFAULT_HOME_PAGE_CONTENT),
       getInstagramPosts().catch(() => DEFAULT_INSTAGRAM_POSTS),
     ]);
 
-    if (cmsTestimonials && cmsTestimonials.length > 0) testimonials = cmsTestimonials;
     if (cmsFaqs && cmsFaqs.length > 0) faqs = cmsFaqs;
     if (cmsHomeContent) {
       homeContent = { ...DEFAULT_HOME_PAGE_CONTENT, ...cmsHomeContent };
@@ -219,7 +214,10 @@ export default async function Home() {
         {/* 08. Featured / Specialised Advanced Procedures */}
         <FeaturedProceduresSection />
 
-        {/* 09. Breast Cancer Treatment Journey (7-Step Interactive Timeline) */}
+        {/* 09. Patient Education Guides (Slots #03, #04, #05 - Wireframe 44 Section 05) */}
+        <HomePatientEducationGuides />
+
+        {/* 10. Breast Cancer Treatment Journey (7-Step Interactive Timeline) */}
         <CareJourneyTimeline />
 
         {/* 10. Instagram — Latest Reels */}
@@ -228,13 +226,10 @@ export default async function Home() {
         {/* 11. Cancer Patient Support Group, Screening Camps & Awareness Sessions */}
         <CommunityInitiativesSection />
 
-        {/* 12. Patient Testimonials (What Our Patients Say) */}
-        <PatientStoriesSection testimonials={testimonials} />
+        {/* 12. Ethical Care Standards & Clinical Governance (NMC 2026 Compliant) */}
+        <EthicalCareStandardsSection />
 
-        {/* 13. Interactive Patient Feedback & Scannable Review QR Code Hub */}
-        <PatientReviewQrSection />
-
-        {/* 14. Frequently Asked Questions */}
+        {/* 13. Frequently Asked Questions */}
         <DoctorFaqAccordion faqs={faqs} />
 
         {/* 14. Location / Clinic Information with Google Map */}

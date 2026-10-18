@@ -20,6 +20,7 @@ import * as h_admin_instagram from "@/lib/api/handlers/admin/instagram/route";
 import * as h_admin_landing_pages from "@/lib/api/handlers/admin/landing-pages/route";
 import * as h_admin_leads from "@/lib/api/handlers/admin/leads/route";
 import * as h_admin_media from "@/lib/api/handlers/admin/media/route";
+import * as h_admin_image_slots from "@/lib/api/handlers/admin/image-slots/route";
 import * as h_admin_offers from "@/lib/api/handlers/admin/offers/route";
 import * as h_admin_pages from "@/lib/api/handlers/admin/pages/route";
 import * as h_admin_portfolio from "@/lib/api/handlers/admin/portfolio/route";
@@ -199,6 +200,12 @@ const ROUTES: RouteMatch[] = [
     handlers: h_admin_media,
   },
   {
+    pattern: "admin/image-slots",
+    segments: ["admin","image-slots"],
+    isDynamic: false,
+    handlers: h_admin_image_slots,
+  },
+  {
     pattern: "admin/offers",
     segments: ["admin","offers"],
     isDynamic: false,
@@ -347,6 +354,12 @@ const ROUTES: RouteMatch[] = [
     segments: ["stories","submit"],
     isDynamic: false,
     handlers: h_stories_submit,
+  },
+  {
+    pattern: "image-slots",
+    segments: ["image-slots"],
+    isDynamic: false,
+    handlers: h_admin_image_slots,
   },
   {
     pattern: "health",

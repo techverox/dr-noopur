@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { SlotImage } from "@/components/common/SlotImage";
 import { usePathname } from "next/navigation";
 import { 
   MapPin, 
@@ -14,8 +15,8 @@ import {
   MessageCircle,
   ChevronDown,
   ArrowRight,
-  QrCode,
-  Star
+  ShieldCheck,
+  HeartHandshake
 } from "lucide-react";
 import { SITE_CONFIG } from "@/config/site";
 
@@ -23,7 +24,7 @@ export default function DoctorNavbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isTreatmentsOpen, setIsTreatmentsOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
@@ -53,49 +54,65 @@ export default function DoctorNavbar() {
     }
   }, [isMobileMenuOpen]);
 
-  // Clean, minimalist, uncluttered navigation links (Conditions before Treatments)
+  // Clean, minimalist, uncluttered navigation links strictly aligned with Phase 2 Hierarchy
   const navLinks = [
-    { label: "About", href: "/about" },
-    { label: "Conditions", href: "/#conditions" },
-    { 
-      label: "Treatments", 
-      href: "/services",
+    {
+      label: "About",
+      href: "/about",
       hasDropdown: true,
       subItems: [
-        { 
-          title: "Breast Cancer Surgery", 
-          href: "/breast-cancer-surgery", 
-          desc: "Comprehensive oncological staging & surgical care" 
+        {
+          title: "About Dr. Noopur Patel",
+          href: "/about",
+          desc: "Background, clinical philosophy, and ethical patient care",
         },
-        { 
-          title: "Breast Conservation (BCS)", 
-          href: "/breast-conservation-surgery-ahmedabad", 
-          desc: "Lumpectomy preserving natural breast shape" 
+        {
+          title: "Professional Journey & Credentials",
+          href: "/about/journey",
+          desc: "MBBS, MS, MCh, fellowship, mentors & memberships",
         },
-        { 
-          title: "Mastectomy Surgery", 
-          href: "/mastectomy-ahmedabad", 
-          desc: "Total, MRM & skin-sparing clearance" 
-        },
-        { 
-          title: "Oncoplastic Breast Surgery", 
-          href: "/oncoplastic-breast-surgery-ahmedabad", 
-          desc: "Tumor excision with cosmetic breast contouring" 
-        },
-        { 
-          title: "Sentinel Node Biopsy (SLNB)", 
-          href: "/sentinel-lymph-node-biopsy", 
-          desc: "Precision lymphatic mapping protecting arm health" 
-        },
-        { 
-          title: "Breast Reconstruction", 
-          href: "/breast-reconstruction-surgery-ahmedabad", 
-          desc: "Immediate or delayed breast form restoration" 
-        },
-      ]
+      ],
     },
-    { label: "Patient Stories", href: "/patient-stories" },
-    { label: "Feedback (QR)", href: "/#feedback" },
+    { label: "Conditions", href: "/breast-conditions" },
+    {
+      label: "Treatments",
+      href: "/treatments",
+      hasDropdown: true,
+      subItems: [
+        {
+          title: "All Treatment Options",
+          href: "/treatments",
+          desc: "Evidence-based surgical oncology & oncoplastic portfolio",
+        },
+        {
+          title: "Breast Cancer Surgery",
+          href: "/breast-cancer-surgery",
+          desc: "Comprehensive oncological staging & surgical resection",
+        },
+        {
+          title: "Breast Conservation (BCS)",
+          href: "/breast-conservation-surgery-ahmedabad",
+          desc: "Lumpectomy preserving natural breast contours",
+        },
+        {
+          title: "Mastectomy Surgery",
+          href: "/mastectomy-ahmedabad",
+          desc: "Simple, skin-sparing & nipple-sparing options",
+        },
+        {
+          title: "Oncoplastic Surgery",
+          href: "/oncoplastic-breast-surgery-ahmedabad",
+          desc: "Cancer clearance combined with plastic reshaping",
+        },
+        {
+          title: "Sentinel Node Biopsy (SLNB)",
+          href: "/sentinel-lymph-node-biopsy",
+          desc: "Minimally invasive axillary staging protecting arm health",
+        },
+      ],
+    },
+    { label: "Screening", href: "/screening-diagnosis" },
+    { label: "Education", href: "/patient-education" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -104,14 +121,14 @@ export default function DoctorNavbar() {
     return pathname.startsWith(href);
   };
 
-  const handleMouseEnterTreatments = () => {
+  const handleMouseEnterDropdown = (label: string) => {
     if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
-    setIsTreatmentsOpen(true);
+    setOpenDropdown(label);
   };
 
-  const handleMouseLeaveTreatments = () => {
+  const handleMouseLeaveDropdown = () => {
     dropdownTimeoutRef.current = setTimeout(() => {
-      setIsTreatmentsOpen(false);
+      setOpenDropdown(null);
     }, 150);
   };
 
@@ -142,11 +159,11 @@ export default function DoctorNavbar() {
 
           <div className="flex items-center space-x-4">
             <Link
-              href="/#feedback"
+              href="/share-story"
               className="flex items-center gap-1.5 text-[#88213B] font-semibold hover:text-[#D84C70] transition-colors"
             >
-              <QrCode className="w-3.5 h-3.5 text-[#D84C70]" />
-              <span>Review / Feedback (QR)</span>
+              <HeartHandshake className="w-3.5 h-3.5 text-[#D84C70]" />
+              <span>Patient Guidance</span>
             </Link>
             <span className="text-slate-300">|</span>
             <a
@@ -177,12 +194,13 @@ export default function DoctorNavbar() {
             className="flex items-center group shrink-0" 
             aria-label="Dr. Noopur Patel — Home"
           >
-            <Image
+            <SlotImage
+              slot={47}
               src="/images/doctor/assets/logo.png"
               alt="Dr. Noopur Patel — Breast Cancer Surgeon & Surgical Breast Oncologist"
-              width={300}
+              width={324}
               height={96}
-              className="h-14 sm:h-16 md:h-16 w-auto object-contain transition-transform group-hover:scale-[1.01]"
+              className="h-13 sm:h-15 md:h-16 w-auto object-contain transition-transform group-hover:scale-[1.01]"
               priority
             />
           </Link>
@@ -197,30 +215,30 @@ export default function DoctorNavbar() {
                   <div
                     key={link.label}
                     className="relative"
-                    onMouseEnter={handleMouseEnterTreatments}
-                    onMouseLeave={handleMouseLeaveTreatments}
+                    onMouseEnter={() => handleMouseEnterDropdown(link.label)}
+                    onMouseLeave={handleMouseLeaveDropdown}
                   >
                     <Link
                       href={link.href}
                       className={`text-[13.5px] font-medium transition-all duration-200 flex items-center gap-1 py-1.5 whitespace-nowrap ${
-                        active || isTreatmentsOpen
+                        active || openDropdown === link.label
                           ? "text-[#88213B] font-semibold"
                           : "text-slate-700 hover:text-[#88213B]"
                       }`}
                     >
                       <span>{link.label}</span>
-                      <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isTreatmentsOpen ? "rotate-180 text-[#88213B]" : "text-slate-400"}`} />
+                      <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${openDropdown === link.label ? "rotate-180 text-[#88213B]" : "text-slate-400"}`} />
                     </Link>
 
                     {/* Elegant Minimalist Dropdown Menu */}
-                    {isTreatmentsOpen && (
+                    {openDropdown === link.label && (
                       <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-80 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
                         <div className="bg-white rounded-2xl shadow-xl border border-[#F0D5DC] p-3 space-y-1">
                           {link.subItems?.map((sub) => (
                             <Link
                               key={sub.href}
                               href={sub.href}
-                              onClick={() => setIsTreatmentsOpen(false)}
+                              onClick={() => setOpenDropdown(null)}
                               className="block p-2.5 rounded-xl hover:bg-[#FFF5F7] transition-colors group"
                             >
                               <div className="text-xs font-bold text-slate-800 group-hover:text-[#88213B] transition-colors">
@@ -233,11 +251,11 @@ export default function DoctorNavbar() {
                           ))}
                           <div className="pt-2 mt-1 border-t border-slate-100 px-2.5 pb-1 flex items-center justify-between text-[11px] font-bold text-[#88213B]">
                             <Link 
-                              href="/services" 
-                              onClick={() => setIsTreatmentsOpen(false)}
+                              href={link.href} 
+                              onClick={() => setOpenDropdown(null)}
                               className="hover:underline flex items-center gap-1"
                             >
-                              <span>View All Procedures</span>
+                              <span>Explore {link.label} Overview</span>
                               <ArrowRight className="w-3 h-3" />
                             </Link>
                           </div>
@@ -345,9 +363,9 @@ export default function DoctorNavbar() {
                 <Image
                   src="/images/doctor/assets/logo.png"
                   alt="Dr. Noopur Patel Logo"
-                  width={260}
-                  height={84}
-                  className="h-13 w-auto object-contain"
+                  width={280}
+                  height={83}
+                  className="h-12 w-auto object-contain"
                 />
                 <button
                   type="button"
@@ -359,11 +377,11 @@ export default function DoctorNavbar() {
                 </button>
               </div>
 
-              <nav className="flex flex-col space-y-1.5 mt-6">
+              <nav className="flex flex-col space-y-1 mt-5">
                 <Link
                   href="/"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-[14.5px] font-medium px-4 py-2.5 rounded-xl transition-colors ${
+                  className={`text-[14px] font-medium px-3.5 py-2 rounded-xl transition-colors ${
                     pathname === "/"
                       ? "bg-[#FFF8F9] text-[#88213B] font-bold border border-[#F5D6DE]"
                       : "text-slate-800 hover:bg-slate-50"
@@ -374,8 +392,8 @@ export default function DoctorNavbar() {
                 <Link
                   href="/about"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-[14.5px] font-medium px-4 py-2.5 rounded-xl transition-colors ${
-                    pathname.startsWith("/about")
+                  className={`text-[14px] font-medium px-3.5 py-2 rounded-xl transition-colors ${
+                    pathname === "/about"
                       ? "bg-[#FFF8F9] text-[#88213B] font-bold border border-[#F5D6DE]"
                       : "text-slate-800 hover:bg-slate-50"
                   }`}
@@ -383,17 +401,32 @@ export default function DoctorNavbar() {
                   About Dr. Noopur Patel
                 </Link>
                 <Link
-                  href="/#conditions"
+                  href="/about/journey"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-[14.5px] font-medium px-4 py-2.5 rounded-xl text-slate-800 hover:bg-slate-50 transition-colors"
+                  className={`text-[13px] font-medium pl-7 pr-3 py-1.5 rounded-xl transition-colors ${
+                    pathname === "/about/journey"
+                      ? "bg-[#FFF8F9] text-[#88213B] font-bold border border-[#F5D6DE]"
+                      : "text-slate-600 hover:bg-slate-50"
+                  }`}
+                >
+                  ↳ Professional Journey & Credentials
+                </Link>
+                <Link
+                  href="/breast-conditions"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`text-[14px] font-medium px-3.5 py-2 rounded-xl transition-colors ${
+                    pathname.startsWith("/breast-conditions")
+                      ? "bg-[#FFF8F9] text-[#88213B] font-bold border border-[#F5D6DE]"
+                      : "text-slate-800 hover:bg-slate-50"
+                  }`}
                 >
                   Breast Conditions
                 </Link>
                 <Link
-                  href="/services"
+                  href="/treatments"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-[14.5px] font-medium px-4 py-2.5 rounded-xl transition-colors ${
-                    pathname.startsWith("/services") || pathname.startsWith("/breast-cancer-surgery") || pathname.startsWith("/mastectomy")
+                  className={`text-[14px] font-medium px-3.5 py-2 rounded-xl transition-colors ${
+                    pathname.startsWith("/treatments") || pathname.startsWith("/breast-cancer-surgery") || pathname.startsWith("/mastectomy")
                       ? "bg-[#FFF8F9] text-[#88213B] font-bold border border-[#F5D6DE]"
                       : "text-slate-800 hover:bg-slate-50"
                   }`}
@@ -401,33 +434,44 @@ export default function DoctorNavbar() {
                   Treatments &amp; Surgery
                 </Link>
                 <Link
-                  href="/patient-stories"
+                  href="/screening-diagnosis"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-[14.5px] font-medium px-4 py-2.5 rounded-xl transition-colors ${
-                    pathname.startsWith("/patient-stories")
+                  className={`text-[14px] font-medium px-3.5 py-2 rounded-xl transition-colors ${
+                    pathname.startsWith("/screening-diagnosis")
                       ? "bg-[#FFF8F9] text-[#88213B] font-bold border border-[#F5D6DE]"
                       : "text-slate-800 hover:bg-slate-50"
                   }`}
                 >
-                  Patient Stories
+                  Screening &amp; Diagnosis
                 </Link>
                 <Link
-                  href="/#feedback"
+                  href="/patient-education"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center justify-between text-[14.5px] font-medium px-4 py-2.5 rounded-xl text-slate-800 hover:bg-[#FFF8F9] hover:text-[#88213B] transition-colors group"
+                  className={`text-[14px] font-medium px-3.5 py-2 rounded-xl transition-colors ${
+                    pathname.startsWith("/patient-education")
+                      ? "bg-[#FFF8F9] text-[#88213B] font-bold border border-[#F5D6DE]"
+                      : "text-slate-800 hover:bg-slate-50"
+                  }`}
+                >
+                  Patient Education
+                </Link>
+                <Link
+                  href="/share-story"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center justify-between text-[14px] font-medium px-3.5 py-2 rounded-xl text-slate-800 hover:bg-[#FFF8F9] hover:text-[#88213B] transition-colors group"
                 >
                   <span className="flex items-center gap-2">
-                    <QrCode className="w-4 h-4 text-[#D84C70]" />
-                    <span>Feedback &amp; Review (QR)</span>
+                    <HeartHandshake className="w-4 h-4 text-[#D84C70]" />
+                    <span>Patient Guidance &amp; Care</span>
                   </span>
                   <span className="text-[10px] font-bold text-[#88213B] bg-[#FFF0F3] px-2 py-0.5 rounded-full border border-[#F5D6DE]">
-                    Scan QR
+                    NMC Compliant
                   </span>
                 </Link>
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-[14.5px] font-medium px-4 py-2.5 rounded-xl transition-colors ${
+                  className={`text-[14px] font-medium px-3.5 py-2 rounded-xl transition-colors ${
                     pathname.startsWith("/contact")
                       ? "bg-[#FFF8F9] text-[#88213B] font-bold border border-[#F5D6DE]"
                       : "text-slate-800 hover:bg-slate-50"

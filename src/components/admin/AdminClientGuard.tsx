@@ -18,6 +18,10 @@ export function AdminClientGuard({ children }: { children: React.ReactNode }) {
   const [isVerifying, setIsVerifying] = useState(!isLoginPage);
 
   useEffect(() => {
+    document.documentElement.classList.remove("dark");
+    document.documentElement.classList.add("light");
+    document.documentElement.style.colorScheme = "light";
+
     let isCancelled = false;
 
     async function checkAuthSession() {

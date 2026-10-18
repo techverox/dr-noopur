@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
   ],
   allowedDevOrigins: ["192.168.1.34", "localhost:3000"],
   images: {
+    qualities: [75, 85, 90, 92, 95, 100],
     remotePatterns: [
       { protocol: "https", hostname: "**.cdninstagram.com" },
       { protocol: "https", hostname: "**.fbcdn.net" },

@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { SlotImage } from "@/components/common/SlotImage";
 import { 
   Calendar, 
   MapPin, 
@@ -66,12 +67,14 @@ export default function DoctorHero({
                   ========================================================================= */}
               <div className="w-full lg:hidden order-1">
                 <div className="relative w-full max-w-md mx-auto aspect-square sm:aspect-[4/3.8] rounded-2xl overflow-hidden bg-gradient-to-b from-[#FCEEF2] to-[#F5D2DB] border border-[#F5CAD5] shadow-md">
-                  <Image
-                    src={DOCTOR_PROFILE_IMAGES.heroMobile.src}
+                  <SlotImage
+                    slot={1}
+                    src="/images/doctor/assets/hero-image.png"
                     alt={DOCTOR_PROFILE_IMAGES.heroMobile.alt}
                     fill
                     priority
-                    sizes="(max-width: 1024px) 100vw, 420px"
+                    quality={95}
+                    sizes="(max-width: 1024px) 100vw, 640px"
                     className="object-cover object-[center_top]"
                   />
                   {/* Subtle Gradient Overlay at bottom for legibility */}
@@ -136,23 +139,23 @@ export default function DoctorHero({
                   {subheadline}
                 </p>
 
-                {/* 4. Four Bullet Highlights */}
+                {/* 4. Four Bullet Highlights (Verified Qualifications & Clinical Focus) */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5 pt-1">
                   <div className="flex items-center gap-2 text-xs sm:text-[13px] font-medium text-slate-800">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Lady Breast Surgeon for Confidential Care</span>
+                    <span>MBBS, MS, MCh (Surg Onco) · GMC G-22533</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs sm:text-[13px] font-medium text-slate-800">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Fellowship in Breast Oncology (Max)</span>
+                    <span>Fellowship in Breast Surgical Oncology</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs sm:text-[13px] font-medium text-slate-800">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Breast Conservation &amp; Oncoplastic Surgery</span>
+                    <span>Breast Conservation (BCS) &amp; Oncoplastic Surgery</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs sm:text-[13px] font-medium text-slate-800">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>100% Cashless Mediclaim &amp; TPA Empaneled</span>
+                    <span>Cashless Mediclaim &amp; TPA Empaneled at CIMS</span>
                   </div>
                 </div>
 
@@ -255,12 +258,14 @@ export default function DoctorHero({
 
                   {/* Main Portrait Card */}
                   <div className="relative aspect-[4/5] rounded-[28px] overflow-hidden bg-gradient-to-b from-[#FFF5F7] via-white to-[#FCE8ED] border-2 border-white shadow-xl">
-                    <Image
-                      src={DOCTOR_PROFILE_IMAGES.heroPrimary.src}
+                    <SlotImage
+                      slot={1}
+                      src="/images/doctor/assets/hero-image.png"
                       alt={DOCTOR_PROFILE_IMAGES.heroPrimary.alt}
                       fill
                       priority
-                      sizes="(min-width: 1024px) 480px"
+                      quality={95}
+                      sizes="(min-width: 1024px) 960px, 100vw"
                       className="object-cover object-[center_top] hover:scale-[1.02] transition-transform duration-500"
                     />
 

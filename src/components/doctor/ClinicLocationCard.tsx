@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { SlotImage } from "@/components/common/SlotImage";
 import {
   MapPin,
   Navigation,
@@ -232,7 +233,8 @@ export default function ClinicLocationCard({
         ) : (
           <>
             {/* Real Hospital Reception Photo */}
-            <Image
+            <SlotImage
+              slot={46}
               src="/images/doctor/assets/clinic-reception.jpg"
               alt="Marengo CIMS Hospital Reception & Consultation Suite"
               fill

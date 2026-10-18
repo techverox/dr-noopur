@@ -17,11 +17,6 @@ export default function AdminRootLayout({
 }) {
   return (
     <div className="light bg-[#F8FAFC] text-slate-900 min-h-screen" style={{ colorScheme: "light" }}>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `document.documentElement.classList.remove('dark');document.documentElement.classList.add('light');document.documentElement.style.colorScheme='light';`,
-        }}
-      />
       <AdminClientGuard>{children}</AdminClientGuard>
     </div>
   );

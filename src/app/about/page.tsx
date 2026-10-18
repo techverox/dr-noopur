@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { SlotImage } from "@/components/common/SlotImage";
 import { 
   Ribbon, 
   Heart, 
@@ -21,10 +22,9 @@ import {
 import DoctorNavbar from "@/components/doctor/DoctorNavbar";
 import DoctorFooter from "@/components/doctor/DoctorFooter";
 import HopeCtaBanner from "@/components/doctor/HopeCtaBanner";
+import EthicalCareStandardsSection from "@/components/doctor/EthicalCareStandardsSection";
 import TrustStrip from "@/components/doctor/TrustStrip";
-import PatientStoriesSection from "@/components/doctor/PatientStoriesSection";
-import { TESTIMONIALS_DATA } from "@/data/testimonials";
-import { getCmsTestimonials, getCmsPageContent } from "@/lib/services/cmsService";
+import { getCmsPageContent } from "@/lib/services/cmsService";
 import { DEFAULT_ABOUT_PAGE_CONTENT } from "@/data/pagesContent";
 import { AboutPageContent } from "@/types";
 import { 
@@ -41,17 +41,10 @@ export const metadata = {
 };
 
 export default async function AboutPage() {
-  let testimonials = TESTIMONIALS_DATA;
   let aboutContent: AboutPageContent = DEFAULT_ABOUT_PAGE_CONTENT;
 
   try {
-    const [cmsTestimonials, cmsAboutContent] = await Promise.all([
-      getCmsTestimonials().catch(() => null),
-      getCmsPageContent("about").catch(() => null),
-    ]);
-    if (cmsTestimonials && cmsTestimonials.length > 0) {
-      testimonials = cmsTestimonials;
-    }
+    const cmsAboutContent = await getCmsPageContent("about").catch(() => null);
     if (cmsAboutContent) {
       aboutContent = { ...DEFAULT_ABOUT_PAGE_CONTENT, ...cmsAboutContent };
     }
@@ -161,7 +154,8 @@ export default async function AboutPage() {
               <div className="lg:col-span-5 relative flex justify-center">
                 <div className="relative w-full max-w-[400px] aspect-[4/5] rounded-[32px] overflow-hidden bg-[#FDF2F4] border border-[#F5D6DE] shadow-xl p-2.5">
                   <div className="relative w-full h-full rounded-[26px] overflow-hidden">
-                    <Image
+                    <SlotImage
+                      slot={7}
                       src={DOCTOR_PROFILE_IMAGES.heroPrimary.src}
                       alt={DOCTOR_PROFILE_IMAGES.heroPrimary.alt}
                       fill
@@ -196,7 +190,8 @@ export default async function AboutPage() {
               
               <div className="lg:col-span-6 flex justify-center">
                 <div className="relative w-full max-w-[480px] aspect-[4/3] rounded-3xl overflow-hidden border border-[#F5D6DE] shadow-lg">
-                  <Image
+                  <SlotImage
+                    slot={8}
                     src={DOCTOR_PROFILE_IMAGES.spotlightStanding.src}
                     alt={DOCTOR_PROFILE_IMAGES.spotlightStanding.alt}
                     fill
@@ -445,7 +440,8 @@ export default async function AboutPage() {
               
               <div className="lg:col-span-5 flex justify-center">
                 <div className="relative w-full max-w-[420px] aspect-[4/3] rounded-3xl overflow-hidden bg-[#FFF8F9] border border-[#F5D6DE] shadow-md">
-                  <Image
+                  <SlotImage
+                    slot={9}
                     src={DOCTOR_PROFILE_IMAGES.spotlightCrossedArms.src}
                     alt={DOCTOR_PROFILE_IMAGES.spotlightCrossedArms.alt}
                     fill
@@ -706,8 +702,8 @@ export default async function AboutPage() {
           </div>
         </section>
 
-        {/* 9. REAL PATIENT STORIES */}
-        <PatientStoriesSection testimonials={testimonials} />
+        {/* 9. CLINICAL GOVERNANCE & ETHICAL CARE STANDARDS (NMC 2026 COMPLIANT) */}
+        <EthicalCareStandardsSection />
 
         {/* 10. HOPE CTA BANNER & TRUST STRIP */}
         <HopeCtaBanner />

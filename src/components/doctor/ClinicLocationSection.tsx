@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { SlotImage } from "@/components/common/SlotImage";
 import {
   MapPin,
   Phone,
@@ -138,7 +139,8 @@ export default function ClinicLocationSection() {
           {/* Right Column: Reception Photo Card */}
           <div className="lg:col-span-6 flex flex-col">
             <div className="relative w-full h-full min-h-[340px] sm:min-h-[400px] rounded-3xl overflow-hidden border border-[#F0D5DC] shadow-sm bg-slate-100 group">
-              <Image
+              <SlotImage
+                slot={6}
                 src="/images/doctor/assets/clinic-reception.jpg"
                 alt="Dr. Noopur Patel Clinic Reception at Marengo CIMS Hospital"
                 fill

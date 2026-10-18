@@ -1,5 +1,6 @@
 import path from "path";
 import fs from "fs/promises";
+import fsSync from "fs";
 import { getAdminFirestore, getFirebaseAdminApp, getAdminStorage, FieldValue } from "@/lib/firebase/admin";
 import { COLLECTIONS } from "@/config/firebase";
 import { MediaItem, MediaUsageCheckResult, MediaUsageReference } from "@/types";
@@ -648,7 +649,62 @@ export const ALLOWED_MEDIA_MIME_TYPES = [
 export const MAX_MEDIA_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 
 /**
+ * Automatically scans local public/images/doctor directories for offline-copied images.
+ * Whenever any image file is pasted into public/images/doctor (or any subfolder like gallery, assets, user-updates),
+ * it is immediately indexed and available in the Media Library and Image Slots without uploading.
+ */
+export function scanLocalDoctorMediaDirectories(): MediaItem[] {
+  try {
+    const scanDir = (relDir: string): MediaItem[] => {
+      const fullDir = path.join(process.cwd(), relDir);
+      if (!fsSync.existsSync(fullDir)) return [];
+      let list: MediaItem[] = [];
+      const entries = fsSync.readdirSync(fullDir, { withFileTypes: true });
+      for (const entry of entries) {
+        const fullPath = path.join(fullDir, entry.name);
+        if (entry.isDirectory()) {
+          list = list.concat(scanDir(path.join(relDir, entry.name)));
+        } else {
+          const ext = path.extname(entry.name).toLowerCase();
+          if ([".png", ".jpg", ".jpeg", ".webp", ".svg", ".gif"].includes(ext)) {
+            const stat = fsSync.statSync(fullPath);
+            const webUrl = "/" + path.relative(path.join(process.cwd(), "public"), fullPath).replace(/\\/g, "/");
+            const cleanName = entry.name
+              .replace(/\.[^/.]+$/, "")
+              .replace(/[-_]+/g, " ")
+              .trim()
+              .replace(/\b\w/g, (c: string) => c.toUpperCase());
+            list.push({
+              id: "local-" + Buffer.from(webUrl).toString("base64url"),
+              name: cleanName,
+              fileName: entry.name,
+              url: webUrl,
+              storagePath: webUrl.replace(/^\//, ""),
+              fileSize: stat.size,
+              mimeType: ext === ".png" ? "image/png" : ext === ".webp" ? "image/webp" : ext === ".svg" ? "image/svg+xml" : "image/jpeg",
+              altText: `Dr. Noopur Patel — ${cleanName}`,
+              title: cleanName,
+              caption: `Local folder asset: ${webUrl}`,
+              uploadedAt: stat.mtime.toISOString(),
+              createdAt: stat.birthtime ? stat.birthtime.toISOString() : stat.mtime.toISOString(),
+              updatedAt: stat.mtime.toISOString(),
+            });
+          }
+        }
+      }
+      return list;
+    };
+
+    return scanDir("public/images/doctor");
+  } catch (err) {
+    console.warn("[scanLocalDoctorMediaDirectories] Error scanning local directory:", err);
+    return [];
+  }
+}
+
+/**
  * Lists all media assets for the Admin Media Library.
+ * Combines Firestore assets, local auto-scanned disk assets, and canonical seed media.
  */
 export async function getAllMediaAdmin(searchQuery?: string): Promise<MediaItem[]> {
   const adminDb = getAdminFirestore();
@@ -678,16 +734,23 @@ export async function getAllMediaAdmin(searchQuery?: string): Promise<MediaItem[
     }
   }
 
-  // If no Firestore items yet, merge with seed media
-  if (items.length === 0) {
-    items = [...SEED_MEDIA_ITEMS];
-  } else {
-    // Ensure seed media items are merged if not already present by URL
-    const existingUrls = new Set(items.map((i) => i.url));
-    for (const seed of SEED_MEDIA_ITEMS) {
-      if (!existingUrls.has(seed.url)) {
-        items.push(seed);
-      }
+  // Set of existing URLs to avoid duplicates
+  const existingUrls = new Set(items.map((i) => i.url));
+
+  // Merge auto-scanned local disk images (from public/images/doctor/...)
+  const localItems = scanLocalDoctorMediaDirectories();
+  for (const local of localItems) {
+    if (!existingUrls.has(local.url)) {
+      items.push(local);
+      existingUrls.add(local.url);
+    }
+  }
+
+  // Merge seed media items if any still missing
+  for (const seed of SEED_MEDIA_ITEMS) {
+    if (!existingUrls.has(seed.url)) {
+      items.push(seed);
+      existingUrls.add(seed.url);
     }
   }
 

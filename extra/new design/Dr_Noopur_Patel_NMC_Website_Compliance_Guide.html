@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Noopur Patel Website | NMC Compliance Review</title>
+<style>
+:root{
+  --ink:#202b3c;--muted:#657286;--navy:#172b4d;--blue:#285ea8;--teal:#178b88;
+  --bg:#f4f7fb;--line:#dce4ef;--white:#fff;--red:#a33b43;--redbg:#fff1f1;
+  --amber:#8b5b08;--amberbg:#fff7e6;--green:#176b50;--greenbg:#eaf8f1;
+  --pink:#faedf2;--shadow:0 14px 35px rgba(27,49,83,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Arial,Helvetica,sans-serif}
+.wrap{max-width:1120px;margin:auto;padding:26px}
+.hero{background:linear-gradient(135deg,#172b4d 0%,#254f7d 58%,#178b88 100%);color:white;border-radius:24px;padding:38px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #ffffff30;border-radius:50%;right:-75px;top:-90px;box-shadow:0 0 0 35px #ffffff0c,0 0 0 70px #ffffff08}
+.kicker{text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700;color:#c5e8f0}
+h1{font-size:clamp(28px,4vw,43px);line-height:1.12;margin:10px 0 16px;max-width:800px}
+.hero p{max-width:800px;color:#e8f1fa;margin:0}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.pill{font-size:12px;border:1px solid #ffffff55;border-radius:99px;padding:6px 11px;color:white}
+.notice{background:#fff;border:1px solid var(--line);border-left:5px solid var(--teal);padding:18px 20px;border-radius:14px;margin:22px 0;box-shadow:var(--shadow)}
+.notice strong{color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0}
+.card{background:white;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 5px 20px #1b31530a}
+.card h2,.section-title{margin:0 0 12px;color:var(--navy);line-height:1.25}
+.card h3{margin:0 0 7px;font-size:17px}
+.card p{margin:0;color:var(--muted)}
+.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:4px 8px;border-radius:6px;margin-bottom:9px}
+.stop{background:var(--redbg);color:var(--red)}.review{background:var(--amberbg);color:var(--amber)}.ok{background:var(--greenbg);color:var(--green)}
+section{margin:30px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:14px}
+.section-head p{margin:0;color:var(--muted);max-width:650px}
+h2.section-title{font-size:26px}
+table{width:100%;border-collapse:separate;border-spacing:0;background:white;border:1px solid var(--line);border-radius:15px;overflow:hidden}
+th,td{text-align:left;padding:14px 15px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#edf3fa;color:var(--navy);font-size:13px}
+td{font-size:14px}
+tr:last-child td{border-bottom:0}
+.status{font-weight:700;white-space:nowrap}
+.status.stop{background:none;color:var(--red)}.status.review{background:none;color:var(--amber)}.status.ok{background:none;color:var(--green)}
+.accordion{background:white;border:1px solid var(--line);border-radius:14px;margin:10px 0;overflow:hidden}
+.accordion button{width:100%;border:0;background:white;color:var(--navy);font-weight:700;text-align:left;padding:17px 20px;cursor:pointer;font-size:16px;display:flex;justify-content:space-between;gap:15px}
+.accordion button:hover{background:#f8fbff}
+.accordion button span:last-child{font-size:22px;color:var(--teal)}
+.panel{display:none;padding:0 20px 20px;color:var(--muted)}
+.panel.open{display:block}
+.panel ul{padding-left:21px}
+.panel li{margin:6px 0}
+.checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.check{display:flex;gap:10px;align-items:flex-start;background:white;border:1px solid var(--line);padding:12px;border-radius:11px;font-size:14px}
+.check input{margin-top:5px;accent-color:var(--teal);flex-shrink:0}
+.progress-wrap{background:#e1e8f1;height:8px;border-radius:10px;overflow:hidden;margin:12px 0 18px}
+.progress{height:100%;width:0;background:var(--teal);transition:width .2s}
+.buttons{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.btn{border:0;border-radius:10px;padding:11px 15px;font-weight:700;cursor:pointer;background:var(--navy);color:white}
+.btn.secondary{background:white;color:var(--navy);border:1px solid var(--line)}
+.callout{padding:17px 19px;border-radius:14px;margin:14px 0}
+.callout.red{background:var(--redbg);border:1px solid #f3c9cb}
+.callout.amber{background:var(--amberbg);border:1px solid #f0dfb2}
+.callout.green{background:var(--greenbg);border:1px solid #c5ead8}
+.small{font-size:13px;color:var(--muted)}
+.footer{border-top:1px solid var(--line);margin-top:32px;padding:22px 0 8px;color:var(--muted);font-size:13px}
+a{color:#1d5d9e;overflow-wrap:anywhere}
+@media(max-width:760px){.wrap{padding:14px}.hero{padding:26px 22px;border-radius:18px}.grid,.checklist{grid-template-columns:1fr}.section-head{display:block}table{display:block;overflow-x:auto;white-space:normal}th,td{min-width:150px}.card{padding:18px}}
+@media print{body{background:white}.wrap{max-width:none;padding:0}.hero{box-shadow:none;border-radius:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}.card,.notice{box-shadow:none;break-inside:avoid}.accordion button{padding:10px}.panel{display:block!important}.buttons{display:none}a{color:inherit;text-decoration:none}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div class="kicker">DIGIVIGEE • Healthcare Website Compliance Note</div>
+  <h1>Dr. Noopur Patel Website<br>Website Content & Structure Review</h1>
+  <p>A client-friendly briefing on which planned website elements should be retained, revised, removed or held for compliance review following the NMC Guidelines on Ethical Advertising and Public Communication dated 6 October 2026.</p>
+  <div class="meta">
+    <span class="pill">Prepared for: Dr. Noopur Patel</span>
+    <span class="pill">Prepared by: DIGIVIGEE</span>
+    <span class="pill">Review date: October 2026</span>
+    <span class="pill">Interactive • Print-ready</span>
+  </div>
+</header>
+
+<div class="notice">
+  <strong>Important clarification:</strong> The new guidance does not automatically mean the entire website must be rebuilt or that every doctor website is prohibited. The planned site can still provide factual, verifiable patient information. The main review is about promotional framing, patient solicitation, doctor-image promotion, testimonials, outcome claims, patient material, rankings and lead-generation mechanics. The final treatment of each item depends on the exact guideline text and applicable state/clinical-establishment law.
+</div>
+
+<section>
+  <div class="section-head">
+    <div><h2 class="section-title">1. Executive summary</h2><p>What this means for the proposed Dr. Noopur Patel website.</p></div>
+  </div>
+  <div class="grid">
+    <div class="card"><span class="tag ok">Retain, with verification</span><h3>Core information pages</h3><p>About/profile facts, recognised qualifications, registration details, clinic/hospital location, contact details, consultation availability, factual treatment/condition information and educational articles.</p></div>
+    <div class="card"><span class="tag review">Revise / review</span><h3>Conversion-focused design</h3><p>Hero messaging, repeated “Book Appointment” buttons, WhatsApp enquiry journeys, service-page CTAs, local SEO copy and any wording that could turn factual information into patient solicitation.</p></div>
+    <div class="card"><span class="tag stop">Remove / do not add</span><h3>High-risk promotional content</h3><p>Patient testimonials/stories used for promotion, before-and-after outcomes, “best/no. 1/100% cure” claims, success-rate bragging, fake reviews, paid doctor rankings and inducements.</p></div>
+    <div class="card"><span class="tag review">Specific approval required</span><h3>Patient media and clinical cases</h3><p>Patient photos, videos, identifiable clinical details and operation footage must not be treated as safe merely because a consent form exists. Educational/scientific exceptions are narrow and require careful review.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <div><h2 class="section-title">2. Review of the previously planned website</h2><p>Based on the earlier proposed structure: Home, About Dr. Noopur Patel, breast conditions, breast cancer surgery/treatments, screening, awareness/blog, FAQ, patient stories, testimonials, gallery and contact/appointment.</p></div>
+  </div>
+  <table>
+    <thead><tr><th>Previously planned item</th><th>Recommended action</th><th>What to change</th></tr></thead>
+    <tbody>
+      <tr><td>Home page hero and main headline</td><td class="status review">Revise</td><td>Use neutral factual wording about speciality and services. Remove superiority, guarantee, fear-based or “choose us / best care” claims that function as solicitation.</td></tr>
+      <tr><td>About Dr. Noopur Patel</td><td class="status ok">Retain, verify</td><td>Keep factual bio, recognised qualifications, speciality, registration details and professional information. Avoid promotional superlatives and personal-success claims.</td></tr>
+      <tr><td>Breast cancer surgery / oncoplastic surgery / breast conservation pages</td><td class="status review">Retain as factual information; review wording</td><td>Explain what a procedure is, indications, risks, alternatives and general care information. Do not promise outcomes, imply suitability for every patient or advertise impressive surgical results.</td></tr>
+      <tr><td>Breast conditions, screening and diagnostic pages</td><td class="status ok">Retain, medically review</td><td>Evidence-based educational content, symptoms and when to seek care. Avoid fear-based hooks, self-diagnosis certainty or claims that encourage unnecessary investigations.</td></tr>
+      <tr><td>Patient education / blog / FAQ</td><td class="status ok">Retain, review</td><td>Educational purpose, clear sourcing where appropriate, doctor review, no personalised diagnosis in public comments and no misleading cure claims.</td></tr>
+      <tr><td>Patient stories / testimonials / reviews</td><td class="status stop">Remove from promotional use</td><td>Do not publish as marketing proof or endorsements. Patient consent alone does not make an otherwise prohibited testimonial permissible. Any scientific/educational case requires separate review and anonymisation safeguards.</td></tr>
+      <tr><td>Gallery of patients, surgeries or clinical outcomes</td><td class="status stop">Remove or replace</td><td>Do not use patient images, before/after depictions or impressive surgical outcomes as promotion. Replace with non-patient educational diagrams or generic non-misleading illustrations.</td></tr>
+      <tr><td>Doctor portrait / prominent image on every section</td><td class="status review">Review placement and purpose</td><td>A doctor directory with factual credentials may be permissible, but using a doctor’s photograph to promote or solicit patients may be restricted. Keep only where permitted and not as self-promotional advertising.</td></tr>
+      <tr><td>Repeated “Book Appointment” / “Consult now” CTAs</td><td class="status review">Review / simplify</td><td>Do not assume every booking feature is prohibited. Assess whether the design, repetition, wording and paid promotion amount to direct or indirect patient solicitation. Prefer neutral contact/availability information pending legal review.</td></tr>
+      <tr><td>Appointment form, WhatsApp pre-filled message, click-to-call</td><td class="status review">Review purpose and data handling</td><td>Keep necessary contact functionality only after review. Avoid aggressive lead capture, unnecessary medical details, referral/lead fees and promotional follow-ups. Protect any personal/health data.</td></tr>
+      <tr><td>Instagram feed embedded on website</td><td class="status review">Moderate and audit</td><td>Do not automatically display every social post. Exclude patient testimonials, clinical outcome posts, misleading claims, identifiable patient media and prohibited promotional content.</td></tr>
+      <tr><td>Local SEO pages and keywords</td><td class="status review">Keep factual; remove hype</td><td>Location and speciality information can help people find accurate information. Avoid “best breast surgeon in Ahmedabad”, “No.1”, fake rankings, unverifiable superiority claims or content designed to create fear or unnecessary demand.</td></tr>
+      <tr><td>Hospital/clinic details, map, timings, contact</td><td class="status ok">Retain, verify</td><td>Use accurate address, hours, contact information and factual facilities. Confirm state-specific requirements and that all listed services are actually available.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="section-head"><div><h2 class="section-title">3. Wording: avoid vs safer factual alternative</h2><p>These are examples for drafting—not a guarantee that any phrase is compliant in every context.</p></div></div>
+  <table>
+    <thead><tr><th>Avoid this style</th><th>Use a factual alternative</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr><td>“Ahmedabad’s Best Breast Cancer Surgeon”</td><td>“Breast surgical oncology consultation in Ahmedabad”</td><td>Removes an unsubstantiated superiority claim.</td></tr>
+      <tr><td>“100% cure / guaranteed recovery”</td><td>“Treatment options and outcomes depend on diagnosis and individual clinical factors.”</td><td>No guarantee of cure or outcome.</td></tr>
+      <tr><td>“Look at this successful surgery / patient transformation”</td><td>Use an anonymised, non-promotional educational diagram, after review.</td><td>Avoid promotional patient stories and surgery-result advertising.</td></tr>
+      <tr><td>“Book now before it is too late!”</td><td>“For information about consultation availability, contact the clinic.”</td><td>Avoid fear-based marketing and undue pressure.</td></tr>
+      <tr><td>“Hundreds of happy patients cured by Dr. Noopur”</td><td>Omit patient-count, cure and testimonial-based claims.</td><td>Avoid professional success claims and testimonial promotion.</td></tr>
+      <tr><td>“Free consultation this week / discount on surgery”</td><td>Do not use inducement-based medical offers without confirming they are expressly lawful and compliant.</td><td>Discounts and inducements may amount to patient solicitation.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="section-head"><div><h2 class="section-title">4. Expandable compliance FAQs</h2><p>Open each item for the practical interpretation.</p></div></div>
+  <div class="accordion"><button aria-expanded="false">Does the whole website need to be cancelled? <span>+</span></button><div class="panel"><p>No. The guideline expressly contemplates factual, objective and verifiable institutional information. Reassess individual pages and features rather than deleting the whole website by default. The rules for an RMP’s personal promotion and a hospital’s factual directory are not identical.</p></div></div>
+  <div class="accordion"><button aria-expanded="false">Can we list treatments and procedures? <span>+</span></button><div class="panel"><p>Factual information about services and medical conditions may be appropriate, subject to the rules. Write educational descriptions—not claims of superiority, guaranteed results, exceptional success rates or pressure to undergo procedures. The doctor must verify medical accuracy.</p></div></div>
+  <div class="accordion"><button aria-expanded="false">Can we show patient testimonials if the patient signs consent? <span>+</span></button><div class="panel"><p>Do not rely on consent alone. The new guidance states that consent does not by itself make a prohibited testimonial, endorsement, promotional patient story or before-and-after depiction permissible. Keep testimonials out of promotional use unless qualified legal review confirms a specific lawful exception.</p></div></div>
+  <div class="accordion"><button aria-expanded="false">Can we keep appointment booking and WhatsApp? <span>+</span></button><div class="panel"><p>Do not treat every contact tool as automatically banned. Review the wording, placement, repetition, purpose and data collected. A neutral way to find contact details or consultation availability is different from aggressive solicitation or a lead-generation arrangement tied to patient referrals. Get a compliance review before launch.</p></div></div>
+  <div class="accordion"><button aria-expanded="false">Can we use the doctor’s photograph? <span>+</span></button><div class="panel"><p>The guideline distinguishes a factual hospital directory listing a doctor’s name, recognised qualifications, speciality, registration details and availability from paid/promotional advertising. Use of an RMP image may be restricted where it constitutes self-advertisement, solicitation or promotional publicity. Do not assume a large hero portrait or repeated portrait is automatically acceptable.</p></div></div>
+  <div class="accordion"><button aria-expanded="false">Can we add an Instagram feed and SEO landing pages? <span>+</span></button><div class="panel"><p>Only after moderation. An embedded feed can import prohibited content onto the website. SEO pages should provide accurate information about conditions, services and locations—not fake rankings, “best/no.1” claims, exaggerated outcomes or fear-based messaging.</p></div></div>
+  <div class="accordion"><button aria-expanded="false">Who is responsible if the agency builds a non-compliant website? <span>+</span></button><div class="panel"><p>The guidelines state that using a third-party agency does not by itself absolve the RMP or institution from responsibility for content it authorises, commissions, sponsors, adopts or knowingly permits. This does not automatically mean the agency has the same professional disciplinary liability as a doctor. Responsibilities and other legal exposure depend on the facts and applicable law.</p></div></div>
+</section>
+
+<section>
+  <div class="section-head"><div><h2 class="section-title">5. Website launch checklist</h2><p>Tick off the items before the website goes live. Progress is local to this open page only.</p></div></div>
+  <div id="progressText" class="small">0 of 10 checks completed</div>
+  <div class="progress-wrap"><div class="progress" id="progress"></div></div>
+  <div class="checklist" id="checks">
+    <label class="check"><input type="checkbox"> Doctor’s name, recognised qualifications, speciality and registration details verified.</label>
+    <label class="check"><input type="checkbox"> All service and procedure descriptions approved by the doctor.</label>
+    <label class="check"><input type="checkbox"> “Best”, “No. 1”, guaranteed cure, success-rate and exaggerated claims removed.</label>
+    <label class="check"><input type="checkbox"> Testimonials, promotional patient stories and before/after content removed or legally reviewed for a specific exception.</label>
+    <label class="check"><input type="checkbox"> Patient photos, clinical images and case details reviewed for privacy and permitted purpose.</label>
+    <label class="check"><input type="checkbox"> Hero section, portrait use, CTAs and booking flow reviewed for solicitation.</label>
+    <label class="check"><input type="checkbox"> Instagram/social feed moderated before embedding.</label>
+    <label class="check"><input type="checkbox"> Forms collect only necessary information and have appropriate privacy notices/safeguards.</label>
+    <label class="check"><input type="checkbox"> Address, hours, facilities, fees and contact details verified.</label>
+    <label class="check"><input type="checkbox"> Final pages reviewed against NMC guidance and applicable Gujarat/state clinical-establishment requirements.</label>
+  </div>
+  <div class="buttons"><button class="btn" onclick="window.print()">Print / Save as PDF</button><button class="btn secondary" onclick="document.querySelectorAll('#checks input').forEach(c=>c.checked=false);updateProgress()">Reset checklist</button></div>
+</section>
+
+<section>
+  <div class="callout amber"><strong>Important about scope:</strong> This document is a practical website-content review, not a legal opinion. It is based on the NMC public notice dated 6 October 2026 and the previously discussed Dr. Noopur Patel website plan. It does not claim that every listed feature is categorically banned. Some items are “review” items because their compliance depends on purpose, wording, design, consent, data handling and applicable law.</div>
+  <div class="callout green"><strong>Recommended workflow:</strong> DIGIVIGEE drafts the factual website → Dr. Noopur Patel verifies medical facts and credentials → high-risk advertising, patient-media and CTA questions are reviewed against the official guideline / by a qualified legal professional → client signs off on the final content. Client approval does not make prohibited content permissible.</div>
+</section>
+
+<section>
+  <h2 class="section-title">Official references</h2>
+  <ul>
+    <li><a href="https://nmc.org.in/whats-new?type=news" target="_blank" rel="noopener">National Medical Commission — What's New (official notices)</a> — listed the “Guidelines on Ethical Advertising and Public Communication by Hospitals/Medical Institutions and Registered Medical Practitioners” dated 06 October 2026.</li>
+    <li><a href="https://oldnmc.nmc.org.in/rules-regulations/code-of-medical-ethics-regulations-2002/" target="_blank" rel="noopener">NMC — Code of Medical Ethics Regulations, 2002</a> — background professional-conduct rules; read with current applicable directions.</li>
+    <li><a href="https://medicaldialogues.in/health-news/nmc/nmc-issues-ethical-advertising-public-communication-guidelines-for-doctors-hospitals-details-180731" target="_blank" rel="noopener">Medical Dialogues — Summary of the 6 October 2026 guideline</a> — secondary explainer, not a substitute for the official PDF.</li>
+  </ul>
+  <p class="small">Before relying on a specific restriction, open the official NMC notice and its annexed guideline, check the relevant clause, and confirm any applicable Gujarat law or subsequent clarification. This document is dated October 2026 and should be updated if the regulator issues further directions.</p>
+</section>
+
+<footer class="footer">
+  <strong>DIGIVIGEE</strong> · Healthcare Website Compliance Review · Prepared for Dr. Noopur Patel<br>
+  Educational and operational guidance only; not a legal opinion or a guarantee of regulatory compliance.
+</footer>
+</div>
+<script>
+document.querySelectorAll('.accordion button').forEach(button=>{
+  button.addEventListener('click',()=>{
+    const panel=button.nextElementSibling;
+    const isOpen=panel.classList.toggle('open');
+    button.setAttribute('aria-expanded',String(isOpen));
+    button.querySelector('span:last-child').textContent=isOpen?'−':'+';
+  });
+});
+function updateProgress(){
+ const boxes=[...document.querySelectorAll('#checks input')];
+ const count=boxes.filter(b=>b.checked).length;
+ document.getElementById('progressText').textContent=`${count} of ${boxes.length} checks completed`;
+ document.getElementById('progress').style.width=`${count/boxes.length*100}%`;
+}
+document.querySelectorAll('#checks input').forEach(b=>b.addEventListener('change',updateProgress));
+</script>
+</body>
+</html>

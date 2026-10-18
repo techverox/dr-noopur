@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { SlotImage } from "@/components/common/SlotImage";
 import { Heart, Activity, ShieldCheck, Users } from "lucide-react";
 
 export default function EarlyDetectionSection() {
@@ -84,6 +85,7 @@ export default function EarlyDetectionSection() {
                 src="/images/doctor/assets/early-detection-woman.png"
                 alt="Woman holding breast cancer awareness ribbon"
                 fill
+                quality={92}
                 className="object-cover object-center hover:scale-103 transition-transform duration-500"
                 sizes="(max-width: 768px) 100vw, 420px"
               />

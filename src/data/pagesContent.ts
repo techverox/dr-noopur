@@ -53,12 +53,12 @@ export const DEFAULT_ABOUT_PAGE_CONTENT: AboutPageContent = {
   visionTitle: "Our Vision",
   visionDescription:
     "To be a trusted centre for breast health, known for clinical excellence, advanced surgical techniques and a patient-centred approach.",
-  stat1Value: "10+",
-  stat1Label: "Years of Experience",
-  stat2Value: "1000+",
-  stat2Label: "Patients Treated",
-  stat3Value: "100%",
-  stat3Label: "Compassionate Care",
+  stat1Value: "MBBS, MS, MCh",
+  stat1Label: "Surgical Oncology Specialization",
+  stat2Value: "GMC G-22533",
+  stat2Label: "Gujarat Medical Council Verified",
+  stat3Value: "Marengo CIMS",
+  stat3Label: "Dedicated Breast Oncology Practice",
   createdAt: "2026-01-01T00:00:00Z",
   updatedAt: "2026-01-01T00:00:00Z",
 };
