@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
+import { SITE_CONFIG } from "@/config/site";
 
 // Canonical static fast-path redirects
 const STATIC_REDIRECTS: Record<string, { dest: string; status: number }> = {
   "/growth-services": { dest: "/services", status: 301 },
   "/case-studies": { dest: "/portfolio", status: 301 },
   "/audit": { dest: "/contact", status: 301 },
-  "/whatsapp": { dest: "https://wa.me/919081145178", status: 302 },
+  "/whatsapp": { dest: `https://wa.me/${SITE_CONFIG.contact.whatsappNumber}`, status: 302 },
   "/blueprint": { dest: "/landing/performance-marketing-blueprint", status: 301 },
   "/pricing": { dest: "/contact", status: 301 },
 };

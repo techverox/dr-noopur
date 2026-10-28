@@ -132,7 +132,7 @@ export function SlotImage({
       return globalSlotOverrides[slotNum].currentUrl;
     }
     // If not customized, use slot default or passed src
-    return slotItem?.currentUrl || slotItem?.defaultUrl || src || "/images/doctor/assets/hero-image.png";
+    return slotItem?.currentUrl || slotItem?.defaultUrl || src || "/uploads/slots/slot-01-1792324615457.png";
   });
 
   const [activeAlignment, setActiveAlignment] = useState<ImageSlotAlignment | undefined>(() => {
@@ -165,7 +165,7 @@ export function SlotImage({
         }
       } else if (slotNum && isGlobalFetchStarted && Object.keys(globalSlotOverrides).length >= 0) {
         // If not in overrides, ensure it points to canonical default
-        const fallbackUrl = slotItem?.defaultUrl || src || "/images/doctor/assets/hero-image.png";
+        const fallbackUrl = slotItem?.defaultUrl || src || "/uploads/slots/slot-01-1792324615457.png";
         setActiveUrl(fallbackUrl);
         setActiveAlignment(slotItem?.alignment);
       }
@@ -191,7 +191,7 @@ export function SlotImage({
       } else if (!detail) {
         // Full master reset
         globalSlotOverrides = {};
-        setActiveUrl(slotItem?.defaultUrl || src || "/images/doctor/assets/hero-image.png");
+        setActiveUrl(slotItem?.defaultUrl || src || "/uploads/slots/slot-01-1792324615457.png");
         setActiveAlignment(slotItem?.alignment);
         isGlobalFetchStarted = false;
         fetchGlobalSlotsOnce();

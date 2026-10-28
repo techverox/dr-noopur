@@ -23,10 +23,15 @@ export const DEFAULT_IMAGE_SLOTS: ImageSlotItem[] = [
     description: "Main homepage doctor portrait and clinical consultation showcase at Marengo CIMS Hospital.",
     recommendedSize: "1200 x 800 px",
     aspectRatio: "3:2",
-    defaultUrl: "/images/doctor/assets/hero-image.png",
-    currentUrl: "/images/doctor/assets/hero-image.png",
+    defaultUrl: "/uploads/slots/slot-01-1792324615457.png",
+    currentUrl: "/uploads/slots/slot-01-1792324615457.png",
     altText: "Dr. Noopur Patel, Breast Cancer Surgeon & Surgical Breast Oncologist at Marengo CIMS Hospital Ahmedabad",
-    updatedAt: "2026-10-18T00:00:00.000Z",
+    alignment: {
+      zoom: 1,
+      x: 92,
+      y: 7,
+    },
+    updatedAt: "2026-10-18T14:04:10.257Z",
   },
   {
     id: "slot-02",

@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { HelpCircle, ChevronDown } from "lucide-react";
+import { HelpCircle, ChevronDown, Phone, MessageSquare } from "lucide-react";
+import { SITE_CONFIG } from "@/config/site";
 
 interface ContactFaqItem {
   id: string;
@@ -10,51 +11,50 @@ interface ContactFaqItem {
   answer: string;
 }
 
-const CONTACT_FAQS: ContactFaqItem[] = [
+const CLINICAL_CONTACT_FAQS: ContactFaqItem[] = [
   {
-    id: "faq-prep",
-    question: "What should I prepare before our 30-minute consultation?",
+    id: "faq-docs",
+    question: "What documents and reports should I bring for my first consultation?",
     answer:
-      "Just your primary growth bottleneck or objective. If you manage active ad campaigns, having read-only access ready allows our directors to provide live diagnostic feedback during our screen-share.",
+      "Please bring any recent mammogram films/discs, breast ultrasound reports, previous biopsy or histopathology slides/blocks (if available), and past surgical or medical history records.",
   },
   {
-    id: "faq-nda",
-    question: "How does NDA and data confidentiality work?",
+    id: "faq-urgent",
+    question: "How can I schedule an urgent consultation for a newly noticed lump?",
     answer:
-      "Every consultation is strictly confidential under mutual non-disclosure. We never disclose your benchmarks or proprietary data. If your team requires a custom NDA, we countersign within 2 business hours.",
+      "For newly noticed breast lumps, acute pain, or spontaneous nipple discharge, our clinic desk prioritizes same-day or next-day OPD evaluation. Please reach out via WhatsApp or call our desk directly.",
   },
   {
-    id: "faq-pricing",
-    question: "What are your pricing tiers and commitments?",
+    id: "faq-insurance",
+    question: "Is consultation and surgical treatment covered under cashless insurance?",
     answer:
-      "Modular SaaS licenses for RestroMitra, verified merchant tiers for Maru Gujarat, and growth retainers starting from $1,500/mo. All proposals outline exact deliverables and performance milestones with zero hidden fees.",
+      "Yes. In-patient surgical interventions and approved daycare diagnostic procedures are eligible for cashless insurance assistance and TPA claim processing at empaneled hospitals.",
   },
   {
-    id: "faq-onboarding",
-    question: "How quickly can DigiVigee onboard us?",
+    id: "faq-second-opinion",
+    question: "Can I consult Dr. Noopur Patel for a second opinion on surgery or biopsy?",
     answer:
-      "RestroMitra and Maru Gujarat onboarding completes within 24–48 hours. Full-scale Meta Partner retainers deploy in 3–5 business days including CAPI verification and account audits.",
+      "Yes. Dr. Noopur Patel regularly provides detailed second opinions regarding breast conservation (BCS), oncoplastic surgical planning, and biopsy histopathology reviews.",
   },
   {
-    id: "faq-team",
-    question: "Will I work with senior directors or junior reps?",
+    id: "faq-location",
+    question: "Where does Dr. Noopur Patel consult and perform surgeries?",
     answer:
-      "100% direct senior access. Consultations, ad architecture, and deployments are managed by senior strategy directors and certified Meta media buyers. We never outsource to junior contractors.",
+      "Dr. Noopur Patel consults and performs specialized breast surgical oncology procedures in Ahmedabad, Gujarat, with scheduled OPD timings from Monday to Saturday.",
   },
 ];
 
 export default function ContactFaqSection() {
-  const [openId, setOpenId] = useState<string | null>(CONTACT_FAQS[0]?.id || null);
+  const [openId, setOpenId] = useState<string | null>(CLINICAL_CONTACT_FAQS[0]?.id || null);
 
   const toggle = (id: string) => {
     setOpenId((prev) => (prev === id ? null : id));
   };
 
-  // Google FAQ Schema
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: CONTACT_FAQS.map((f) => ({
+    mainEntity: CLINICAL_CONTACT_FAQS.map((f) => ({
       "@type": "Question",
       name: f.question,
       acceptedAnswer: {
@@ -64,10 +64,12 @@ export default function ContactFaqSection() {
     })),
   };
 
-  const whatsappUrl = "https://wa.me/919081145178?text=Hi%20DigiVigee%20team,%20I%20have%20a%20question%20before%20scheduling%20a%20consultation.";
+  const whatsappUrl = `https://wa.me/${SITE_CONFIG.contact.whatsappNumber}?text=${encodeURIComponent(
+    "Hello Dr. Noopur Patel's clinic desk, I would like to inquire about a breast consultation."
+  )}`;
 
   return (
-    <section className="relative z-10 py-14 sm:py-20 bg-white border-t border-slate-200/80">
+    <section className="relative z-10 py-14 sm:py-20 bg-white border-t border-rose-100">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -75,91 +77,97 @@ export default function ContactFaqSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          {/* LEFT: Section Intro & Direct Help Card (5 cols) */}
+          {/* LEFT: Section Intro & Direct Help Card */}
           <div className="lg:col-span-5 space-y-6">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[#008744] text-[11px] font-semibold uppercase tracking-wider mb-3">
-                <HelpCircle className="w-3 h-3" />
-                <span>Consultation Clarity</span>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-700 text-[11px] font-semibold uppercase tracking-wider mb-3">
+                <HelpCircle className="w-3.5 h-3.5" />
+                <span>Patient Guidance</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0C1628] tracking-tight mb-3">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-slate-900 tracking-tight mb-3">
                 Frequently Asked Questions
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Clear, transparent answers about our consultative protocol, deliverables, NDA confidentiality, and turnaround SLAs.
+                Clear answers regarding appointment scheduling, required diagnostic reports, second opinions, and clinical consultation protocols.
               </p>
             </div>
 
             {/* Direct Assistance Card */}
-            <div className="rounded-2xl p-6 bg-slate-50/90 border border-slate-200/90 space-y-4">
+            <div className="rounded-2xl p-6 bg-rose-50/60 border border-rose-200/80 space-y-4">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#008744]">
-                  Need Immediate Clarity?
+                <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse" />
+                <span className="text-xs font-semibold uppercase tracking-wider text-rose-800">
+                  Direct Clinic Assistance
                 </span>
               </div>
-              <h3 className="text-base font-bold text-[#0C1628]">
-                Prefer talking directly to a senior strategist right now?
+              <h3 className="text-base font-bold text-slate-900">
+                Have questions before your appointment?
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Skip the form and chat with our directors on WhatsApp or call our priority desk directly.
+                Our care coordinator is available to assist you with report requirements, directions, and OPD slot confirmations.
               </p>
               <div className="space-y-2 pt-1">
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-2.5 px-4 rounded-xl bg-[#008744] hover:bg-[#007038] text-white text-xs font-semibold flex items-center justify-between shadow-xs transition-colors"
+                  className="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold flex items-center justify-between shadow-xs transition-colors"
                 >
-                  <span>Chat on WhatsApp (Avg 5 mins)</span>
+                  <span className="flex items-center gap-2">
+                    <MessageSquare className="w-3.5 h-3.5" />
+                    Chat on WhatsApp
+                  </span>
                   <span>&rarr;</span>
                 </a>
                 <a
-                  href="tel:+919081145178"
-                  className="w-full py-2.5 px-4 rounded-xl bg-white hover:bg-slate-100 border border-slate-200 text-slate-800 text-xs font-semibold flex items-center justify-between transition-colors"
+                  href={`tel:${SITE_CONFIG.contact.phone.replace(/[^0-9+]/g, "")}`}
+                  className="w-full py-2.5 px-4 rounded-xl bg-white hover:bg-rose-50 border border-rose-200 text-slate-800 text-xs font-semibold flex items-center justify-between transition-colors"
                 >
-                  <span>Call +91 90811 45178</span>
-                  <span className="text-slate-400 font-normal">24/7 Available</span>
+                  <span className="flex items-center gap-2">
+                    <Phone className="w-3.5 h-3.5 text-rose-600" />
+                    Call {SITE_CONFIG.contact.phoneFormatted}
+                  </span>
+                  <span className="text-slate-400 font-normal">OPD Desk</span>
                 </a>
               </div>
             </div>
           </div>
 
-          {/* RIGHT: Accordion (7 cols) */}
+          {/* RIGHT: Accordion */}
           <div className="lg:col-span-7 space-y-3">
-            {CONTACT_FAQS.map((faq) => {
+            {CLINICAL_CONTACT_FAQS.map((faq) => {
               const isOpen = openId === faq.id;
               return (
                 <div
                   key={faq.id}
                   className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
                     isOpen
-                      ? "bg-slate-50/90 border-emerald-500/40 shadow-xs"
-                      : "bg-white border-slate-200/90 hover:border-slate-300"
+                      ? "bg-white border-rose-300 shadow-md shadow-rose-900/5 ring-1 ring-rose-300"
+                      : "bg-slate-50/70 border-slate-200/80 hover:bg-white hover:border-rose-200"
                   }`}
                 >
                   <button
                     type="button"
                     onClick={() => toggle(faq.id)}
-                    className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 cursor-pointer select-none"
+                    className="w-full py-4 px-5 sm:px-6 text-left flex items-center justify-between gap-4 cursor-pointer"
                     aria-expanded={isOpen}
                   >
                     <span
-                      className={`text-sm sm:text-base font-semibold tracking-tight transition-colors ${
-                        isOpen ? "text-[#008744]" : "text-[#0C1628]"
+                      className={`text-sm sm:text-base font-semibold leading-snug ${
+                        isOpen ? "text-rose-900" : "text-slate-800"
                       }`}
                     >
                       {faq.question}
                     </span>
-                    <div
-                      className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-200 ${
+                    <span
+                      className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-transform duration-200 ${
                         isOpen
-                          ? "rotate-180 bg-[#008744] text-white"
-                          : "bg-slate-100 text-slate-500 hover:bg-slate-200"
+                          ? "bg-rose-100 text-rose-700 rotate-180"
+                          : "bg-slate-100 text-slate-500"
                       }`}
                     >
-                      <ChevronDown className="w-3.5 h-3.5" />
-                    </div>
+                      <ChevronDown className="w-4 h-4" />
+                    </span>
                   </button>
 
                   <AnimatePresence initial={false}>
@@ -169,14 +177,11 @@ export default function ContactFaqSection() {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{
-                          height: { duration: 0.25, ease: [0.21, 0.47, 0.32, 0.98] },
-                          opacity: { duration: 0.15 },
-                        }}
+                        transition={{ duration: 0.25, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="px-4 pb-5 sm:px-5 pt-0.5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60">
-                          <p>{faq.answer}</p>
+                        <div className="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-rose-50">
+                          {faq.answer}
                         </div>
                       </motion.div>
                     )}

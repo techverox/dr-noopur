@@ -69,13 +69,13 @@ export default function DoctorHero({
                 <div className="relative w-full max-w-md mx-auto aspect-square sm:aspect-[4/3.8] rounded-2xl overflow-hidden bg-gradient-to-b from-[#FCEEF2] to-[#F5D2DB] border border-[#F5CAD5] shadow-md">
                   <SlotImage
                     slot={1}
-                    src="/images/doctor/assets/hero-image.png"
+                    src="/uploads/slots/slot-01-1792324615457.png"
                     alt={DOCTOR_PROFILE_IMAGES.heroMobile.alt}
                     fill
                     priority
                     quality={95}
                     sizes="(max-width: 1024px) 100vw, 640px"
-                    className="object-cover object-[center_top]"
+                    className="object-cover object-[92%_7%]"
                   />
                   {/* Subtle Gradient Overlay at bottom for legibility */}
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent pointer-events-none" />
@@ -260,13 +260,13 @@ export default function DoctorHero({
                   <div className="relative aspect-[4/5] rounded-[28px] overflow-hidden bg-gradient-to-b from-[#FFF5F7] via-white to-[#FCE8ED] border-2 border-white shadow-xl">
                     <SlotImage
                       slot={1}
-                      src="/images/doctor/assets/hero-image.png"
+                      src="/uploads/slots/slot-01-1792324615457.png"
                       alt={DOCTOR_PROFILE_IMAGES.heroPrimary.alt}
                       fill
                       priority
                       quality={95}
                       sizes="(min-width: 1024px) 960px, 100vw"
-                      className="object-cover object-[center_top] hover:scale-[1.02] transition-transform duration-500"
+                      className="object-cover object-[92%_7%] hover:scale-[1.02] transition-transform duration-500"
                     />
 
                     {/* Gradient Overlay at Bottom */}
