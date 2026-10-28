@@ -92,7 +92,7 @@ export default function AppointmentClient({
     }
   };
 
-  const whatsappRaw = (content.whatsapp || SITE_CONFIG.contact.whatsappNumber || "919876543210").replace(/\D/g, "");
+  const whatsappRaw = (content.whatsapp || SITE_CONFIG.contact.whatsappNumber || "917567987787").replace(/\D/g, "");
   const phoneDisplay = content.phone || SITE_CONFIG.contact.phone;
   const phoneRaw = phoneDisplay.replace(/\s+/g, "");
 

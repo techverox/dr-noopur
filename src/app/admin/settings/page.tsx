@@ -79,8 +79,8 @@ const CANONICAL_SETTINGS: SettingsFormState = {
   showAnnouncementBar: false,
   announcementBarText: "Expert Breast Care & Consultations — Dr. Noopur Patel at Marengo CIMS Hospital, Ahmedabad",
   announcementLink: "/appointments",
-  phone: "+91 98765 43210",
-  whatsapp: "+91 98765 43210",
+  phone: "+91 75679 87787",
+  whatsapp: "+91 75679 87787",
   email: "dr.noopurpatel@gmail.com",
   address: "Marengo CIMS Hospital, Off Science City Road, Sola, Ahmedabad, Gujarat 380060",
   businessHours: "Mon - Sat: 10:00 AM - 6:00 PM",
@@ -1502,7 +1502,7 @@ export default function AdminSettingsPage() {
                     Reset Global Settings to Practice Defaults
                   </h3>
                   <p className="text-xs text-red-800/80 leading-relaxed max-w-xl">
-                    Restore canonical contact details (+91 98765 43210), Marengo CIMS Hospital Ahmedabad address, verified social profiles, and patient consultation policies.
+                    Restore canonical contact details (+91 75679 87787), Marengo CIMS Hospital Ahmedabad address, verified social profiles, and patient consultation policies.
                   </p>
                 </div>
                 <button
@@ -1549,7 +1549,7 @@ export default function AdminSettingsPage() {
         onClose={() => setIsResetModalOpen(false)}
         onConfirm={handleResetToDefaults}
         title="Reset Global Practice Settings?"
-        message={`This will restore canonical Dr. Noopur Patel branding, Marengo CIMS Hospital Ahmedabad address, official consultation numbers (+91 98765 43210), verified clinical social media profiles, top announcement bar, and footer statements.\n\nAll changes will immediately sync across live Cloud Firestore and open website tabs.`}
+        message={`This will restore canonical Dr. Noopur Patel branding, Marengo CIMS Hospital Ahmedabad address, official consultation numbers (+91 75679 87787), verified clinical social media profiles, top announcement bar, and footer statements.\n\nAll changes will immediately sync across live Cloud Firestore and open website tabs.`}
         confirmLabel="Yes, Reset to Defaults"
         isDestructive={false}
         isLoading={isResetting}

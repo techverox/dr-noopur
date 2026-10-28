@@ -220,7 +220,7 @@ export const SEED_LANDING_PAGES: LandingPage[] = [
       primaryCtaTarget: "#lead-form",
       secondaryCtaLabel: "WhatsApp Quick Chat",
       secondaryCtaType: "whatsapp",
-      secondaryCtaTarget: "+919876543210",
+      secondaryCtaTarget: "+917567987787",
     },
     form: {
       formTitle: "Get Your Custom Growth Strategy",

@@ -110,7 +110,7 @@ export default function Footer() {
     }
   };
 
-  const phone = settings?.contact?.phone || SITE_CONFIG?.contact?.phone || "+91 98765 43210";
+  const phone = settings?.contact?.phone || SITE_CONFIG?.contact?.phone || "+91 75679 87787";
   const email = settings?.contact?.email || SITE_CONFIG?.contact?.email || "dr.noopurpatel@gmail.com";
   const address = settings?.contact?.address || SITE_CONFIG?.contact?.address || "Marengo CIMS Hospital, Off Science City Road, Sola, Ahmedabad, Gujarat 380060";
   const copyright =

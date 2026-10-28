@@ -233,7 +233,7 @@ Host: https://drnoopurpatel.com`;
         },
         contactPoint: {
           "@type": "ContactPoint",
-          telephone: "+91 98765 43210",
+          telephone: "+91 75679 87787",
           contactType: "clinical appointment",
           availableLanguage: ["English", "Hindi", "Gujarati"],
         },

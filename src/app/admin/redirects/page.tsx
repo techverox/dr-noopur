@@ -43,9 +43,9 @@ const CLINICAL_REDIRECT_PRESETS = [
   {
     label: "💬 /whatsapp",
     sourcePath: "/whatsapp",
-    destinationPath: "https://wa.me/919876543210",
+    destinationPath: "https://wa.me/917567987787",
     statusCode: 302 as RedirectStatusCode,
-    note: "Direct Hospital Clinical WhatsApp (+91 98765 43210)",
+    note: "Direct Hospital Clinical WhatsApp (+91 75679 87787)",
   },
   {
     label: "🌸 /screening",
@@ -895,7 +895,7 @@ export default function AdminRedirectsPage() {
                       required
                       value={destinationPath}
                       onChange={(e) => setDestinationPath(e.target.value)}
-                      placeholder="e.g. /custom-page or https://wa.me/919876543210"
+                      placeholder="e.g. /custom-page or https://wa.me/917567987787"
                       className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-rose-500 focus:bg-white focus:ring-2 focus:ring-rose-500/15 transition-all"
                     />
                   )}
@@ -993,7 +993,7 @@ export default function AdminRedirectsPage() {
 • /treatments -> /services (301 Permanent)
 • /patient-reviews -> /testimonials (301 Permanent)
 • /screening -> /contact?intent=screening (301 Permanent)
-• /whatsapp -> https://wa.me/919876543210 (302 Temporary)
+• /whatsapp -> https://wa.me/917567987787 (302 Temporary)
 • /second-opinion -> /contact?intent=second-opinion (301)
 • /oncoplastic -> /services/oncoplastic-breast-surgery (301)
 • /biopsy -> /services/breast-biopsy (301)

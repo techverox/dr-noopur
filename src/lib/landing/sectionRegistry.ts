@@ -361,7 +361,7 @@ export const SECTION_REGISTRY: SectionDefinition[] = [
       headline: "Need Immediate Clinical Guidance?",
       subheadline: "Chat directly with Dr. Noopur Patel's consultation coordination desk on WhatsApp for appointment scheduling and reports review.",
       buttonLabel: "Chat on WhatsApp Now",
-      phoneNumber: "+919876543210",
+      phoneNumber: "+917567987787",
       prefilledMessage: "Hello Dr. Noopur Patel's clinic desk, I would like to schedule a breast consultation.",
     },
     defaultStyling: {
@@ -398,7 +398,7 @@ export const SECTION_REGISTRY: SectionDefinition[] = [
     defaultContent: {
       heading: "Clinical Consultation Location",
       email: "dr.noopurpatel@gmail.com",
-      phone: "+91 98765 43210",
+      phone: "+91 75679 87787",
       address: "Marengo CIMS Hospital, Off Science City Road, Sola, Ahmedabad, Gujarat 380060",
       hours: "Monday – Saturday: 9:00 AM – 6:00 PM",
     },

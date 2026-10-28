@@ -1178,7 +1178,7 @@ export default function AdminOffersPage() {
                         <option value="/services/oncoplastic-breast-surgery">Oncoplastic Breast Surgery</option>
                         <option value="/services/breast-cancer-surgery">Breast Cancer Surgery</option>
                         <option value="/contact?intent=guide">Patient Self-Exam Guide</option>
-                        <option value="https://wa.me/919876543210">Marengo CIMS Hospital WhatsApp</option>
+                        <option value="https://wa.me/917567987787">Marengo CIMS Hospital WhatsApp</option>
                       </select>
                     </div>
                   </div>

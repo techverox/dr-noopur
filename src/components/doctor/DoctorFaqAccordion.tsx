@@ -48,7 +48,7 @@ export const HOMEPAGE_FAQS: FaqItemData[] = [
   {
     question: "How can I book a consultation with Dr. Noopur Patel?",
     answer:
-      "You can book directly through the online appointment form on this website, call the Marengo CIMS Hospital OPD clinic desk at +91 98765 43210, or message via WhatsApp for assistance. Same-day appointments are prioritized for patients with acute symptoms or suspicious biopsy reports.",
+      "You can book directly through the online appointment form on this website, call the Marengo CIMS Hospital OPD clinic desk at +91 75679 87787, or message via WhatsApp for assistance. Same-day appointments are prioritized for patients with acute symptoms or suspicious biopsy reports.",
   },
 ];
 

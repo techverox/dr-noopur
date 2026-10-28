@@ -16,7 +16,7 @@ export const DEFAULT_HOME_PAGE_CONTENT: HomePageContent = {
   primaryCtaText: "Book a Consultation",
   primaryCtaLink: "/appointments",
   secondaryCtaText: "Consult on WhatsApp",
-  secondaryCtaLink: "https://wa.me/919876543210",
+  secondaryCtaLink: "https://wa.me/917567987787",
   stat1Value: "1 in 8",
   stat1Label: "Women may develop breast cancer",
   stat2Value: "90%+",

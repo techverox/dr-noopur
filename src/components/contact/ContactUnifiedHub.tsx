@@ -101,7 +101,7 @@ export default function ContactUnifiedHub({
   };
 
   const cleanPhone = phone.replace(/[^0-9+]/g, "");
-  const whatsappNumber = SITE_CONFIG.contact.whatsappNumber || "919876543210";
+  const whatsappNumber = SITE_CONFIG.contact.whatsappNumber || "917567987787";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     "Hello Dr. Noopur Patel's clinic desk, I would like to schedule a breast consultation at Marengo CIMS Hospital."
   )}`;

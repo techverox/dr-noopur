@@ -40,7 +40,7 @@ export const CANONICAL_REDIRECTS: RedirectItem[] = [
   {
     id: "red-4",
     sourcePath: "/whatsapp",
-    destinationPath: "https://wa.me/919876543210",
+    destinationPath: "https://wa.me/917567987787",
     statusCode: 302,
     isActive: true,
     note: "Direct Marengo CIMS Hospital Clinical WhatsApp Desk",
