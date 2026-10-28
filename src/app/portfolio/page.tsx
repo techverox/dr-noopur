@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import DoctorNavbar from "@/components/doctor/DoctorNavbar";
+import DoctorFooter from "@/components/doctor/DoctorFooter";
 import GlobalSpotlightGrid from "@/components/GlobalSpotlightGrid";
 import { getCmsPortfolio } from "@/lib/services/cmsService";
 import { resolveDynamicPageMetadata } from "@/lib/seo/metadata";
@@ -28,11 +28,10 @@ export default async function PortfolioArchivePage() {
   const publishedPortfolio = portfolio.filter((p) => p.isPublished !== false);
 
   return (
-    <div className="relative min-h-screen bg-[#FCFDFD] text-[#0C1628] selection:bg-emerald-500/20 selection:text-emerald-900">
-      <GlobalSpotlightGrid />
-      <Navbar />
+    <div className="relative min-h-screen bg-[#FCFDFD] text-slate-900 selection:bg-[#D84C70]/20 selection:text-[#9B2846]">
+      <DoctorNavbar />
       <PortfolioClientView initialItems={publishedPortfolio} />
-      <Footer />
+      <DoctorFooter />
     </div>
   );
 }

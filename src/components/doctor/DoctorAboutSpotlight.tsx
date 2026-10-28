@@ -62,7 +62,7 @@ export default function DoctorAboutSpotlight() {
                   <span>Education &amp; Qualifications</span>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  MBBS, MS (General Surgery), MCh (Surgical Oncology), Fellowship in Breast Surgical Oncology.
+                  MBBS, MS (General Surgery), Fellowship in Breast Surgical Oncology.
                 </p>
                 <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#FFF5F7] border border-[#F5CAD5] text-[11px] font-bold text-[#88213B]">
                   <span>GMC Reg. No: G-22533</span>

@@ -784,8 +784,8 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
       "Immunohistochemistry (IHC)",
     ],
     heroBadge: "ACCURATE HISTOPATHOLOGY · RAPID RESULTS",
-    heroSubtitle: "Precise diagnostic confirmation with ultrasound guidance for maximum safety and comfort.",
-    quickOverview: "A breast biopsy is the only definitive method to distinguish benign conditions from malignancies. Dr. Noopur Patel performs real-time ultrasound-guided core needle biopsy, ensuring painless tissue sampling under local anesthesia with fast histopathology results.",
+    heroSubtitle: "Precise diagnostic confirmation with guided precision for maximum safety and comfort.",
+    quickOverview: "A breast biopsy is the only definitive method to distinguish benign conditions from malignancies. Dr. Noopur Patel performs guided core needle biopsy, ensuring painless tissue sampling under local anesthesia with fast histopathology results.",
     keySections: [
       {
         heading: "Diagnostic Biopsy Types & Clinical Indications",
@@ -797,10 +797,6 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
         ],
       },
     ],
-    costAndInsurance: {
-      tpaNotes: "Diagnostic biopsies prescribed by specialists are covered under OPD/daycare insurance depending on policy terms.",
-      disclaimer: "Specialized immunohistochemistry (IHC) profiling (ER, PR, HER2-neu) is performed when clinically indicated for personalized therapy.",
-    },
     faqs: [
       {
         question: "Is a breast biopsy painful?",
@@ -808,7 +804,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
       },
       {
         question: "How long does the biopsy report take?",
-        answer: "Standard histopathology reports take 2 to 4 working days. If specialized Immunohistochemistry (IHC) staining is needed, an additional 24-48 hours may be required.",
+        answer: "Standard histopathology reports take 2 to 4 working days. If specialized Immunohistochemistry (IHC) staining is needed, an additional 48-72 hours may be required.",
       },
     ],
     relatedSlugs: [
@@ -817,7 +813,7 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
       "breast-cancer-specialist-ahmedabad",
       "breast-lump-removal-surgery-ahmedabad",
     ],
-    ctaText: "Book Ultrasound Guided Biopsy",
+    ctaText: "Schedule Biopsy Consultation",
     schemaType: "MedicalProcedure",
   },
 
@@ -861,8 +857,8 @@ export const SEO_KEYWORD_MAP: Record<string, SeoPageData> = {
     ],
     faqs: [
       {
-        question: "Can large lumps be removed using VABB?",
-        answer: "VABB is best suited for lumps up to 3 cm in size. For larger lesions, Dr. Noopur Patel will evaluate whether open cosmetic excision is preferable.",
+        question: "Can small lumps be removed using VABB?",
+        answer: "Yes. VABB is ideally suited for small, benign breast lumps (typically up to 2-3 cm) and microcalcifications, removing them completely without stitches or surgical scars.",
       },
     ],
     relatedSlugs: [

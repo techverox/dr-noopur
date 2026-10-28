@@ -96,7 +96,7 @@ const FIVE_STEP_APPROACH = [
   {
     step: "04",
     title: "Precision Surgical Execution",
-    desc: "Operative resection performed at Marengo CIMS Hospital with frozen section margin assessment and specialized lady care staff.",
+    desc: "Operative resection performed with intraoperative frozen section margin assessment and specialized lady care nursing staff.",
   },
   {
     step: "05",

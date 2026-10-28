@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import QRCode from "qrcode";
 import {
   QrCode,
@@ -189,14 +190,14 @@ export default function PatientStoryQRCode({
             <span>Open Review Form Now</span>
           </button>
         ) : (
-          <a
+          <Link
             href="/share-story"
             className="w-full mt-3 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-[13px] font-semibold text-white bg-gradient-to-r from-[#D84C70] to-[#BE3A5C] hover:opacity-95 shadow-sm transition-all"
           >
             <Heart className="w-4 h-4 fill-white" />
             <span>Open Review Form Now</span>
             <ExternalLink className="w-3.5 h-3.5 ml-0.5 opacity-80" />
-          </a>
+          </Link>
         )}
 
         {/* Privacy Note */}

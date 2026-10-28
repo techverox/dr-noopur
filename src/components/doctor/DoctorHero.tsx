@@ -143,7 +143,7 @@ export default function DoctorHero({
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5 pt-1">
                   <div className="flex items-center gap-2 text-xs sm:text-[13px] font-medium text-slate-800">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>MBBS, MS, MCh (Surg Onco) · GMC G-22533</span>
+                    <span>MBBS, MS (Gen Surgery) · GMC G-22533</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs sm:text-[13px] font-medium text-slate-800">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />

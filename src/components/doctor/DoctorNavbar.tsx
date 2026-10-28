@@ -69,7 +69,7 @@ export default function DoctorNavbar() {
         {
           title: "Professional Journey & Credentials",
           href: "/about/journey",
-          desc: "MBBS, MS, MCh, fellowship, mentors & memberships",
+          desc: "MBBS, MS, fellowship, mentors & memberships",
         },
       ],
     },

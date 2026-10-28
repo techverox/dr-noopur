@@ -1,7 +1,7 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import DoctorNavbar from "@/components/doctor/DoctorNavbar";
+import DoctorFooter from "@/components/doctor/DoctorFooter";
 import GlobalSpotlightGrid from "@/components/GlobalSpotlightGrid";
 import CaseStudyDetailClientView from "@/components/portfolio/CaseStudyDetailClientView";
 import { getCmsPortfolioBySlug, getCmsPortfolio } from "@/lib/services/cmsService";
@@ -79,21 +79,20 @@ export default async function PortfolioDetailPage({ params }: PortfolioPageProps
   };
 
   return (
-    <div className="relative min-h-screen bg-[#FCFDFD] text-[#0C1628] selection:bg-emerald-500/20 selection:text-emerald-900 font-sans">
+    <div className="relative min-h-screen bg-[#FCFDFD] text-slate-900 selection:bg-[#D84C70]/20 selection:text-[#9B2846] font-sans">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <GlobalSpotlightGrid />
-      <Navbar />
+      <DoctorNavbar />
 
       <CaseStudyDetailClientView
         item={item}
         relatedItems={relatedItems}
       />
 
-      <Footer />
+      <DoctorFooter />
     </div>
   );
 }

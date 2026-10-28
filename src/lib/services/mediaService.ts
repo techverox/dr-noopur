@@ -655,15 +655,16 @@ export const MAX_MEDIA_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
  */
 export function scanLocalDoctorMediaDirectories(): MediaItem[] {
   try {
-    const scanDir = (relDir: string): MediaItem[] => {
-      const fullDir = path.join(process.cwd(), relDir);
-      if (!fsSync.existsSync(fullDir)) return [];
+    const baseDir = path.join(process.cwd(), "public", "images", "doctor");
+    if (!fsSync.existsSync(baseDir)) return [];
+
+    const scanDir = (currentDir: string): MediaItem[] => {
       let list: MediaItem[] = [];
-      const entries = fsSync.readdirSync(fullDir, { withFileTypes: true });
+      const entries = fsSync.readdirSync(currentDir, { withFileTypes: true });
       for (const entry of entries) {
-        const fullPath = path.join(fullDir, entry.name);
+        const fullPath = path.join(currentDir, entry.name);
         if (entry.isDirectory()) {
-          list = list.concat(scanDir(path.join(relDir, entry.name)));
+          list = list.concat(scanDir(fullPath));
         } else {
           const ext = path.extname(entry.name).toLowerCase();
           if ([".png", ".jpg", ".jpeg", ".webp", ".svg", ".gif"].includes(ext)) {
@@ -695,7 +696,7 @@ export function scanLocalDoctorMediaDirectories(): MediaItem[] {
       return list;
     };
 
-    return scanDir("public/images/doctor");
+    return scanDir(baseDir);
   } catch (err) {
     console.warn("[scanLocalDoctorMediaDirectories] Error scanning local directory:", err);
     return [];

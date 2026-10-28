@@ -23,7 +23,7 @@ import { SITE_CONFIG } from "@/config/site";
 export const metadata: Metadata = {
   title: "Professional Journey & Credentials | Dr. Noopur Patel Ahmedabad",
   description:
-    "Explore Dr. Noopur Patel's surgical training, MBBS, MS, MCh Surgical Oncology, fellowship, mentors, and professional medical memberships.",
+    "Explore Dr. Noopur Patel's surgical training, MBBS, MS, Fellowship in Breast Surgical Oncology, mentors, and professional medical memberships.",
 };
 
 const TIMELINE_MILESTONES = [
@@ -43,17 +43,17 @@ const TIMELINE_MILESTONES = [
   },
   {
     slot: 14,
-    year: "MCh",
-    title: "Super-Specialization in Surgical Oncology",
-    institution: "Premier Regional Cancer Centre",
-    desc: "3-year advanced residency in oncological resection, multi-visceral clearance, sentinel node mapping, and tumor biology.",
+    year: "Fellowship",
+    title: "Fellowship in Breast Surgical Oncology",
+    institution: "Max Healthcare Institute",
+    desc: "Sub-specialized fellowship training focusing exclusively on oncological breast resection, sentinel node mapping, and oncoplastic techniques.",
   },
   {
     slot: 15,
-    year: "Fellowship",
-    title: "Advanced Oncoplastic Breast Surgery",
-    institution: "Max Healthcare Institute",
-    desc: "Sub-specialized fellowship training focusing exclusively on breast conservation techniques, tissue rearrangement, and breast aesthetics.",
+    year: "Oncoplastic",
+    title: "Advanced Oncoplastic & Reconstructive Training",
+    institution: "National & International Masterclasses",
+    desc: "Sub-specialized masterclasses focusing on breast conservation techniques, tissue rearrangement, and aesthetic breast preservation.",
   },
   {
     slot: 16,
@@ -168,7 +168,7 @@ export default function ProfessionalJourneyPage() {
                       Academic Rigor &amp; Surgical Excellence
                     </p>
                     <p className="text-[11px] text-slate-500 mt-0.5">
-                      MBBS, MS (Gen Surgery), MCh (Surg Oncology), Fellowship (Max)
+                      MBBS, MS (Gen Surgery), Fellowship in Breast Surgical Oncology
                     </p>
                   </div>
                 </div>
@@ -197,7 +197,7 @@ export default function ProfessionalJourneyPage() {
                     />
                     <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md p-3 rounded-xl border border-rose-100 text-center">
                       <p className="text-xs font-bold text-slate-900">Dr. Noopur Patel</p>
-                      <p className="text-[11px] text-[#D84C70] font-semibold">GMC Reg No: G-49281</p>
+                      <p className="text-[11px] text-[#D84C70] font-semibold">GMC Reg No: G-22533</p>
                     </div>
                   </div>
                 </div>
@@ -222,16 +222,16 @@ export default function ProfessionalJourneyPage() {
                       <div className="text-[11px] text-slate-500 mt-0.5">Foundational surgical training &amp; university honors</div>
                     </div>
                     <div className="p-3.5 rounded-2xl bg-white border border-[#F0D5DC]">
-                      <div className="text-xs font-bold text-slate-900">MCh (Surgical Oncology)</div>
-                      <div className="text-[11px] text-slate-500 mt-0.5">Super-speciality cancer surgery residency</div>
-                    </div>
-                    <div className="p-3.5 rounded-2xl bg-white border border-[#F0D5DC]">
-                      <div className="text-xs font-bold text-slate-900">Breast Oncology Fellowship</div>
+                      <div className="text-xs font-bold text-slate-900">Fellowship in Breast Oncology</div>
                       <div className="text-[11px] text-slate-500 mt-0.5">Max Healthcare Institute, New Delhi</div>
                     </div>
                     <div className="p-3.5 rounded-2xl bg-white border border-[#F0D5DC]">
+                      <div className="text-xs font-bold text-slate-900">Oncoplastic Breast Surgery</div>
+                      <div className="text-[11px] text-slate-500 mt-0.5">Advanced tissue rearrangement &amp; reconstruction</div>
+                    </div>
+                    <div className="p-3.5 rounded-2xl bg-white border border-[#F0D5DC]">
                       <div className="text-xs font-bold text-slate-900">Gujarat Medical Council</div>
-                      <div className="text-[11px] text-slate-500 mt-0.5">Officially registered practitioner</div>
+                      <div className="text-[11px] text-slate-500 mt-0.5">Officially registered practitioner (G-22533)</div>
                     </div>
                   </div>
                 </div>

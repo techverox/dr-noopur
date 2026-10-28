@@ -12,19 +12,15 @@ import {
   Tag,
   Sparkles,
   Layers,
-  Star,
   Quote,
-  Users,
-  Check,
-  ArrowUpRight,
+  Heart,
+  Calendar,
   AlertCircle,
   Activity,
   Workflow,
-  Clock,
+  Stethoscope,
 } from "lucide-react";
 import { PortfolioItem } from "@/types";
-import { ShimmerButton } from "@/components/motion";
-import SocialProofBar from "@/components/SocialProofBar";
 
 interface CaseStudyDetailClientViewProps {
   item: PortfolioItem;
@@ -36,50 +32,49 @@ export default function CaseStudyDetailClientView({
   relatedItems,
 }: CaseStudyDetailClientViewProps) {
   return (
-    <div className="relative min-h-screen bg-[#FCFDFD] text-[#0C1628] selection:bg-emerald-500/20 selection:text-emerald-900 font-sans">
-      
+    <div className="relative min-h-screen bg-[#FCFDFD] text-slate-900 selection:bg-[#D84C70]/20 selection:text-[#9B2846] font-sans">
       {/* 1. Subtle Ambient Gradient Wash */}
       <div
         aria-hidden="true"
-        className="absolute top-0 inset-x-0 h-[650px] bg-[radial-gradient(ellipse_70%_45%_at_50%_-10%,rgba(0,135,68,0.06),transparent_70%)] pointer-events-none"
+        className="absolute top-0 inset-x-0 h-[650px] bg-[radial-gradient(ellipse_70%_45%_at_50%_-10%,rgba(216,76,112,0.06),transparent_70%)] pointer-events-none"
       />
 
-      {/* ====================================================================
-          HERO SECTION: EXECUTIVE IMPACT HEADLINE & CLIENT METADATA
-          ==================================================================== */}
+      {/* HERO SECTION */}
       <section className="pt-[92px] sm:pt-[98px] lg:pt-[102px] pb-14 sm:pb-16 relative overflow-hidden text-center">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FFF0F3] border border-[#F5CAD5] text-[#88213B] text-xs font-bold uppercase tracking-wider mb-5">
+            <Stethoscope className="w-3.5 h-3.5 text-[#D84C70]" />
+            <span>Clinical Care Journey &amp; Surgical Outcome</span>
+          </div>
 
-          {/* Primary Case Study Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0C1628] mb-6 leading-[1.15]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-slate-900 mb-6 leading-[1.18]">
             {item.title}
           </h1>
 
-          {/* Subtitle / Context */}
-          <p className="text-base sm:text-lg text-[#475569] max-w-3xl mx-auto font-normal leading-relaxed mb-8">
+          <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto font-normal leading-relaxed mb-8">
             {item.shortDescription}
           </p>
 
-          {/* Client Metadata Strip */}
+          {/* Clinical Case Metadata Strip */}
           <div className="flex flex-wrap items-center justify-center gap-3 text-xs text-slate-600">
-            <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-xl border border-slate-200/80 shadow-2xs">
-              <Building2 className="w-3.5 h-3.5 text-[#008744]" />
+            <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-xl border border-rose-100 shadow-xs">
+              <Building2 className="w-3.5 h-3.5 text-[#D84C70]" />
               <span>
-                Client: <strong className="text-slate-900">{item.clientName}</strong>
+                Case Profile: <strong className="text-slate-900">{item.clientName}</strong>
               </span>
             </span>
 
-            <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-xl border border-slate-200/80 shadow-2xs">
-              <Tag className="w-3.5 h-3.5 text-[#008744]" />
+            <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-xl border border-rose-100 shadow-xs">
+              <Tag className="w-3.5 h-3.5 text-[#D84C70]" />
               <span>
-                Industry: <strong className="text-slate-900">{item.industry}</strong>
+                Specialty: <strong className="text-slate-900">{item.category || item.industry}</strong>
               </span>
             </span>
 
             {item.authorName && (
-              <span className="flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-xl border border-slate-200/80 shadow-2xs">
+              <span className="flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-xl border border-rose-100 shadow-xs">
                 {item.authorAvatar && (
-                  <span className="relative w-5 h-5 rounded-full overflow-hidden border border-slate-200 shrink-0">
+                  <span className="relative w-5 h-5 rounded-full overflow-hidden border border-rose-100 shrink-0">
                     <Image
                       src={item.authorAvatar}
                       alt={item.authorName}
@@ -90,27 +85,24 @@ export default function CaseStudyDetailClientView({
                   </span>
                 )}
                 <span>
-                  Leader: <strong className="text-slate-900">{item.authorName}</strong> ({item.authorRole || "Partner"})
+                  Consultant: <strong className="text-slate-900">{item.authorName}</strong>
                 </span>
               </span>
             )}
           </div>
-
         </div>
       </section>
 
-      {/* ====================================================================
-          2. KEY METRICS RIBBON WITH DESCRIPTIONS
-          ==================================================================== */}
+      {/* 2. KEY CLINICAL METRICS RIBBON */}
       {item.metrics && item.metrics.length > 0 && (
         <section className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-4 mb-16">
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-rose-100/90 shadow-sm grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {item.metrics.map((m, idx) => (
               <div key={idx} className="space-y-1.5 flex flex-col justify-center">
-                <div className="text-3xl sm:text-4xl font-black text-[#008744] tracking-tight">
+                <div className="text-3xl sm:text-4xl font-serif font-bold text-[#88213B] tracking-tight">
                   {m.value}
                 </div>
-                <div className="text-xs font-bold text-[#0C1628] uppercase tracking-wider">
+                <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">
                   {m.label}
                 </div>
                 {m.description && (
@@ -124,51 +116,48 @@ export default function CaseStudyDetailClientView({
         </section>
       )}
 
-      {/* ====================================================================
-          3. MAIN CONTENT CONTAINER
-          ==================================================================== */}
-      <section className="pb-20 sm:pb-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
-        
-        {/* Visual Hero Media Banner */}
-        {item.heroImage && item.heroImage.trim().length > 0 && (
-          <div className="relative w-full h-[320px] sm:h-[460px] rounded-3xl overflow-hidden shadow-md border border-slate-200/80 bg-slate-100 isolate">
+      {/* 3. CASE BODY */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 space-y-12">
+        {/* Hero Visual */}
+        {item.heroImage && (
+          <div className="relative w-full aspect-16/9 rounded-3xl overflow-hidden border border-rose-100 shadow-sm bg-slate-100">
             <Image
-              src={item.heroImage.trim()}
+              src={item.heroImage}
               alt={item.title}
               fill
-              sizes="(max-width: 1024px) 100vw, 1024px"
+              sizes="(max-width: 1200px) 100vw, 1024px"
               className="object-cover object-center"
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
             
             <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between z-10 text-white">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-xs font-bold border border-white/20">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-xs font-semibold border border-white/20">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Verified Commercial Audit</span>
+                <span>Ethical Care Documentation</span>
               </span>
-              <span className="text-xs font-semibold text-white/90 drop-shadow-xs hidden sm:inline-block">
-                {item.clientName} • Case Study #{item.order || 1}
+              <span className="text-xs font-medium text-white/90 drop-shadow-xs hidden sm:inline-block">
+                {item.clientName} • Case Journey #{item.order || 1}
               </span>
             </div>
           </div>
         )}
 
         {/* Executive Summary Brief Card */}
-        <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-2xs">
-          <div className="flex items-center gap-2 mb-4 text-[#008744] text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-4 h-4" />
-            <span>Executive At-A-Glance Brief</span>
+        <div className="bg-white p-6 sm:p-8 rounded-3xl border border-rose-100 shadow-xs">
+          <div className="flex items-center gap-2 mb-4 text-[#88213B] text-xs font-bold uppercase tracking-wider">
+            <Sparkles className="w-4 h-4 text-[#D84C70]" />
+            <span>Clinical Summary at a Glance</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2 text-left">
-            <div className="space-y-1.5 border-l-2 border-rose-400 pl-4">
-              <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Primary Constraint</div>
+            <div className="space-y-1.5 border-l-2 border-rose-300 pl-4">
+              <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Clinical Presentation</div>
               <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
                 {item.challenge}
               </p>
             </div>
-            <div className="space-y-1.5 border-l-2 border-blue-400 pl-4">
-              <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Engine Solution</div>
+            <div className="space-y-1.5 border-l-2 border-amber-300 pl-4">
+              <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Surgical Strategy</div>
               <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
                 {item.strategy}
               </p>
@@ -182,39 +171,35 @@ export default function CaseStudyDetailClientView({
           </div>
         </div>
 
-        {/* ====================================================================
-            4. THE 4-PHASE DEEP DIVE NARRATIVE
-            ==================================================================== */}
+        {/* 4-PHASE CLINICAL JOURNEY */}
         <div className="space-y-8 text-slate-800">
-          
-          {/* Phase 01: The Bottleneck */}
-          <div className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-2xs space-y-5">
+          {/* Phase 01: Presentation & Evaluation */}
+          <div className="bg-white p-8 sm:p-10 rounded-3xl border border-rose-100/90 shadow-xs space-y-5">
             <div className="flex items-center justify-between flex-wrap gap-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 text-rose-700 text-xs font-bold uppercase tracking-wider border border-rose-200/70">
-                <AlertCircle className="w-3.5 h-3.5" />
-                <span>Phase 01: The Operational Bottleneck</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 text-rose-800 text-xs font-bold uppercase tracking-wider border border-rose-200/70">
+                <AlertCircle className="w-3.5 h-3.5 text-[#D84C70]" />
+                <span>Phase 01: Initial Presentation &amp; Diagnosis</span>
               </div>
-              <span className="text-xs font-mono text-slate-400">Pre-DigiVigee Legacy State</span>
+              <span className="text-xs font-mono text-slate-400">Clinical Evaluation</span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0C1628] tracking-tight">
-              Operational Friction & Scalability Ceilings
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 tracking-tight">
+              Patient Assessment &amp; Diagnostic Confirmation
             </h2>
 
-            <div className="text-base text-[#475569] leading-relaxed whitespace-pre-line">
+            <div className="text-base text-slate-600 leading-relaxed whitespace-pre-line">
               {item.challenge}
             </div>
 
-            {/* Before Pain Points List */}
             {item.beforePoints && item.beforePoints.length > 0 && (
               <div className="pt-4 border-t border-slate-100">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
-                  Critical Vulnerabilities Identified:
+                  Key Diagnostic Observations:
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {item.beforePoints.map((point, pIdx) => (
-                    <div key={pIdx} className="flex items-start gap-2.5 text-xs text-slate-700 bg-rose-50/40 p-3 rounded-xl border border-rose-100">
-                      <span className="text-rose-600 font-bold shrink-0 mt-0.5">✕</span>
+                    <div key={pIdx} className="flex items-start gap-2.5 text-xs text-slate-700 bg-[#FFF8F9] p-3 rounded-xl border border-rose-100">
+                      <span className="text-[#D84C70] font-bold shrink-0 mt-0.5">•</span>
                       <span>{point}</span>
                     </div>
                   ))}
@@ -223,113 +208,106 @@ export default function CaseStudyDetailClientView({
             )}
           </div>
 
-          {/* Phase 02: Strategic Architecture & Modules */}
-          <div className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-2xs space-y-5">
+          {/* Phase 02: Surgical Planning & Multidisciplinary Review */}
+          <div className="bg-white p-8 sm:p-10 rounded-3xl border border-rose-100/90 shadow-xs space-y-5">
             <div className="flex items-center justify-between flex-wrap gap-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider border border-blue-200/70">
-                <Workflow className="w-3.5 h-3.5" />
-                <span>Phase 02: System Blueprint & Strategy</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFF0F3] text-[#88213B] text-xs font-bold uppercase tracking-wider border border-[#F5CAD5]">
+                <Workflow className="w-3.5 h-3.5 text-[#D84C70]" />
+                <span>Phase 02: Tailored Surgical Blueprint</span>
               </div>
-              <span className="text-xs font-mono text-slate-400">Architecture Mapping</span>
+              <span className="text-xs font-mono text-slate-400">Multidisciplinary Review</span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0C1628] tracking-tight">
-              DigiVigee Engine Architecture Deployed
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 tracking-tight">
+              Personalized Oncologic Treatment Planning
             </h2>
 
-            <div className="text-base text-[#475569] leading-relaxed whitespace-pre-line">
+            <div className="text-base text-slate-600 leading-relaxed whitespace-pre-line">
               {item.strategy}
             </div>
 
-            {/* Platform Modules Deployed */}
             {item.servicesDelivered && item.servicesDelivered.length > 0 && (
               <div className="pt-4 border-t border-slate-100 space-y-3">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                  Platform Delivery Engines Installed:
+                  Procedures &amp; Modalities Formulated:
                 </div>
                 <div className="flex flex-wrap gap-2.5">
-                  {item.servicesDelivered.map((svc, sIdx) => (
-                    <Link
+                  {item.servicesDelivered.map((srv, sIdx) => (
+                    <span
                       key={sIdx}
-                      href="/services"
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs font-semibold border border-slate-200/80 hover:border-slate-300 transition-colors group/pill"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#FFF8F9] border border-rose-100 text-xs font-medium text-slate-800"
                     >
-                      <Layers className="w-3.5 h-3.5 text-[#008744]" />
-                      <span>{svc}</span>
-                      <ArrowUpRight className="w-3 h-3 text-slate-400 group-hover/pill:text-slate-900 group-hover/pill:translate-x-0.5 transition-all" />
-                    </Link>
+                      <Layers className="w-3.5 h-3.5 text-[#D84C70]" />
+                      <span>{srv}</span>
+                    </span>
                   ))}
                 </div>
               </div>
             )}
           </div>
 
-          {/* Phase 03: Fast-Track Execution */}
-          {item.execution && (
-            <div className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-2xs space-y-5">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-bold uppercase tracking-wider border border-amber-200/70">
-                  <Clock className="w-3.5 h-3.5" />
-                  <span>Phase 03: Rapid Onboarding & Integration</span>
-                </div>
-                <span className="text-xs font-mono text-slate-400">48-Hour SLA Execution</span>
-              </div>
-
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#0C1628] tracking-tight">
-                Execution Protocol & Workflow Calibration
-              </h2>
-
-              <div className="text-base text-[#475569] leading-relaxed whitespace-pre-line">
-                {item.execution}
-              </div>
-
-              {/* Execution Milestones */}
-              {item.executionMilestones && item.executionMilestones.length > 0 && (
-                <div className="pt-4 border-t border-slate-100 space-y-3">
-                  <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                    Integration Milestones Achieved:
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                    {item.executionMilestones.map((milestone, mIdx) => (
-                      <div key={mIdx} className="flex items-start gap-2.5 text-xs text-slate-700 bg-amber-50/30 p-3 rounded-xl border border-amber-100">
-                        <Check className="w-3.5 h-3.5 text-amber-600 font-bold shrink-0 mt-0.5" />
-                        <span>{milestone}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* Phase 04: Verified Compounding Results */}
-          <div className="bg-gradient-to-b from-white to-emerald-50/40 p-8 sm:p-10 rounded-3xl border border-emerald-200/90 shadow-2xs space-y-5">
+          {/* Phase 03: Surgical Execution */}
+          <div className="bg-white p-8 sm:p-10 rounded-3xl border border-rose-100/90 shadow-xs space-y-5">
             <div className="flex items-center justify-between flex-wrap gap-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#008744] text-white text-xs font-bold uppercase tracking-wider shadow-2xs">
-                <ShieldCheck className="w-3.5 h-3.5" />
-                <span>Phase 04: Audited Retainer Telemetry</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold uppercase tracking-wider border border-emerald-200">
+                <Activity className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Phase 03: Precision Surgical Resection</span>
               </div>
-              <span className="text-xs font-mono text-[#008744] font-semibold">100% Commercial Telemetry Verified</span>
+              <span className="text-xs font-mono text-slate-400">Intraoperative Clearance</span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0C1628] tracking-tight">
-              Compounding Retention & Revenue Expansion
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 tracking-tight">
+              Surgical Execution &amp; Margin Verification
+            </h2>
+
+            <div className="text-base text-slate-600 leading-relaxed whitespace-pre-line">
+              {item.execution}
+            </div>
+
+            {item.executionMilestones && item.executionMilestones.length > 0 && (
+              <div className="pt-4 border-t border-slate-100 space-y-3">
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                  Care Pathway Milestones:
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {item.executionMilestones.map((ms, mIdx) => (
+                    <div key={mIdx} className="flex items-start gap-2.5 text-xs text-slate-800 bg-slate-50 p-3 rounded-xl border border-slate-200/80">
+                      <span className="font-mono text-xs font-bold text-[#88213B] mt-0.5">0{mIdx + 1}</span>
+                      <span>{ms}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Phase 04: Measured Recovery Outcomes */}
+          <div className="bg-gradient-to-b from-[#FFF8F9] to-white p-8 sm:p-10 rounded-3xl border border-rose-200/80 shadow-xs space-y-5">
+            <div className="flex items-center justify-between flex-wrap gap-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#88213B] text-white text-xs font-bold uppercase tracking-wider shadow-xs">
+                <ShieldCheck className="w-3.5 h-3.5 text-rose-200" />
+                <span>Phase 04: Histopathological Clearance &amp; Recovery</span>
+              </div>
+              <span className="text-xs font-mono text-[#88213B] font-semibold">100% Margin Clearance</span>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 tracking-tight">
+              Aesthetic Preservation &amp; Long-Term Recovery
             </h2>
 
             <div className="text-base text-slate-700 leading-relaxed whitespace-pre-line">
               {item.results}
             </div>
 
-            {/* After Superpowers List */}
             {item.afterPoints && item.afterPoints.length > 0 && (
-              <div className="pt-4 border-t border-emerald-200/70 space-y-3">
-                <div className="text-xs font-bold uppercase tracking-wider text-emerald-800">
-                  Operational Superpowers Unlocked:
+              <div className="pt-4 border-t border-rose-200/70 space-y-3">
+                <div className="text-xs font-bold uppercase tracking-wider text-[#88213B]">
+                  Verified Recovery Milestones:
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {item.afterPoints.map((point, aIdx) => (
-                    <div key={aIdx} className="flex items-start gap-2.5 text-xs text-slate-800 bg-white/90 p-3 rounded-xl border border-emerald-200 shadow-2xs">
-                      <CheckCircle2 className="w-4 h-4 text-[#008744] shrink-0 mt-0.5" />
+                    <div key={aIdx} className="flex items-start gap-2.5 text-xs text-slate-800 bg-white/90 p-3 rounded-xl border border-rose-200 shadow-xs">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                       <span className="font-medium">{point}</span>
                     </div>
                   ))}
@@ -337,161 +315,109 @@ export default function CaseStudyDetailClientView({
               </div>
             )}
           </div>
-
         </div>
 
-        {/* ====================================================================
-            5. VERIFIED CLIENT TESTIMONIAL QUOTE
-            ==================================================================== */}
+        {/* 5. PATIENT PERSPECTIVE / REFLECTION */}
         {item.testimonialQuote && (
-          <div className="relative bg-white rounded-3xl border border-slate-200/90 p-8 sm:p-12 shadow-sm text-left overflow-hidden">
-            <Quote className="w-12 h-12 text-emerald-500/20 absolute top-6 right-6 pointer-events-none" />
+          <div className="relative bg-white rounded-3xl border border-rose-100 p-8 sm:p-12 shadow-sm text-left overflow-hidden">
+            <Quote className="w-12 h-12 text-[#D84C70]/15 absolute top-6 right-6 pointer-events-none" />
             
-            <div className="flex items-center gap-1.5 mb-4 text-amber-500">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-              ))}
-              <span className="text-xs font-bold text-slate-400 ml-2">5.0 / 5.0 Verified Retainer Rating</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFF0F3] border border-[#F5CAD5] text-[#88213B] text-xs font-bold mb-4">
+              <Heart className="w-3.5 h-3.5 text-[#D84C70] fill-[#D84C70]" />
+              <span>Patient Experience &amp; Survivorship Reflection</span>
             </div>
 
-            <blockquote className="text-lg sm:text-xl font-semibold text-[#0C1628] leading-relaxed mb-6">
+            <blockquote className="text-lg sm:text-xl font-serif text-slate-900 leading-relaxed mb-6 italic">
               &ldquo;{item.testimonialQuote}&rdquo;
             </blockquote>
 
             <div className="flex items-center gap-3.5 pt-4 border-t border-slate-100">
-              {item.authorAvatar ? (
-                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-slate-200 shrink-0">
-                  <Image
-                    src={item.authorAvatar}
-                    alt={item.authorName || "Client Leader"}
-                    fill
-                    sizes="48px"
-                    className="object-cover"
-                  />
-                </div>
-              ) : (
-                <div className="w-12 h-12 rounded-full bg-emerald-500 text-white font-bold flex items-center justify-center shrink-0">
-                  {item.authorName ? item.authorName.charAt(0) : "C"}
-                </div>
-              )}
-              <div>
-                <div className="text-sm font-bold text-[#0C1628] flex items-center gap-1.5">
-                  <span>{item.authorName}</span>
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#008744]" />
-                </div>
-                <div className="text-xs text-slate-500">
-                  {item.authorRole} • <strong className="text-slate-700 font-semibold">{item.clientName}</strong>
-                </div>
+              <div className="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+                <span>{item.clientName}</span>
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+              </div>
+              <div className="text-xs text-slate-500">
+                Treated at Marengo CIMS Hospital, Ahmedabad
               </div>
             </div>
           </div>
         )}
 
-        {/* ====================================================================
-            6. HIGH-CONVERTING LIGHT-FIRST CTA CARD
-            ==================================================================== */}
-        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-white to-emerald-50/50 border border-emerald-200/90 shadow-sm text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100/80 text-[#008744] text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Ready for Similar Retainer Compounding?</span>
+        {/* 6. ETHICAL CLINICAL CONSULTATION CARD */}
+        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-[#FFF8F9] to-white border border-[#F5D6DE] shadow-sm text-center space-y-5">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-[#88213B] text-xs font-bold uppercase tracking-wider border border-[#F0D5DC]">
+            <Calendar className="w-3.5 h-3.5 text-[#D84C70]" />
+            <span>Dedicated Clinical Consultation</span>
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0C1628] tracking-tight">
-            Schedule a 30-Minute Agency Growth Diagnostic
+          <h3 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 tracking-tight">
+            Need Expert Clinical Guidance or a Second Opinion?
           </h3>
 
-          <p className="text-sm sm:text-base text-[#475569] max-w-xl mx-auto">
-            Our enterprise solutions team will review your agency ad ops, client reporting, and retainer billing structure to identify immediate margin expansion.
+          <p className="text-sm sm:text-base text-slate-600 max-w-xl mx-auto leading-relaxed">
+            Every case is unique and requires individual evaluation. Consult with Dr. Noopur Patel to discuss diagnosis, treatment choices, and personalized surgical options.
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Link href="/contact">
-              <ShimmerButton
-                shimmerColor="rgba(255, 255, 255, 0.45)"
-                className="px-8 py-3.5 rounded-xl bg-[#008744] hover:bg-[#009b4e] text-white font-bold text-sm shadow-md shadow-emerald-600/20 cursor-pointer"
-              >
-                <span>Request Growth Diagnostic</span>
-                <ArrowRight className="w-4 h-4" />
-              </ShimmerButton>
+            <Link
+              href="/appointments"
+              className="px-8 py-3.5 rounded-xl bg-[#88213B] hover:bg-[#731930] text-white font-bold text-sm shadow-md transition-all cursor-pointer"
+            >
+              <span>Schedule OPD Consultation</span>
             </Link>
 
             <Link
               href="/portfolio"
-              className="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#0C1628] font-bold text-sm border border-slate-200 shadow-2xs hover:border-slate-300 transition-colors"
+              className="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm border border-slate-200 shadow-xs hover:border-slate-300 transition-colors"
             >
-              Browse All Case Studies
+              Browse All Care Journeys
             </Link>
           </div>
         </div>
 
-      </section>
-
-      {/* ====================================================================
-          7. MORE VERIFIED AGENCY STORIES
-          ==================================================================== */}
-      {relatedItems.length > 0 && (
-        <section className="py-16 bg-[#F8FAFC] border-t border-slate-200/80">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between mb-8">
+        {/* 7. RELATED CARE JOURNEYS */}
+        {relatedItems && relatedItems.length > 0 && (
+          <div className="pt-8 border-t border-slate-100">
+            <div className="flex items-center justify-between mb-6">
               <div>
-                <span className="text-xs font-bold text-[#008744] uppercase tracking-wider">
-                  Verified Customer Evidence
+                <span className="text-xs font-bold text-[#88213B] uppercase tracking-wider">
+                  Additional Case Studies
                 </span>
-                <h3 className="text-xl sm:text-2xl font-bold text-[#0C1628] mt-1">
-                  More Verified Agency Transformations
-                </h3>
+                <h4 className="text-xl sm:text-2xl font-serif font-bold text-slate-900 mt-1">
+                  Related Clinical Outcomes
+                </h4>
               </div>
               <Link
                 href="/portfolio"
-                className="text-xs font-bold text-[#008744] hover:underline inline-flex items-center gap-1"
+                className="text-xs font-bold text-[#88213B] hover:underline inline-flex items-center gap-1"
               >
-                <span>View All Case Studies</span>
+                <span>View All</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {relatedItems.map((rel) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {relatedItems.slice(0, 3).map((rel, rIdx) => (
                 <Link
-                  key={rel.slug}
+                  key={rIdx}
                   href={`/portfolio/${rel.slug}`}
-                  className="p-6 rounded-2xl bg-white border border-slate-200/80 hover:border-emerald-500/50 hover:shadow-md hover:-translate-y-0.5 transition-all group flex flex-col justify-between"
+                  className="group block p-5 rounded-2xl bg-white border border-rose-100 shadow-xs hover:shadow-md hover:border-rose-300 transition-all text-left"
                 >
-                  <div>
-                    <div className="flex items-center justify-between gap-2 mb-2">
-                      <span className="text-xs font-bold text-[#008744] uppercase tracking-wider">
-                        {rel.clientName}
-                      </span>
-                      <span className="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">
-                        {rel.industry}
-                      </span>
-                    </div>
-                    <div className="text-base font-bold text-[#0C1628] group-hover:text-[#008744] transition-colors mb-2 line-clamp-2">
-                      {rel.title}
-                    </div>
-                    <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
-                      {rel.shortDescription}
-                    </p>
+                  <span className="text-xs font-bold text-[#D84C70] uppercase tracking-wider">
+                    {rel.category}
+                  </span>
+                  <div className="text-sm font-bold text-slate-900 group-hover:text-[#88213B] transition-colors mt-1 mb-2 line-clamp-2">
+                    {rel.title}
                   </div>
-
-                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold mt-4">
-                    <span className="text-[#008744]">
-                      {rel.metrics?.[0]?.value ? `${rel.metrics[0].value} ${rel.metrics[0].label}` : "Audited Case Study"}
-                    </span>
-                    <span className="text-slate-400 group-hover:text-[#008744] group-hover:translate-x-1 transition-all inline-flex items-center gap-1">
-                      Read Story →
-                    </span>
+                  <div className="text-xs text-slate-500 line-clamp-2">
+                    {rel.shortDescription}
                   </div>
                 </Link>
               ))}
             </div>
           </div>
-        </section>
-      )}
-
-      {/* 8. Partner Trust Strip */}
-      <SocialProofBar />
-
+        )}
+      </section>
     </div>
   );
 }

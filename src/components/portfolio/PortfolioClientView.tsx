@@ -30,11 +30,10 @@ interface FilterTab {
 }
 
 const FILTER_TABS: FilterTab[] = [
-  { id: "all", label: "All Case Studies" },
-  { id: "performance", label: "Performance & Paid Media" },
-  { id: "social", label: "Social Media & Creative" },
-  { id: "localseo", label: "Local SEO & GBP" },
-  { id: "fullservice", label: "Full-Service Retainers" },
+  { id: "all", label: "All Patient Journeys" },
+  { id: "oncoplastic", label: "Oncoplastic Surgery & BCS" },
+  { id: "benign", label: "Benign Lumps & Fibroadenoma" },
+  { id: "reconstruction", label: "Mastectomy & Reconstruction" },
 ];
 
 export default function PortfolioClientView({ initialItems }: PortfolioClientViewProps) {
@@ -46,12 +45,12 @@ export default function PortfolioClientView({ initialItems }: PortfolioClientVie
   });
 
   return (
-    <div className="relative min-h-screen bg-[#FCFDFD] text-[#0C1628] selection:bg-emerald-500/20 selection:text-emerald-900">
+    <div className="relative min-h-screen bg-[#FCFDFD] text-slate-900 selection:bg-[#D84C70]/20 selection:text-[#9B2846]">
       
       {/* Background Subtle Mesh */}
       <div
         aria-hidden="true"
-        className="absolute top-0 inset-x-0 h-[650px] bg-[radial-gradient(ellipse_70%_45%_at_50%_-10%,rgba(0,135,68,0.06),transparent_70%)] pointer-events-none"
+        className="absolute top-0 inset-x-0 h-[650px] bg-[radial-gradient(ellipse_70%_45%_at_50%_-10%,rgba(216,76,112,0.06),transparent_70%)] pointer-events-none"
       />
 
       {/* Hero Section */}
@@ -60,57 +59,57 @@ export default function PortfolioClientView({ initialItems }: PortfolioClientVie
 
           {/* Staggered Heading Reveal */}
           <FadeIn direction="up" delay={0.2}>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0C1628] max-w-4xl mx-auto leading-[1.12] mb-6">
-              Real Agency Retainers.{" "}
-              <span className="text-[#008744] bg-gradient-to-r from-[#008744] to-[#00B84D] bg-clip-text text-transparent">
-                Audited Revenue Impact.
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-slate-900 max-w-4xl mx-auto leading-[1.15] mb-6">
+              Compassionate Care Journeys &amp;{" "}
+              <span className="text-[#88213B]">
+                Clinical Outcomes
               </span>
             </h1>
           </FadeIn>
 
           {/* Subtitle */}
           <FadeIn direction="up" delay={0.3}>
-            <p className="text-base sm:text-lg text-[#475569] max-w-2xl mx-auto font-normal leading-relaxed mb-12">
-              Discover how leading performance, social, and local search agencies scaled retainer margins from $15k to $180k/mo with automated pacing, 1-click approvals, and zero overspend.
+            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed mb-12">
+              Explore evidence-based recovery journeys, oncological clearance results, and oncoplastic aesthetic outcomes under the personalized surgical care of Dr. Noopur Patel.
             </p>
           </FadeIn>
 
-          {/* Live Metric Ribbon (Dynamic Count-Up Engine) */}
+          {/* Clinical Pillars Ribbon */}
           <FadeIn direction="up" delay={0.4}>
-            <div className="max-w-4xl mx-auto bg-white rounded-2xl p-4 sm:p-6 border border-slate-200/80 shadow-2xs grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
+            <div className="max-w-4xl mx-auto bg-white rounded-2xl p-4 sm:p-6 border border-rose-100/80 shadow-sm grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
               <div className="space-y-1">
-                <div className="text-2xl sm:text-3xl font-extrabold text-[#0C1628] tracking-tight">
-                  <Counter to={84.2} prefix="$" suffix="M+" decimals={1} duration={1.3} />
+                <div className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+                  100%
                 </div>
-                <div className="text-[11px] sm:text-xs font-medium text-slate-500 uppercase tracking-wider">
-                  Audited Ad Spend
+                <div className="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                  Clear Margin Goal
                 </div>
               </div>
 
               <div className="space-y-1">
-                <div className="text-2xl sm:text-3xl font-extrabold text-[#008744] tracking-tight">
-                  <Counter to={4.8} suffix="x" decimals={1} duration={1.2} />
+                <div className="text-2xl sm:text-3xl font-bold text-[#D84C70] tracking-tight">
+                  Optimal
                 </div>
-                <div className="text-[11px] sm:text-xs font-medium text-slate-500 uppercase tracking-wider">
-                  Avg Blended ROAS
-                </div>
-              </div>
-
-              <div className="space-y-1">
-                <div className="text-2xl sm:text-3xl font-extrabold text-[#0C1628] tracking-tight">
-                  <Counter to={99.4} suffix="%" decimals={1} duration={1.4} />
-                </div>
-                <div className="text-[11px] sm:text-xs font-medium text-slate-500 uppercase tracking-wider">
-                  Client Retention
+                <div className="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                  Symmetry Preservation
                 </div>
               </div>
 
               <div className="space-y-1">
-                <div className="text-2xl sm:text-3xl font-extrabold text-[#008744] tracking-tight">
-                  <Counter to={420} suffix="+" duration={1.5} />
+                <div className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+                  SLNB
                 </div>
-                <div className="text-[11px] sm:text-xs font-medium text-slate-500 uppercase tracking-wider">
-                  Verified Agency Pods
+                <div className="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                  Lymphedema Prevention
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <div className="text-2xl sm:text-3xl font-bold text-[#88213B] tracking-tight">
+                  Tumor Board
+                </div>
+                <div className="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                  Multidisciplinary Consensus
                 </div>
               </div>
             </div>
@@ -120,7 +119,7 @@ export default function PortfolioClientView({ initialItems }: PortfolioClientVie
       </section>
 
       {/* Filter Tabs Section */}
-      <section className="sticky top-20 z-20 py-4 bg-[#FCFDFD]/90 backdrop-blur-md border-y border-slate-200/60">
+      <section className="sticky top-20 z-20 py-4 bg-[#FCFDFD]/90 backdrop-blur-md border-y border-rose-100/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center">
             <div className="inline-flex items-center p-1.5 rounded-full bg-slate-100/90 border border-slate-200/80 shadow-2xs gap-1 overflow-x-auto max-w-full">
@@ -137,14 +136,14 @@ export default function PortfolioClientView({ initialItems }: PortfolioClientVie
                     onClick={() => setActiveTab(tab.id)}
                     className={`relative px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-colors duration-200 cursor-pointer flex items-center gap-1.5 z-10 ${
                       isActive
-                        ? "text-[#0C1628]"
+                        ? "text-slate-900"
                         : "text-slate-600 hover:text-slate-900"
                     }`}
                   >
                     {isActive && (
                       <motion.div
                         layoutId="activePortfolioTabPill"
-                        className="absolute inset-0 bg-white rounded-full shadow-xs border border-slate-200/90 -z-10"
+                        className="absolute inset-0 bg-white rounded-full shadow-xs border border-rose-200/80 -z-10"
                         transition={{ type: "spring", stiffness: 380, damping: 28 }}
                       />
                     )}
@@ -152,7 +151,7 @@ export default function PortfolioClientView({ initialItems }: PortfolioClientVie
                     <span
                       className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono ${
                         isActive
-                          ? "bg-emerald-50 text-[#008744] font-bold"
+                          ? "bg-rose-50 text-[#88213B] font-bold"
                           : "bg-slate-200/60 text-slate-500"
                       }`}
                     >
@@ -310,68 +309,49 @@ export default function PortfolioClientView({ initialItems }: PortfolioClientVie
         </AnimatePresence>
       </section>
 
-      {/* Infinite Trust Partner Bar */}
-      <SocialProofBar />
-
-      {/* High-Conversion CTA Banner */}
-      <section className="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl bg-gradient-to-b from-white to-emerald-50/40 p-8 sm:p-14 border border-emerald-200/90 shadow-sm text-center overflow-hidden">
-          
-          <div
-            aria-hidden="true"
-            className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl pointer-events-none"
-          />
-
-          <div className="relative z-10 max-w-2xl mx-auto space-y-6">
-            
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100/70 text-[#008744] text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Scale Your Agency Retainers</span>
+      {/* Calm Clinical Consultation Banner */}
+      <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative rounded-3xl bg-gradient-to-b from-[#FFF8F9] to-white p-8 sm:p-12 border border-[#F5D6DE] shadow-sm text-center overflow-hidden">
+          <div className="relative z-10 max-w-2xl mx-auto space-y-5">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-[#88213B] text-xs font-bold border border-[#F0D5DC] uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5 text-[#D84C70]" />
+              <span>Compassionate Surgical Guidance</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0C1628] tracking-tight leading-tight">
-              Ready to Scale Your Agency Retainers with Audited Certainty?
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 tracking-tight leading-tight">
+              Seeking Second Opinion or Clinical Guidance?
             </h2>
 
-            <p className="text-sm sm:text-base text-[#475569] leading-relaxed">
-              Join 2,350+ agency founders scaling client retainers with automated ad pacing, 1-click approvals, and zero client churn.
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+              Every diagnosis is unique. Consult with Dr. Noopur Patel for evidence-based evaluation, detailed counseling, and personalized surgical care planning.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-              <Link href="/contact">
-                <ShimmerButton
-                  shimmerColor="rgba(255, 255, 255, 0.45)"
-                  className="px-7 py-3.5 rounded-xl bg-[#008744] hover:bg-[#009b4e] text-white font-bold text-sm shadow-md shadow-emerald-600/20 cursor-pointer"
-                >
-                  <span>Request Growth Diagnostic</span>
-                  <ArrowRight className="w-4 h-4" />
-                </ShimmerButton>
+            <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
+              <Link
+                href="/appointments"
+                className="px-6 py-3 rounded-xl bg-[#88213B] hover:bg-[#731930] text-white font-bold text-sm shadow-md transition-all cursor-pointer"
+              >
+                Book OPD Consultation
               </Link>
               <Link
-                href="/services"
-                className="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#0C1628] font-bold text-sm border border-slate-200 shadow-2xs hover:border-slate-300 transition-all cursor-pointer"
+                href="/contact"
+                className="px-6 py-3 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm border border-slate-200 shadow-2xs hover:border-slate-300 transition-all cursor-pointer"
               >
-                Explore Delivery Engines
+                Clinic Coordinates &amp; Map
               </Link>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-500 pt-3">
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-500 pt-2">
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                <span>24h Deployment Ready</span>
+                <span>OPD: Mon - Sat (10 AM - 6 PM)</span>
               </span>
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                <span>Zero Headcount Overhead</span>
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                <span>100% White-Labeled</span>
+                <span>Marengo CIMS Hospital, Ahmedabad</span>
               </span>
             </div>
-
           </div>
-
         </div>
       </section>
 

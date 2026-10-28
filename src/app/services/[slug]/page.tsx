@@ -1,7 +1,7 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import DoctorNavbar from "@/components/doctor/DoctorNavbar";
+import DoctorFooter from "@/components/doctor/DoctorFooter";
 import GlobalSpotlightGrid from "@/components/GlobalSpotlightGrid";
 import ServiceDetailClientView from "@/components/services/ServiceDetailClientView";
 import { getCmsServiceBySlug, getCmsServices } from "@/lib/services/cmsService";
@@ -78,15 +78,14 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
-      <GlobalSpotlightGrid />
-      <Navbar />
+      <DoctorNavbar />
 
       <ServiceDetailClientView
         service={service}
         relatedServices={relatedServices}
       />
 
-      <Footer />
+      <DoctorFooter />
     </div>
   );
 }
