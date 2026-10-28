@@ -7,16 +7,42 @@ import { getClientEnv } from "../env";
 
 // Prevent Turbopack dev runtime popup for harmless connection aborts (e.g. during Hot Reload / Fast Refresh)
 if (typeof window !== "undefined") {
-  window.addEventListener("unhandledrejection", (event) => {
-    if (
-      event.reason &&
-      (event.reason.name === "AbortError" ||
-        event.reason.message?.includes("signal is aborted") ||
-        event.reason.message?.includes("The user aborted a request"))
-    ) {
-      event.preventDefault();
-    }
-  });
+  const isHarmlessAbort = (err: unknown): boolean => {
+    if (!err || typeof err !== "object") return false;
+    const e = err as { name?: string; message?: string; code?: number };
+    return (
+      e.name === "AbortError" ||
+      e.code === 20 ||
+      Boolean(
+        e.message &&
+          (e.message.includes("signal is aborted") ||
+            e.message.includes("aborted without reason") ||
+            e.message.includes("The user aborted a request"))
+      )
+    );
+  };
+
+  window.addEventListener(
+    "unhandledrejection",
+    (event) => {
+      if (isHarmlessAbort(event.reason)) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+      }
+    },
+    true
+  );
+
+  window.addEventListener(
+    "error",
+    (event) => {
+      if (isHarmlessAbort(event.error)) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+      }
+    },
+    true
+  );
 }
 
 let app: FirebaseApp | null = null;
@@ -69,11 +95,13 @@ export function getFirebaseFirestore(): Firestore | null {
     const clientApp = getFirebaseClientApp();
     if (clientApp) {
       try {
-        db = initializeFirestore(clientApp, {
-          experimentalForceLongPolling: true,
-        });
-      } catch {
         db = getFirestore(clientApp);
+      } catch {
+        try {
+          db = initializeFirestore(clientApp, {});
+        } catch {
+          db = null;
+        }
       }
     }
   }

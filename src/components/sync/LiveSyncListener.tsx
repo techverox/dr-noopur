@@ -8,13 +8,52 @@ import {
   LiveSyncEvent,
 } from "@/lib/sync/clientSync";
 
+// Global suppression of harmless browser network aborts (HMR, navigation, unmounting)
+if (typeof window !== "undefined") {
+  const isHarmlessAbort = (err: unknown): boolean => {
+    if (!err || typeof err !== "object") return false;
+    const e = err as { name?: string; message?: string; code?: number };
+    return (
+      e.name === "AbortError" ||
+      e.code === 20 ||
+      Boolean(e.message && (
+        e.message.includes("signal is aborted") ||
+        e.message.includes("aborted without reason") ||
+        e.message.includes("The user aborted a request")
+      ))
+    );
+  };
+
+  window.addEventListener(
+    "unhandledrejection",
+    (event) => {
+      if (isHarmlessAbort(event.reason)) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+      }
+    },
+    true
+  );
+
+  window.addEventListener(
+    "error",
+    (event) => {
+      if (isHarmlessAbort(event.error)) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+      }
+    },
+    true
+  );
+}
+
 /**
  * LiveSyncListener provides seamless 100% real-time UI synchronization
  * between the Admin Panel, Cloud Firestore, and the Public Website.
  *
  * 1. Cross-Tab / Cross-Window: BroadcastChannel + LocalStorage event triggers instant router.refresh().
- * 2. Cross-Device / Cloud: Live Firestore onSnapshot listeners detect any database change in real time.
- * 3. Window Focus: Re-checks sync state when returning to a dormant tab.
+ * 2. Window Focus: Re-checks sync state when returning to a dormant tab.
+ * 3. Gracefully handles unmounted streams without AbortError popup.
  */
 export function LiveSyncListener() {
   const router = useRouter();
@@ -41,8 +80,8 @@ export function LiveSyncListener() {
       triggerDebouncedRefresh();
     });
 
-    // 2. Subscribe to Cloud Firestore onSnapshot for 100% live multi-device database sync
-    const unsubscribeFirestore = setupFirestoreRealtimeListener((colName) => {
+    // 2. Subscribe to Cloud Firestore onSnapshot for multi-device sync
+    const unsubscribeFirestore = setupFirestoreRealtimeListener(() => {
       lastSyncTimeRef.current = Date.now();
       triggerDebouncedRefresh();
     });
@@ -66,8 +105,12 @@ export function LiveSyncListener() {
     window.addEventListener("focus", handleFocus);
 
     return () => {
-      unsubscribeBroadcast();
-      unsubscribeFirestore();
+      try {
+        unsubscribeBroadcast();
+        unsubscribeFirestore();
+      } catch {
+        // Suppress unmount aborts
+      }
       window.removeEventListener("focus", handleFocus);
       if (refreshTimeoutRef.current) {
         clearTimeout(refreshTimeoutRef.current);
