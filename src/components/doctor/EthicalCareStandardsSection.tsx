@@ -35,8 +35,8 @@ export default function EthicalCareStandardsSection() {
       icon: <ShieldCheck className="w-6 h-6 text-[#88213B]" />,
       title: "Patient Dignity & Confidentiality",
       description:
-        "Strict adherence to NMC Ethical Guidelines and medical ethics. Patient privacy, clinical imaging data, and personal health details are safeguarded with complete confidentiality.",
-      badge: "NMC 2026 Compliant",
+        "Highest standards of medical ethics and patient dignity. Clinical consultations, imaging records, and patient records are safeguarded with strict medical confidentiality.",
+      badge: "Medical Ethics",
     },
     {
       icon: <HeartHandshake className="w-6 h-6 text-[#88213B]" />,

@@ -68,8 +68,8 @@ export default async function AboutPage() {
     },
     {
       num: 2,
-      title: "Specialisation in Breast Surgery",
-      desc: "Focused fellowship training in breast cancer surgery and oncoplastic techniques.",
+      title: "Specialisation in Breast Surgery (FIBD)",
+      desc: "Sub-specialized fellowship training in breast cancer surgery and oncoplastic techniques at Max Healthcare.",
       icon: <Ribbon className="w-5 h-5 text-[#D84C70]" />,
     },
     {
@@ -266,10 +266,10 @@ export default async function AboutPage() {
 
               <div className="space-y-1.5 p-4 rounded-2xl bg-white border border-[#F5D6DE]/60 shadow-xs">
                 <div className="text-[#9B2846] font-serif text-[24px] sm:text-[28px] font-bold">
-                  Fellowship
+                  FIBD
                 </div>
-                <p className="text-[12px] font-semibold uppercase tracking-wider text-[#D84C70]">Breast Surgery</p>
-                <p className="text-[12px] text-slate-600">Subspeciality Breast Oncology & Oncoplastic Training</p>
+                <p className="text-[12px] font-semibold uppercase tracking-wider text-[#D84C70]">Breast Surgical Oncology</p>
+                <p className="text-[12px] text-slate-600">Max Healthcare Fellowship in Breast Oncology</p>
               </div>
 
               <div className="space-y-1.5 p-4 rounded-2xl bg-white border border-[#F5D6DE]/60 shadow-xs">
@@ -517,64 +517,29 @@ export default async function AboutPage() {
           </div>
         </section>
 
-        {/* 8. PROFESSIONAL MENTORSHIP & GUIDANCE SECTION (From /Mentors) */}
-        <section className="w-full py-16 lg:py-24 bg-white border-b border-rose-100/60" id="mentors">
+        {/* 8. PROFESSIONAL MENTORSHIP & CREDENTIALS CALLOUT */}
+        <section className="w-full py-14 lg:py-18 bg-gradient-to-r from-[#FFF5F7] to-white border-b border-rose-100/60" id="mentorship-credentials">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-              <div className="max-w-2xl">
-                <span className="text-[11px] sm:text-[12px] font-bold tracking-widest uppercase text-[#D84C70] block mb-2">
-                  MENTORSHIP &amp; TRAINING
+            <div className="bg-white rounded-3xl border border-[#F5D6DE] p-8 sm:p-12 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="max-w-2xl space-y-2">
+                <span className="text-[11px] sm:text-[12px] font-bold tracking-widest uppercase text-[#D84C70] block">
+                  ACADEMIC LINEAGE &amp; CREDENTIALS
                 </span>
-                <h2 className="font-serif text-[32px] sm:text-[40px] font-bold text-[#1A202C] leading-tight mb-3">
-                  Professional Mentorship &amp; Guidance
-                </h2>
-                <p className="text-slate-600 text-[15px] leading-relaxed">
-                  Clinical mastery is built upon the foundation of strong mentorship. Dr. Noopur Patel has trained under distinguished senior surgical oncology mentors, absorbing meticulous operative technique, clinical ethics, and compassionate patient care.
+                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-slate-900 leading-tight">
+                  Surgical Training, Mentorship &amp; Lineage
+                </h3>
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  Discover Dr. Noopur Patel&apos;s decade of surgical training—from undergraduate honors and general surgical residency to her Max Healthcare breast surgical oncology fellowship and senior mentorship lineage.
                 </p>
               </div>
 
-              <div>
-                <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FFF8F9] border border-[#F5D6DE] text-xs font-semibold text-[#88213B]">
-                  <GraduationCap className="w-4 h-4 text-[#D84C70]" />
-                  <span>Subspecialty Breast Oncology Training</span>
-                </span>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {MENTORS_MEDIA.map((mentor) => (
-                <div
-                  key={mentor.id}
-                  className="group bg-[#FFF8F9]/50 rounded-2xl overflow-hidden border border-[#F5D6DE] shadow-xs hover:shadow-md hover:border-[#D84C70]/60 transition-all flex flex-col justify-between"
-                >
-                  <div className="relative w-full aspect-[4/3] overflow-hidden bg-slate-100">
-                    <Image
-                      src={mentor.src}
-                      alt={mentor.alt}
-                      fill
-                      className="object-contain p-2 group-hover:scale-103 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                    <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-[#88213B] bg-white/90 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-[#F5D6DE] shadow-2xs">
-                      {mentor.badge}
-                    </span>
-                  </div>
-                  <div className="p-5 flex-1 flex flex-col justify-between bg-white">
-                    <div>
-                      <h3 className="font-serif text-[16px] font-bold text-slate-900 mb-1.5 group-hover:text-[#88213B] transition-colors">
-                        {mentor.title}
-                      </h3>
-                      <p className="text-[12.5px] text-slate-600 leading-relaxed">
-                        {mentor.description}
-                      </p>
-                    </div>
-                    <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-semibold text-[#D84C70]">
-                      <span>{mentor.category}</span>
-                      <span className="text-slate-400">Clinical Excellence</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
+              <Link
+                href="/about/journey"
+                className="shrink-0 inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#88213B] hover:bg-[#731930] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#88213B]/20 transition-all active:scale-95"
+              >
+                <span>View Full Training Journey &amp; Mentors</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </section>

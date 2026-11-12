@@ -14,32 +14,32 @@ export interface WhyChoosePoint {
 export const WHY_CHOOSE_POINTS: WhyChoosePoint[] = [
   {
     title: "Specialised Breast Focus",
-    tagline: "Dedicated Surgical Oncology Practice",
-    description: "Unlike general surgeons who treat diverse surgical conditions, Dr. Noopur Patel's practice is focused specifically on benign and malignant breast diseases, ensuring high-volume precision.",
+    tagline: "Dedicated Breast Oncology Practice",
+    description: "Dr. Noopur Patel's surgical practice is dedicated exclusively to benign and malignant breast diseases, ensuring focused expertise and high clinical standards.",
     icon: <Ribbon className="w-5 h-5 text-[#9B2846]" />,
   },
   {
-    title: "Individualised Treatment Planning",
-    tagline: "No Cookie-Cutter Protocols",
-    description: "Every woman's breast cancer is unique. Surgical strategies are meticulously matched to tumor biology, receptor status, breast size, and personal aesthetic goals.",
+    title: "Individualised Surgical Planning",
+    tagline: "Tailored to Tumor Biology",
+    description: "Every breast diagnosis is distinct. Surgical recommendations are carefully matched to tumor histology, hormone receptor status, breast volume, and oncoplastic suitability.",
     icon: <GitBranch className="w-5 h-5 text-[#9B2846]" />,
   },
   {
-    title: "Clear & Empathetic Communication",
-    tagline: "Honest, Understandable Guidance",
-    description: "Cancer terminology can feel overwhelming. Dr. Patel takes the time to explain diagnoses, scan reports, and surgical choices plainly so patients feel empowered.",
+    title: "Clear, Transparent Guidance",
+    tagline: "Understandable Patient Communication",
+    description: "Complex histopathology and radiology reports are explained plainly, ensuring patients and their families understand their diagnosis and treatment options thoroughly.",
     icon: <MessageSquare className="w-5 h-5 text-[#9B2846]" />,
   },
   {
-    title: "Multidisciplinary Care Coordination",
-    tagline: "Tumor Board Consensus",
-    description: "Collaborative staging alongside medical oncologists, radiation therapists, and breast radiologists at Marengo CIMS Hospital for complete treatment harmony.",
+    title: "Oncoplastic Reconstruction",
+    tagline: "Preserving Natural Contour",
+    description: "Combining complete oncological margin clearance with modern plastic surgical rearrangement to protect natural breast form and symmetrical balance.",
     icon: <Users2 className="w-5 h-5 text-[#9B2846]" />,
   },
   {
-    title: "Patient-Centred Long-Term Support",
-    tagline: "Care Beyond the Operating Theater",
-    description: "Compassionate companionship from the first abnormal mammogram through surgery, wound healing, lymphedema prevention, and long-term surveillance.",
+    title: "Post-Operative Continuity",
+    tagline: "Comprehensive Recovery Care",
+    description: "Dedicated follow-up care supporting wound recovery, arm mobility, lymphedema prevention, and regular long-term oncologic surveillance.",
     icon: <HeartHandshake className="w-5 h-5 text-[#9B2846]" />,
   },
 ];
@@ -50,8 +50,8 @@ interface WhyChooseDoctorProps {
 }
 
 export default function WhyChooseDoctor({
-  title = "A Personalised Approach to Breast Cancer Care",
-  subtitle = "We believe that true healing combines surgical excellence with human kindness. Here is why patients and families across Gujarat place their trust in Dr. Noopur Patel.",
+  title = "Patient-Centered Breast Oncology",
+  subtitle = "Focused surgical oncology combining precise tumor clearance, oncoplastic breast preservation, and empathetic guidance at Marengo CIMS Hospital, Ahmedabad.",
 }: WhyChooseDoctorProps = {}) {
   return (
     <section className="w-full py-16 lg:py-24 bg-white border-b border-[#F5E6EA]" id="why-choose">

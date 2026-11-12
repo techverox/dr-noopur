@@ -7,7 +7,6 @@ import DoctorAboutSpotlight from "@/components/doctor/DoctorAboutSpotlight";
 import BreastConditionsGrid from "@/components/doctor/BreastConditionsGrid";
 import BreastCancerTreatments from "@/components/doctor/BreastCancerTreatments";
 import WhyChooseDoctor from "@/components/doctor/WhyChooseDoctor";
-import FeaturedProceduresSection from "@/components/doctor/FeaturedProceduresSection";
 import CareJourneyTimeline from "@/components/doctor/CareJourneyTimeline";
 import InstagramAwarenessFeed from "@/components/doctor/InstagramAwarenessFeed";
 import CommunityInitiativesSection from "@/components/doctor/CommunityInitiativesSection";
@@ -205,16 +204,13 @@ export default async function Home() {
         {/* 06. Breast Cancer Treatment & Surgery in Ahmedabad */}
         <BreastCancerTreatments />
 
-        {/* 07. Why Choose Dr. Noopur Patel (Personalised Care Approach) */}
+        {/* 07. Clinical Care Approach */}
         <WhyChooseDoctor
           title={homeContent.whyUsTitle}
           subtitle={homeContent.whyUsSubtitle}
         />
 
-        {/* 08. Featured / Specialised Advanced Procedures */}
-        <FeaturedProceduresSection />
-
-        {/* 09. Patient Education Guides (Slots #03, #04, #05 - Wireframe 44 Section 05) */}
+        {/* 08. Patient Education Guides */}
         <HomePatientEducationGuides />
 
         {/* 10. Breast Cancer Treatment Journey (7-Step Interactive Timeline) */}

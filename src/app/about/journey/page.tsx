@@ -31,34 +31,34 @@ const TIMELINE_MILESTONES = [
     slot: 12,
     year: "MBBS",
     title: "Undergraduate Medical Education",
-    institution: "Government Medical College",
-    desc: "Comprehensive foundational medical training with honors, intensive rotatory clinical internship, and early focus on surgical pathology.",
+    institution: "AMC MET Medical College, Ahmedabad",
+    desc: "Rigorous foundational medical training, intensive rotatory clinical internship, and early focus on surgical care.",
   },
   {
     slot: 13,
     year: "MS",
     title: "Postgraduate General Surgery",
-    institution: "Postgraduate Institute of Medical Sciences",
-    desc: "Rigorous 3-year surgical residency mastering open, laparoscopic, and emergency trauma surgery. Thesis on breast pathology management.",
+    institution: "SMIMER, Surat",
+    desc: "Comprehensive 3-year surgical residency mastering open, minimally invasive, and emergency oncological surgery.",
   },
   {
     slot: 14,
     year: "Fellowship",
-    title: "Fellowship in Breast Surgical Oncology",
-    institution: "Max Healthcare Institute",
-    desc: "Sub-specialized fellowship training focusing exclusively on oncological breast resection, sentinel node mapping, and oncoplastic techniques.",
+    title: "Fellowship in Breast Surgical Oncology (FIBD)",
+    institution: "Max Healthcare Institute, New Delhi",
+    desc: "Sub-specialized fellowship training focusing exclusively on oncological breast resections, sentinel node mapping, and oncoplastic techniques.",
   },
   {
     slot: 15,
     year: "Oncoplastic",
     title: "Advanced Oncoplastic & Reconstructive Training",
     institution: "National & International Masterclasses",
-    desc: "Sub-specialized masterclasses focusing on breast conservation techniques, tissue rearrangement, and aesthetic breast preservation.",
+    desc: "Focused masterclasses on oncoplastic breast conservation, tissue rearrangement, and aesthetic breast preservation.",
   },
   {
     slot: 16,
     year: "Present",
-    title: "Consultant Breast Surgeon Practice",
+    title: "Associate Consultant – Surgical Breast Oncology",
     institution: "Marengo CIMS Hospital, Ahmedabad",
     desc: "Leading specialized breast clinics, multidisciplinary tumor board coordination, and comprehensive surgical breast care.",
   },
@@ -222,7 +222,7 @@ export default function ProfessionalJourneyPage() {
                       <div className="text-[11px] text-slate-500 mt-0.5">Foundational surgical training &amp; university honors</div>
                     </div>
                     <div className="p-3.5 rounded-2xl bg-white border border-[#F0D5DC]">
-                      <div className="text-xs font-bold text-slate-900">Fellowship in Breast Oncology</div>
+                      <div className="text-xs font-bold text-slate-900">Fellowship in Breast Oncology (FIBD)</div>
                       <div className="text-[11px] text-slate-500 mt-0.5">Max Healthcare Institute, New Delhi</div>
                     </div>
                     <div className="p-3.5 rounded-2xl bg-white border border-[#F0D5DC]">

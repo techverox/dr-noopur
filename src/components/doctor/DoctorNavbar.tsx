@@ -113,7 +113,7 @@ export default function DoctorNavbar() {
     },
     { label: "Screening", href: "/screening-diagnosis" },
     { label: "Education", href: "/patient-education" },
-    { label: "Contact", href: "/contact" },
+    { label: "Contact", href: "/appointments" },
   ];
 
   const isActive = (href: string) => {
