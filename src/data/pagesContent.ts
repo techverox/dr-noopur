@@ -55,7 +55,7 @@ export const DEFAULT_ABOUT_PAGE_CONTENT: AboutPageContent = {
     "To be a trusted centre for breast health, known for clinical excellence, advanced surgical techniques and a patient-centred approach.",
   stat1Value: "MBBS, MS",
   stat1Label: "Breast Surgical Oncology Fellowship",
-  stat2Value: "GMC G-22533",
+  stat2Value: "GMC G-29718",
   stat2Label: "Gujarat Medical Council Verified",
   stat3Value: "Marengo CIMS",
   stat3Label: "Dedicated Breast Oncology Practice",

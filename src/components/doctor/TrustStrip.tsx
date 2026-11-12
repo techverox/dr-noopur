@@ -17,7 +17,7 @@ export default function TrustStrip() {
     },
     {
       icon: <Ribbon className="w-5 h-5 text-[#D84C70]" />,
-      label: "Fellowship in Breast Surgery",
+      label: "Fellowship in Breast Surgery (FIBD)",
       detail: "Advanced Expertise",
     },
     {

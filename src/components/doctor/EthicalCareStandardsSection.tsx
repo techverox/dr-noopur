@@ -122,7 +122,7 @@ export default function EthicalCareStandardsSection() {
                 <span className="text-slate-300">|</span>
                 <div className="flex items-center gap-1.5 font-semibold">
                   <Phone className="w-3.5 h-3.5 text-[#D84C70]" />
-                  <span>GMC Reg. No: G-22533</span>
+                  <span>GMC Reg. No: G-29718</span>
                 </div>
               </div>
             </div>

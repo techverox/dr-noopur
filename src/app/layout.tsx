@@ -22,8 +22,6 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
-  weight: ["500", "600", "700"],
-  style: ["normal", "italic"],
 });
 
 export async function generateMetadata(): Promise<Metadata> {

@@ -248,7 +248,7 @@ export default function ShareStoryPage() {
                 <span>Department of Surgical Breast Oncology, Marengo CIMS Hospital</span>
               </div>
               <div>
-                <span>Ahmedabad, Gujarat &middot; GMC Reg: G-22533</span>
+                <span>Ahmedabad, Gujarat &middot; GMC Reg: G-29718</span>
               </div>
             </div>
 

@@ -239,7 +239,7 @@ export default function DoctorFooter() {
           <div className="flex items-start gap-2.5">
             <ShieldCheck className="w-4 h-4 text-[#D84C70] flex-shrink-0 mt-0.5" />
             <p>
-              <strong className="text-slate-800">Medical Disclaimer &amp; NMC Regulatory Compliance:</strong> The educational content, procedure guides, and breast health resources on this website are published solely for general awareness in accordance with the National Medical Commission (NMC) Guidelines on Ethical Advertising and Public Communication (October 2026). They do not constitute formal medical diagnosis, guarantee clinical outcomes, or replace an in-person clinical consultation. Dr. Noopur Patel is a Registered Medical Practitioner (Gujarat Medical Council, Reg. No. G-22533) practicing at Marengo CIMS Hospital, Sola, Ahmedabad. In case of acute medical emergencies, please visit the nearest hospital casualty department immediately.
+              <strong className="text-slate-800">Medical Disclaimer &amp; NMC Regulatory Compliance:</strong> The educational content, procedure guides, and breast health resources on this website are published solely for general awareness in accordance with the National Medical Commission (NMC) Guidelines on Ethical Advertising and Public Communication (October 2026). They do not constitute formal medical diagnosis, guarantee clinical outcomes, or replace an in-person clinical consultation. Dr. Noopur Patel is a Registered Medical Practitioner (Gujarat Medical Council, Reg. No. G-29718) practicing at Marengo CIMS Hospital, Sola, Ahmedabad. In case of acute medical emergencies, please visit the nearest hospital casualty department immediately.
             </p>
           </div>
         </div>

@@ -197,7 +197,7 @@ export default function ProfessionalJourneyPage() {
                     />
                     <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md p-3 rounded-xl border border-rose-100 text-center">
                       <p className="text-xs font-bold text-slate-900">Dr. Noopur Patel</p>
-                      <p className="text-[11px] text-[#D84C70] font-semibold">GMC Reg No: G-22533</p>
+                      <p className="text-[11px] text-[#D84C70] font-semibold">GMC Reg No: G-29718</p>
                     </div>
                   </div>
                 </div>
@@ -231,7 +231,7 @@ export default function ProfessionalJourneyPage() {
                     </div>
                     <div className="p-3.5 rounded-2xl bg-white border border-[#F0D5DC]">
                       <div className="text-xs font-bold text-slate-900">Gujarat Medical Council</div>
-                      <div className="text-[11px] text-slate-500 mt-0.5">Officially registered practitioner (G-22533)</div>
+                      <div className="text-[11px] text-slate-500 mt-0.5">Officially registered practitioner (G-29718)</div>
                     </div>
                   </div>
                 </div>

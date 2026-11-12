@@ -56,12 +56,12 @@ export default function DoctorAboutSpotlight() {
     },
     {
       label: "Sub-Speciality Fellowship",
-      value: "Fellowship in Breast Surgical Oncology",
+      value: "Fellowship in Breast Surgical Oncology (FIBD)",
       detail: "Focused breast cancer & oncoplastic training",
     },
     {
       label: "Medical Council Registration",
-      value: "GMC Reg. No: G-22533",
+      value: "GMC Reg. No: G-29718",
       detail: "Gujarat Medical Council Verified",
     },
   ];
@@ -184,7 +184,7 @@ export default function DoctorAboutSpotlight() {
 
             <div className="mt-5 pt-4 border-t border-rose-100 flex items-center justify-between text-xs text-slate-500">
               <span>Practicing at Marengo CIMS Hospital</span>
-              <span className="font-bold text-rose-800">GMC G-22533</span>
+              <span className="font-bold text-rose-800">GMC G-29718</span>
             </div>
           </div>
 
