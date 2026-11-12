@@ -4,7 +4,7 @@ import { collection, onSnapshot, doc } from "firebase/firestore";
 import { getFirebaseFirestore } from "@/lib/firebase/client";
 
 export interface LiveSyncEvent {
-  type: "CMS_UPDATED" | "PAGE_SAVED" | "SETTINGS_SAVED" | "MEDIA_UPLOADED";
+  type: "CMS_UPDATED" | "PAGE_SAVED" | "SETTINGS_SAVED" | "MEDIA_UPLOADED" | "CMS_MUTATION" | string;
   collection?: string;
   id?: string;
   timestamp: number;
@@ -17,13 +17,27 @@ const CHANNELS = ["drn-cms-sync", "drn-live-sync", "digivigee-cms-sync"] as cons
  * Uses BroadcastChannel for instant (<10ms) zero-latency sync, plus localStorage
  * as a guaranteed fallback across windows and dormant tabs.
  */
-export function notifyLiveSync(event: Omit<LiveSyncEvent, "timestamp">) {
+export function notifyLiveSync(
+  eventOrCollection: Omit<LiveSyncEvent, "timestamp"> | string,
+  id?: string,
+  actionOrType?: string
+) {
   if (typeof window === "undefined") return;
 
-  const payload: LiveSyncEvent = {
-    ...event,
-    timestamp: Date.now(),
-  };
+  let payload: LiveSyncEvent;
+  if (typeof eventOrCollection === "string") {
+    payload = {
+      type: (actionOrType as any) || "CMS_UPDATED",
+      collection: eventOrCollection,
+      id,
+      timestamp: Date.now(),
+    };
+  } else {
+    payload = {
+      ...eventOrCollection,
+      timestamp: Date.now(),
+    };
+  }
 
   // 1. Send across modern BroadcastChannels
   for (const chName of CHANNELS) {
