@@ -258,7 +258,7 @@ export default function ServiceDetailClientView({
               </h3>
             </div>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Complete cancer clearance with intraoperative margin evaluation and local tissue rearrangement to preserve natural contours.
+              Meticulous surgical resection with intraoperative margin evaluation and local tissue rearrangement to preserve natural contours.
             </p>
           </div>
 

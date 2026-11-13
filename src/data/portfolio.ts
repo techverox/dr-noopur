@@ -23,7 +23,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     execution:
       "Conducted wide local excision with clear histological margins and immediate volume displacement oncoplastic rearrangement. Frozen section assessment verified clear margin boundaries intraoperatively.",
     results:
-      "Complete cancer clearance achieved with clear surgical margins. Sentinel nodes negative for metastasis. Full recovery achieved within two weeks with remarkable aesthetic breast symmetry and zero contour deformities.",
+      "Successful oncological resection achieved with clear surgical margins. Sentinel nodes negative for metastasis. Full recovery achieved within two weeks with remarkable aesthetic breast symmetry and natural contours.",
     testimonialQuote:
       "Dr. Noopur Patel explained every step with so much reassurance. Her surgical skill gave me full cancer clearance and preserved my natural look. I am forever grateful for her compassionate care.",
     keyTakeaway:
@@ -147,7 +147,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     strategy:
       "Dr. Patel coordinated a unified single-stage procedure: skin-sparing mastectomy to clear all cancer tissue while preserving the natural skin envelope, combined with immediate reconstruction.",
     execution:
-      "Complete cancer clearance accomplished with negative margins. Multidisciplinary reconstruction immediately restored natural breast mound volume and warmth under the same anesthesia session.",
+      "Successful oncological resection accomplished with negative histological margins. Multidisciplinary reconstruction immediately restored natural breast mound volume and warmth under the same anesthesia session.",
     results:
       "Patient woke up from surgery with a fully formed, soft, and symmetrical breast. Postoperative recovery proceeded smoothly without wound complications.",
     testimonialQuote:
@@ -161,7 +161,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
       "Need for advanced microvascular surgical team coordination",
     ],
     afterPoints: [
-      "100% oncologic cancer clearance achieved with clear skin margins",
+      "Optimal oncologic resection achieved with verified clear skin margins",
       "Preservation of native skin envelope providing natural breast contour",
       "Avoided need for a secondary delayed reconstructive surgery",
       "High patient satisfaction and restored body image confidence",
