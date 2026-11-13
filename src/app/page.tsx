@@ -79,6 +79,10 @@ export default async function Home() {
     if (cmsFaqs && cmsFaqs.length > 0) faqs = cmsFaqs;
     if (cmsHomeContent) {
       homeContent = { ...DEFAULT_HOME_PAGE_CONTENT, ...cmsHomeContent };
+      // Always ensure verified Dr. Noopur Patel WhatsApp number is used
+      if (!homeContent.secondaryCtaLink || homeContent.secondaryCtaLink.includes("9876543210")) {
+        homeContent.secondaryCtaLink = `https://wa.me/${SITE_CONFIG.contact.whatsappNumber}?text=Hello%20Dr.%20Noopur%20Patel,%20I%20would%20like%20to%20schedule%20a%20consultation.`;
+      }
     }
     if (cmsInstagramPosts && cmsInstagramPosts.length > 0) {
       instagramPosts = cmsInstagramPosts;

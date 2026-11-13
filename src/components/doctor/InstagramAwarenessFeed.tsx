@@ -86,10 +86,20 @@ export default function InstagramAwarenessFeed({ initialPosts }: { initialPosts?
       const res = await fetch("/api/instagram", { cache: "no-store" });
       const data = await res.json();
       if (data.success && Array.isArray(data.posts) && data.posts.length > 0) {
-        setPosts(data.posts);
+        // Strict client-side filter to ensure zero unrelated doctor content appears
+        const verified = data.posts.filter((p: InstagramPost) => {
+          const str = `${p.title || ""} ${p.caption || ""} ${p.url || ""}`.toLowerCase();
+          return !str.includes("divax") && !str.includes("pulmonologist") && !str.includes("palanpur") && !str.includes("lung cancer");
+        });
+        if (verified.length > 0) {
+          setPosts(verified);
+          return;
+        }
       }
+      setPosts(FALLBACK_SEED_POSTS);
     } catch {
       // Graceful fallback to initial or default
+      setPosts(FALLBACK_SEED_POSTS);
     }
   }, []);
 

@@ -112,7 +112,7 @@ export default function AppointmentClient({
                   {content.heroBadge || "YOUR HEALTH, OUR PRIORITY"}
                 </span>
                 <h1 className="font-serif text-[40px] sm:text-[50px] font-bold text-[#1A202C] leading-tight">
-                  {content.heroHeadline || "Book an"}{" "}
+                  {content.heroHeadline || "Book an"}&nbsp;
                   {content.heroHeadlineHighlight && (
                     <span className="italic font-serif text-[#D84C70]">
                       {content.heroHeadlineHighlight}

@@ -218,7 +218,18 @@ export async function getInstagramPosts(): Promise<InstagramPost[]> {
             ...serializeFirestoreData<Record<string, unknown>>(doc.data()),
           })) as InstagramPost[];
 
-        return posts.map(sanitizePost).sort((a, b) => (a.order || 0) - (b.order || 0));
+        // Filter out any legacy or mismatched posts referencing other doctors or conditions
+        const cleanPosts = posts
+          .filter((p) => {
+            const str = `${p.title || ""} ${p.caption || ""} ${p.url || ""}`.toLowerCase();
+            return !str.includes("divax") && !str.includes("pulmonologist") && !str.includes("palanpur") && !str.includes("lung cancer");
+          })
+          .map(sanitizePost)
+          .sort((a, b) => (a.order || 0) - (b.order || 0));
+
+        if (cleanPosts.length > 0) {
+          return cleanPosts;
+        }
       }
     }
   } catch (e) {
@@ -229,7 +240,12 @@ export async function getInstagramPosts(): Promise<InstagramPost[]> {
   const store = getCollectionStore(COLLECTIONS.INSTAGRAM_POSTS);
   if (store.size > 0) {
     const list = Array.from(store.values()) as unknown as InstagramPost[];
-    const activeList = list.filter((p) => p.isActive);
+    const activeList = list
+      .filter((p) => p.isActive)
+      .filter((p) => {
+        const str = `${p.title || ""} ${p.caption || ""} ${p.url || ""}`.toLowerCase();
+        return !str.includes("divax") && !str.includes("pulmonologist") && !str.includes("palanpur") && !str.includes("lung cancer");
+      });
     if (activeList.length > 0) {
       return activeList.map(sanitizePost).sort((a, b) => (a.order || 0) - (b.order || 0));
     }

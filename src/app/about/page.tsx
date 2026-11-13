@@ -130,7 +130,7 @@ export default async function AboutPage() {
                   {aboutContent.heroBadge || "ABOUT US"}
                 </span>
                 <h1 className="font-serif text-[42px] sm:text-[52px] font-bold text-[#1A202C] leading-[1.15]">
-                  {aboutContent.heroHeadline || "Dedicated to Women's Health."}{" "}
+                  {aboutContent.heroHeadline || "Dedicated to Women's Health."}&nbsp;
                   {aboutContent.heroHeadlineHighlight && (
                     <span className="italic font-serif text-[#D84C70] block sm:inline">
                       {aboutContent.heroHeadlineHighlight}

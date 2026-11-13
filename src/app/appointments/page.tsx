@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { getCmsPageContent } from "@/lib/services/cmsService";
 import { DEFAULT_CONTACT_PAGE_CONTENT } from "@/data/pagesContent";
+import { SITE_CONFIG } from "@/config/site";
 import AppointmentClient from "@/components/doctor/AppointmentClient";
 
 export const revalidate = 60;
@@ -18,6 +19,13 @@ export default async function AppointmentPage() {
     const fetched = await getCmsPageContent("contact").catch(() => null);
     if (fetched) {
       contactContent = { ...DEFAULT_CONTACT_PAGE_CONTENT, ...fetched };
+    }
+    // Always guard against stale placeholder dummy numbers
+    if (contactContent.phone && contactContent.phone.includes("98765")) {
+      contactContent.phone = SITE_CONFIG.contact.phoneFormatted;
+    }
+    if (contactContent.whatsapp && contactContent.whatsapp.includes("98765")) {
+      contactContent.whatsapp = SITE_CONFIG.contact.whatsappDisplay;
     }
   } catch (e) {
     console.warn("[AppointmentPage] Using fallback contact copy:", e);
