@@ -42,7 +42,7 @@ export default function DoctorFooter() {
 
             <p className="text-[13.5px] text-slate-600 leading-relaxed">
               Dedicated to compassionate, evidence-based, and patient-centered surgical breast oncology. 
-              Combining complete oncologic tumor clearance with oncoplastic aesthetic preservation for every woman.
+              Adhering to strict oncological standards while prioritizing breast preservation and aesthetic outcomes for each patient.
             </p>
 
             <div className="pt-2 text-[12.5px] text-slate-600 space-y-1 bg-[#FFF8F9] p-3 rounded-xl border border-[#F5D6DE]/60">

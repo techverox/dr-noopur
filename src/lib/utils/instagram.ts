@@ -49,7 +49,7 @@ export function cleanInstagramTitle(rawText: string, fallbackShortcode?: string)
 
   let cleaned = decodeHtmlEntities(rawText);
 
-  // Strip prefixes like "Dr. Divax Oza | Pulmonologist | Palanpur on Instagram: " or "... on Instagram: "
+  // Strip prefixes like "Dr. Noopur Patel | Breast Surgeon on Instagram: " or "... on Instagram: "
   cleaned = cleaned.replace(/^.*?on Instagram:\s*["“]?/i, "");
   // Remove wrapping quotes
   cleaned = cleaned.replace(/^["'“”]+|["'“”]+$/g, "").trim();

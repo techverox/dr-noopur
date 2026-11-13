@@ -25,10 +25,10 @@ const ARTICLES: EducationalArticle[] = [
   },
   {
     slot: 4,
-    title: "Self Breast Examination: Step-by-Step Clinical Guide",
+    title: "Breast Self-Examination: Step-by-Step Clinical Guide",
     category: "Self-Care Protocol",
     readTime: "3 min read",
-    excerpt: "Learn how to examine your breast tissue monthly at home and recognize normal variations versus changes needing evaluation.",
+    excerpt: "Learn how to practice monthly breast awareness at home and recognize normal variations versus changes needing clinical evaluation.",
     href: "/patient-education#self-examination",
   },
   {

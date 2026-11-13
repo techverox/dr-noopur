@@ -117,7 +117,7 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
   },
   footerContent: {
     aboutText:
-      "Dedicated to compassionate, evidence-based, and patient-centered breast surgical oncology. Combining oncologic clearance with aesthetic preservation for every woman.",
+      "Dedicated to compassionate, evidence-based, and patient-centered breast surgical oncology. Adhering to strict oncological standards while prioritizing breast preservation and aesthetic outcomes for each patient.",
     copyrightText: `© ${new Date().getFullYear()} Dr. Noopur Patel. All rights reserved.`,
     badgeText: "Surgical Breast Oncology & Oncoplastic Surgery",
   },
