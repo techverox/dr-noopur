@@ -57,7 +57,7 @@ const AGE_RECOMMENDATIONS = [
   {
     age: "Age 20 – 39",
     focus: "Awareness & Baseline",
-    recommendation: "Monthly breast self-examination. Clinical breast examination by a doctor every 1 to 3 years. Imaging only if a symptom arises or high familial risk.",
+    recommendation: "Familiarity with baseline breast tissue changes through regular breast awareness. Clinical doctor breast examination every 1 to 3 years. Imaging only if an anatomical symptom arises or family history indicates genetic risk.",
   },
   {
     age: "Age 40 – 49",
@@ -111,7 +111,7 @@ export default function ScreeningDiagnosisPage() {
                 </h1>
 
                 <p className="text-slate-600 text-sm sm:text-base lg:text-[17px] leading-relaxed max-w-2xl font-normal">
-                  Early detection saves lives. Dr. Noopur Patel coordinates high-precision digital mammography, 3D breast ultrasound, and image-guided biopsy at Marengo CIMS Hospital, Ahmedabad.
+                  Clinical screening identifies asymptomatic tissue changes when treatment is most effective and minimally invasive. Dr. Noopur Patel coordinates high-precision digital mammography, breast ultrasound, and image-guided biopsy at Marengo CIMS Hospital, Ahmedabad.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-3 pt-2">

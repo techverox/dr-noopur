@@ -34,10 +34,10 @@ const EDUCATION_TOPICS = [
     desc: "An overview of how abnormal cellular proliferation develops in breast ducts and lobules, and the role of ER, PR, and HER2 receptors.",
   },
   {
-    title: "Breast Self-Examination: Step-by-Step",
+    title: "Understanding Breast Awareness & Monthly Checks",
     category: "Self-Care Protocol",
     readTime: "4 min",
-    desc: "Learn the 3-step physical inspection and palpation technique (looking in the mirror, standing, and lying down) to monitor monthly.",
+    desc: "Learn how to become familiar with the natural look and feel of your breasts, so you can recognize any new or unusual changes promptly. (Note: Self-awareness complements, but does not replace, clinical mammography).",
   },
   {
     title: "Benign vs Malignant: Understanding Your Biopsy Report",
@@ -67,8 +67,8 @@ const EDUCATION_TOPICS = [
 
 const FAQS = [
   {
-    q: "When is the best time of the month to perform a breast self-exam?",
-    a: "For menstruating women, the best time is about 7 to 10 days after the first day of your menstrual period, when hormonal swelling and tenderness are lowest. Post-menopausal women can pick a fixed date each month (e.g., the 1st of every month) for consistency.",
+    q: "How can I become familiar with my usual breast changes, and does self-check replace a mammogram?",
+    a: "Breast awareness means knowing how your breasts normally look and feel across your cycle. The ideal time to check is about 7 to 10 days after your menstrual period begins, when hormonal swelling is minimal. Crucially, breast awareness is a habit for detecting changes early—it does not replace screening mammography or clinical doctor evaluations, which can detect non-palpable microcalcifications long before a lump can be felt.",
   },
   {
     q: "Where can I find verified medical information instead of internet misinformation?",
