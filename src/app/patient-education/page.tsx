@@ -72,7 +72,7 @@ const FAQS = [
   },
   {
     q: "Where can I find verified medical information instead of internet misinformation?",
-    a: "Avoid unverified social media claims or forum testimonials. Consult trusted medical guidelines from official clinical societies such as the Association of Breast Surgeons of India (ABSI), the Indian Association of Surgical Oncology (IASO), NCCN, or consult your breast surgeon directly.",
+    a: "Avoid unverified social media claims or forum testimonials. Consult trusted medical guidelines from established professional surgical societies such as the Association of Breast Surgeons of India (ABSI), the Indian Association of Surgical Oncology (IASO), or consult your breast surgeon directly.",
   },
   {
     q: "Is breast cancer hereditary?",
@@ -177,7 +177,7 @@ export default function PatientEducationPage() {
                   <div className="space-y-2.5 pt-1">
                     <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Early-Stage Cure Rate:</strong> Detected at Stage 1, long-term survival exceeds 90% with minimally invasive surgery.</span>
+                      <span><strong>Early-Stage Outcomes:</strong> When detected at early stages, treatment outcomes and long-term survival are significantly improved with breast-preserving surgery.</span>
                     </div>
                     <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />

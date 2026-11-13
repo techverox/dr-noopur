@@ -69,7 +69,7 @@ export const BREAST_CONDITIONS: BreastConditionCard[] = [
   {
     id: "breast-cancer",
     title: "Breast Cancer",
-    subtitle: "Early detection ensures 90%+ cure",
+    subtitle: "Early detection significantly improves outcomes",
     description:
       "Malignant breast disease managed through personalized surgical oncology: Breast Conservation Surgery (BCS) & mastectomy.",
     href: "/breast-cancer-specialist-ahmedabad",

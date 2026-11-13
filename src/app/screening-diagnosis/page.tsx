@@ -67,7 +67,7 @@ const AGE_RECOMMENDATIONS = [
   {
     age: "Age 50 & Above",
     focus: "Routine Annual Screening",
-    recommendation: "Regular annual screening mammography. Early detection at this age yields survival and cure rates exceeding 90% with minimal surgical intervention.",
+    recommendation: "Regular annual screening mammography. Early detection at this age significantly improves long-term outcomes and allows conservative surgical intervention.",
   },
 ];
 

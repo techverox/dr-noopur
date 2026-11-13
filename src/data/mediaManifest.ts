@@ -202,7 +202,7 @@ export const MDT_MEDIA: MediaAsset[] = [
     title: "Comprehensive Clinical Consultation",
     category: "Care Coordination",
     badge: "Integrated Staging",
-    description: "Formal case planning review following international NCCN guidelines to ensure maximum oncologic safety and optimal cosmetic outcome.",
+    description: "Detailed case planning review following established evidence-based oncology guidelines to ensure high oncologic safety and thoughtful surgical planning.",
     sourceDir: "MDT_",
     aspectRatio: "16/9",
     objectFit: "cover",

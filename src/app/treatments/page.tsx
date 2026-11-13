@@ -264,7 +264,7 @@ export default function TreatmentsPage() {
                 All Treatment &amp; Surgical Options
               </h2>
               <p className="text-slate-600 text-xs sm:text-base mt-2">
-                Every procedure is planned strictly in accordance with international NCCN &amp; ESMO guidelines.
+                Every procedure is planned strictly in accordance with evidence-based oncological standards and clinical guidelines.
               </p>
             </div>
 

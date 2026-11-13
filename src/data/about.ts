@@ -331,9 +331,9 @@ export const WHY_DR_NOOPUR: WhyDrNoopurItem[] = [
     title: "Evidence-Based Surgical Decision Making",
     badge: "02. CLINICAL EXCELLENCE",
     description:
-      "Every treatment recommendation is guided by international NCCN and ESMO clinical guidelines, ensuring maximum oncological cure rates with minimal treatment morbidity.",
-    stat: "NCCN/ESMO",
-    statLabel: "Guideline compliance",
+      "Every treatment recommendation is guided by established clinical protocols and peer-reviewed evidence, focusing on optimal oncological safety and patient quality of life.",
+    stat: "Evidence-Based",
+    statLabel: "Clinical protocols",
     colSpan: "col-span-1",
   },
   {
