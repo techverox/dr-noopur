@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Content Audit Checklist — Dr. Noopur Patel</title>
+<style>
+:root{--navy:#20243a;--pink:#a51f4b;--rose:#fff0f4;--ink:#293044;--muted:#667085;--line:#e7e8ee;--bg:#f6f7fb;--green:#16845b;--amber:#9a5b00}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Inter,Arial,sans-serif}
+header{background:linear-gradient(120deg,#fff 0%,#fff0f4 100%);border-bottom:1px solid var(--line);padding:38px 20px}
+.wrap{max-width:1100px;margin:auto}h1{font-size:clamp(26px,4vw,38px);line-height:1.15;margin:0 0 12px;color:var(--navy)}h2{font-size:23px;color:var(--navy);margin:0 0 12px}h3{font-size:17px;margin:0 0 8px;color:var(--navy)}
+p{margin:6px 0 12px}.sub{color:var(--muted);max-width:850px}.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.pill{background:white;border:1px solid var(--line);border-radius:99px;padding:5px 11px;font-size:12px}
+main{max-width:1100px;margin:26px auto;padding:0 18px 60px}.intro{background:#fff;border:1px solid var(--line);border-left:4px solid var(--pink);border-radius:12px;padding:18px;margin-bottom:22px}
+.section{background:white;border:1px solid var(--line);border-radius:14px;padding:22px;margin:18px 0;box-shadow:0 3px 12px #18223a08}
+.section-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--pink);background:var(--rose);padding:4px 9px;border-radius:20px}
+.item{padding:13px 0;border-top:1px solid var(--line)}.item:first-of-type{border-top:0}.item label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}.item input{margin-top:5px;accent-color:var(--pink);width:17px;height:17px;flex:0 0 auto}.item strong{display:block;color:var(--navy)}.detail{color:var(--muted);font-size:13px;margin:3px 0 0 27px}.bad{color:#a12a39}.good{color:var(--green)}.warn{color:var(--amber)}
+table{width:100%;border-collapse:collapse;margin:10px 0 4px;font-size:14px}th,td{text-align:left;vertical-align:top;padding:11px;border-bottom:1px solid var(--line)}th{background:#faf7f8;color:var(--navy)}td:first-child{font-weight:600;width:25%}
+.progressbox{position:sticky;top:0;z-index:5;background:#ffffffed;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 18px}
+.progressinner{max-width:1100px;margin:auto;display:flex;align-items:center;gap:14px}.bar{height:8px;background:#ececf1;border-radius:20px;overflow:hidden;flex:1}.fill{height:100%;width:0;background:var(--pink);transition:width .2s}.count{font-size:12px;color:var(--muted);white-space:nowrap}
+.note{background:#fff9ed;border:1px solid #f1dfb8;padding:13px;border-radius:10px;color:#684900;font-size:13px}
+footer{color:var(--muted);font-size:12px;text-align:center;padding:20px}
+@media(max-width:650px){.section{padding:16px}table{display:block;overflow-x:auto;white-space:normal}td:first-child{min-width:130px}}
+@media print{body{background:#fff}.progressbox{display:none}.section{box-shadow:none;break-inside:avoid}.item input{print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="tag">7-page PDF review</div>
+<h1>Website Content Audit Checklist</h1>
+<p class="sub">Dr. Noopur Patel — Surgical Breast Oncology website. This audit identifies repeated meaning, overlapping sections, visible copy/spelling issues, and items that need factual confirmation before publishing.</p>
+<div class="meta"><span class="pill">Source: supplied 7-page PDF</span><span class="pill">Content + copy audit</span><span class="pill">Interactive checklist</span></div>
+</div></header>
+<div class="progressbox"><div class="progressinner"><strong>Review progress</strong><div class="bar"><div class="fill" id="fill"></div></div><span class="count" id="count">0 / 0 checked</span></div></div>
+<main>
+<div class="intro"><strong>Important finding:</strong> The most urgent issue is not a spelling error. Page 4’s “Latest From Instagram” section visibly contains content for <b>Dr. Divax Oza, Pulmonologist, Palanpur</b> and a lung-cancer reel. This is unrelated to Dr. Noopur Patel’s breast oncology website and should be replaced before launch. Also verify all medical claims, credentials, registration details, OPD timings and regulatory references with the doctor/hospital.</div>
+
+<section class="section">
+<div class="section-head"><div><div class="tag">A — High priority</div><h2>Clear content errors & mismatches</h2></div></div>
+<div class="item"><label><input type="checkbox"><span><strong class="bad">Replace the Instagram content on page 4</strong>Current cards show “Dr. Divax Oza | Pulmonologist | Palanpur” and a lung-cancer reel. These belong to a different doctor/specialty/location.</span></label><p class="detail">Replace with Dr. Noopur Patel’s own verified Instagram posts, breast health education, breast cancer awareness or surgical education. If no suitable feed exists, hide this section until ready.</p></div>
+<div class="item"><label><input type="checkbox"><span><strong>Correct hospital/location spelling throughout</strong>OCR and visible copy show “Anmedabad” in several places; the correct spelling is “Ahmedabad”.</span></label><p class="detail">Check pages 1, 6 and 7, including the hospital address and footer. Use one approved address format everywhere.</p></div>
+<div class="item"><label><input type="checkbox"><span><strong>Fix visible spelling error: “filbrocystic”</strong>Page 2 benign-conditions card uses “filbrocystic changes”.</span></label><p class="detail">Correct to “fibrocystic changes”.</p></div>
+<div class="item"><label><input type="checkbox"><span><strong>Fix OPD time typo/format on page 1</strong>One instance appears as “2:;00 PM”.</span></label><p class="detail">Use “2:00 PM” consistently. Confirm whether the morning and evening slots are both 10:00 AM–2:00 PM and 2:00 PM–6:00 PM, Mon–Sat.</p></div>
+<div class="item"><label><input type="checkbox"><span><strong>Verify the medical registration number</strong>The PDF shows GMC Reg. No. G-29718, but it should be confirmed against the doctor’s official registration record.</span></label><p class="detail">Do not treat this audit as verification of the registration number.</p></div>
+<div class="item"><label><input type="checkbox"><span><strong>Verify credentials and fellowship acronym</strong>The page shows “Fellowship in Breast Surgical Oncology (FIBD)” and “Fellowship in Breast Surgery (FIBD)”.</span></label><p class="detail">Confirm the exact fellowship title, awarding institution and acronym. The PDF alone does not establish whether “FIBD” is correct.</p></div>
+</section>
+
+<section class="section">
+<div class="section-head"><div><div class="tag">B — Repetition / overlap</div><h2>Repeated sections and meaning</h2></div></div>
+<p class="sub">These are not necessarily exact duplicate paragraphs. They repeat the same message, service or conversion action in multiple places. Keep repetition only where it serves a clear navigation or conversion purpose.</p>
+<table>
+<thead><tr><th>Repeated topic</th><th>Where it appears</th><th>Recommendation</th></tr></thead>
+<tbody>
+<tr><td>Early detection saves lives</td><td>Page 1 hero statistic (“90%+” survival), page 3 “Early Detection Can Save Lives”, page 3 education article “Understanding Breast Cancer: Key Facts & Early Symptoms”, page 2 screening/condition messaging.</td><td>Keep one strong awareness section on page 3. Keep the educational article as a deeper resource, but change its angle to warning signs or when to seek evaluation. Avoid repeating the same “early detection saves lives” sentence in every block.</td></tr>
+<tr><td>Personalised / individualised surgical care</td><td>Page 1 Meet the Doctor; page 3 “Individualised Surgical Planning”; page 4 care-journey “Treatment Planning”; page 6 “Evidence-Based Surgical Counselling”.</td><td>Give each a distinct job: doctor philosophy, how a treatment plan is personalised, patient journey step, and informed-consent discussion. Remove repeated generic claims.</td></tr>
+<tr><td>Oncoplastic surgery / breast reconstruction</td><td>Page 1 “Oncoplastic Precision”; page 3 treatment cards “Oncoplastic Breast Surgery” and “Breast Reconstruction”; page 3 philosophy card “Oncoplastic Reconstruction”; page 6 surgical counselling; footer on page 7.</td><td>Keep the detailed service cards in Treatments. In the doctor/philosophy section use a short summary and link to the treatment detail. Avoid describing reconstruction and oncoplastic reshaping as if they are always the same procedure.</td></tr>
+<tr><td>Multidisciplinary team / tumor board</td><td>Page 3 “Individualised Surgical Planning”; page 5 gallery items “Tumor Board Consensus” and “Case Planning”; page 6 “Multidisciplinary Tumor Board Staging”.</td><td>Keep the full explanation on page 6. In the gallery, retain real event photos with short captions, but avoid duplicating the same clinical process description.</td></tr>
+<tr><td>Patient support / survivorship</td><td>Page 4 “Cancer Patient Support & Public Awareness”; page 5 multiple Cancer Warriors / survivor group / survivor empowerment gallery cards; page 3 “Post-Operative Continuity”.</td><td>Separate ongoing clinical follow-up from community survivorship activities. Use one overview section plus a gallery of genuinely different activities. Merge cards if they show the same event or same activity.</td></tr>
+<tr><td>Breast health education</td><td>Page 3 “Evidence-Based Breast Health Guides”; page 4 Instagram intro; page 4 awareness sessions; page 5 public education gallery; footer navigation “Patient Education Guides & Awareness”.</td><td>Keep the article hub as the main online education section. Community lectures and Instagram should show actual activities/posts, not repeat the article-hub description.</td></tr>
+<tr><td>Appointment / consultation CTA</td><td>Page 1 Book Appointment / Read Full Doctor Biography; page 2 Book Clinical Checkup; page 3 Book a Second Opinion; page 4 Begin Your Consultation; page 6 OPD schedule; page 7 Book Clinic Appointment, Book an Appointment, Call Now.</td><td>Multiple CTAs are acceptable, but standardise labels and destination. Use “Book an Appointment” as the primary CTA; reserve “Book a Second Opinion” for the second-opinion section. Ensure every button opens the correct booking method.</td></tr>
+<tr><td>Address, OPD hours and contact details</td><td>Header and hero on page 1; hospital information on page 6; location cards and footer on pages 6–7.</td><td>Repeating essential contact information is useful. However, use one exact approved address, phone number, email and timing format everywhere. Remove conflicting or partial versions.</td></tr>
+<tr><td>Benign breast conditions</td><td>Page 1 hero and biography mention benign breast conditions; page 2 has Breast Lump, Fibroadenoma, Breast Pain, Nipple Discharge and Benign Conditions.</td><td>Keep the detailed condition cards on page 2. Keep only a concise mention in the hero/biography. Check whether the generic “Benign Conditions” card duplicates the separate Fibroadenoma, Breast Pain and Nipple Discharge cards; define its scope clearly.</td></tr>
+</tbody></table>
+<div class="item"><label><input type="checkbox"><span><strong>Review all repeated-topic groups above and decide which section is the “master” section</strong></span></label><p class="detail">A section can link to the master section instead of repeating the same explanatory copy.</p></div>
+</section>
+
+<section class="section">
+<div class="section-head"><div><div class="tag">C — Spelling & copy edits</div><h2>Correction list</h2></div></div>
+<table>
+<thead><tr><th>Current wording / issue</th><th>Suggested correction</th><th>Page</th></tr></thead>
+<tbody>
+<tr><td>“Anmedabad”</td><td><b>Ahmedabad</b></td><td>1, 6, 7 (and anywhere else used)</td></tr>
+<tr><td>“filbrocystic changes”</td><td><b>fibrocystic changes</b></td><td>2</td></tr>
+<tr><td>“Self Breast Examination”</td><td><b>Breast Self-Examination</b> (more natural standard phrasing)</td><td>3</td></tr>
+<tr><td>“2:;00 PM”</td><td><b>2:00 PM</b></td><td>1</td></tr>
+<tr><td>“DoctorReviewed” / “DoctorReviewed” with no space</td><td><b>Doctor-reviewed</b> or <b>Reviewed by a Doctor</b></td><td>3</td></tr>
+<tr><td>“WatchReel”, “ViewPhoto”, “LearnMore”</td><td><b>Watch Reel</b>, <b>View Photo</b>, <b>Learn More</b></td><td>2, 4, 5</td></tr>
+<tr><td>“Cashless Mediclaim & TPA Empaneled at CIMS”</td><td>Suggested: <b>Cashless Insurance & TPA Facilities Available</b> — only if factually accurate and accepted by the hospital.</td><td>1</td></tr>
+<tr><td>“From early evaluation to advanced treatment, we provide comprehensive care for a wide range of breast conditions.”</td><td>Suggested: <b>We assess and treat a wide range of breast conditions, from initial evaluation to advanced care.</b></td><td>2</td></tr>
+<tr><td>“A clear and supportive journey from diagnosis to recovery.”</td><td>Suggested: <b>A clear, supportive care pathway from diagnosis through treatment and recovery.</b></td><td>4</td></tr>
+<tr><td>“In compliance with...”</td><td>Use <b>In compliance with...</b> with a space after the opening phrase; check the full sentence for readability.</td><td>5</td></tr>
+<tr><td>“Online queries & records”</td><td>Suggested: <b>Online enquiries and records</b> or state exactly what the email channel supports.</td><td>7</td></tr>
+<tr><td>“Professional Journey & Credentials”</td><td>Suggested: <b>Professional Background & Credentials</b> (optional wording improvement).</td><td>7</td></tr>
+</tbody></table>
+<p class="note"><b>OCR/visual limitation:</b> Some tiny text in the PDF screenshots is not fully legible. The list above includes clearly identifiable issues and wording visible in the supplied pages. Before publishing, proofread the live website at desktop and mobile sizes; some joined words may be visual spacing/rendering problems rather than source-text spelling mistakes.</p>
+</section>
+
+<section class="section">
+<div class="section-head"><div><div class="tag">D — Page-wise checklist</div><h2>What to review on each page</h2></div></div>
+<h3>Page 1 — Hero, credentials and doctor introduction</h3>
+<div class="item"><label><input type="checkbox"><span>Confirm the doctor’s exact name, degree, fellowship, registration number and hospital affiliation.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Correct “Ahmedabad” and standardise the OPD timing format.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Review the “1 in 8” and “90%+” statistics: add a credible source, context and date, or remove them. Avoid implying a guaranteed individual outcome.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Clarify “You are not alone” and “We are here to support” so it does not read like a separate unsupported service promise.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Reduce overlap between the hero, “Meet Dr. Noopur Patel” and the four value cards. Keep the hero concise and let the biography carry detail.</span></label></div>
+<h3>Page 2 — Breast conditions and treatments</h3>
+<div class="item"><label><input type="checkbox"><span>Correct “fibrocystic”.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Review “Over 80% are benign” and “100% benign” labels. Clarify exactly which condition/statistic each refers to and cite a reliable source; do not make a label look like a guarantee for an individual patient.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Review the phrase “Early detection ensures 90%+ cure”. Replace with qualified, evidence-based wording; early detection can improve treatment outcomes, but a cure is not guaranteed.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Define “Benign Conditions” so it adds information beyond the separate Fibroadenoma, Breast Pain and Nipple Discharge cards.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Make sure each “Learn More” opens a relevant, unique detail page or section.</span></label></div>
+<h3>Page 3 — Treatment cards, philosophy and education guides</h3>
+<div class="item"><label><input type="checkbox"><span>Check treatment-card titles and descriptions for clipping, awkward line breaks and correct labels (Breast Conservation Surgery, Mastectomy, Sentinel Lymph Node Biopsy, Oncoplastic Breast Surgery, Axillary Lymph Node Surgery, Breast Reconstruction).</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Separate the “Early Detection” message from the education article about early symptoms to avoid repeating the same message.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Correct “Self Breast Examination” to “Breast Self-Examination”.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Use consistent labels: “Doctor-reviewed”, “Read Full Guide” and “Educational Guide”.</span></label></div>
+<h3>Page 4 — Care journey, Instagram and community initiatives</h3>
+<div class="item"><label><input type="checkbox"><span class="bad">Remove the unrelated Dr. Divax Oza / Pulmonologist / Palanpur Instagram content and replace with Dr. Noopur Patel content.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Check the seven care-journey steps: the step labels, numbering, descriptions and sequence should be readable and consistent.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Keep “Post-operative follow-up” distinct from community survivor support.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Review the Cancer Warriors, Mammography Camps and Awareness Lectures descriptions against the gallery below; avoid repeating the same descriptions.</span></label></div>
+<h3>Page 5 — Community gallery and ethics introduction</h3>
+<div class="item"><label><input type="checkbox"><span>Check whether multiple gallery cards show the same event/activity. Merge duplicate images or give each card a genuinely different caption.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Correct joined labels such as “View Photo” and “Multidisciplinary Team (MDT)”.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Finish incomplete gallery captions; several descriptions appear cut off in the screenshot.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Keep the patient privacy/authorised visuals statement, and confirm that every published patient image has documented consent and appropriate authorisation.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Check the heading “Clinical Governance & Ethical Standards” for exact spelling and consistent styling.</span></label></div>
+<h3>Page 6 — Governance, OPD information, FAQs and location</h3>
+<div class="item"><label><input type="checkbox"><span>Correct “Ahmedabad” and standardise hospital name as “Marengo CIMS Hospital”.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Verify the claims “Verified Hospital Protocol at Marengo CIMS” with the hospital before publication.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Review the FAQ answer on annual mammography starting at age 40. Have the doctor confirm the exact recommendation and wording for average-risk versus higher-risk patients.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Ensure every FAQ accordion opens and “View All FAQs” goes to a working page.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Confirm map, clinic address, OPD hours and appointment instructions.</span></label></div>
+<h3>Page 7 — Contact, footer and disclaimer</h3>
+<div class="item"><label><input type="checkbox"><span>Confirm phone number and email address character by character; ensure tap-to-call and email links work.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Standardise hospital address, city, state and PIN code in the map link and footer.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Correct spacing in footer labels and navigation links.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Verify the NMC guideline title/date and legal wording with qualified compliance counsel or the relevant professional body. The PDF itself does not verify the October 2026 reference.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Confirm the disclaimer does not imply that website content replaces diagnosis or consultation; retain emergency-care direction after clinical review.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Test Privacy Policy, Terms & Conditions, Medical Disclaimer, social links and Back to Top.</span></label></div>
+</section>
+
+<section class="section">
+<div class="section-head"><div><div class="tag">E — Suggested content architecture</div><h2>Cleaner section structure</h2></div></div>
+<p>To reduce repetition without removing useful information, consider this order:</p>
+<ol>
+<li><b>Hero:</b> doctor name, specialty, location, one-line value proposition, verified credentials and primary appointment CTA.</li>
+<li><b>About the Doctor:</b> biography, qualifications, clinical focus and approach to care.</li>
+<li><b>Conditions Treated:</b> breast lump, fibroadenoma, breast pain, nipple discharge, benign breast conditions and breast cancer.</li>
+<li><b>Treatments & Procedures:</b> BCS, mastectomy, sentinel lymph node biopsy, oncoplastic surgery, axillary lymph node surgery and reconstruction.</li>
+<li><b>Why This Practice:</b> focused breast oncology, individualised planning, clear counselling and follow-up — avoid repeating procedure descriptions.</li>
+<li><b>Patient Education:</b> article hub with unique topics and doctor review information.</li>
+<li><b>Care Journey:</b> one clear step-by-step pathway from consultation to follow-up.</li>
+<li><b>Community & Survivorship:</b> one short overview plus a gallery of distinct, consented activities.</li>
+<li><b>Clinical Governance & FAQs:</b> verified clinical process, ethics, FAQs and medical disclaimer.</li>
+<li><b>Contact & Location:</b> one authoritative address, phone, email, timings and appointment method.</li>
+</ol>
+<div class="note"><b>Do not remove useful repeated navigation:</b> repeating a Book Appointment button, phone number or clinic location in the header, mid-page and footer can be good UX. The audit flags repeated meaning in explanatory content, not every repeated conversion element.</div>
+</section>
+
+<section class="section">
+<div class="section-head"><div><div class="tag">F — Final sign-off</div><h2>Before the website goes live</h2></div></div>
+<div class="item"><label><input type="checkbox"><span>All doctor credentials, fellowship details and registration information approved by the doctor.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>All medical statistics, screening recommendations and outcome claims reviewed by the doctor.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>All patient photographs and event images approved for public use with documented consent.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>All phone, email, map, WhatsApp, booking and social links tested.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Desktop and mobile proofread completed; no clipped text, broken words, blank image placeholders or duplicate cards.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Final proofreading completed by a human reviewer against the live website, not only this PDF screenshot.</span></label></div>
+</section>
+<footer>Prepared from the 7-page PDF supplied in this conversation. This is a content and copy audit, not a medical, legal or regulatory certification.</footer>
+</main>
+<script>
+const boxes=[...document.querySelectorAll('input[type="checkbox"]')],fill=document.getElementById('fill'),count=document.getElementById('count');
+function update(){const done=boxes.filter(x=>x.checked).length;fill.style.width=(boxes.length?done/boxes.length*100:0)+'%';count.textContent=`${done} / ${boxes.length} checked`;}
+boxes.forEach(x=>x.addEventListener('change',update));update();
+</script>
+</body></html>

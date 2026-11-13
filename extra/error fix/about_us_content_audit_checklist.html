@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Noopur Patel — About Us Page Content Audit</title>
+<style>
+:root{--ink:#283047;--muted:#667085;--pink:#a51f4b;--rose:#fff0f4;--line:#e7e8ee;--bg:#f6f7fb;--green:#16845b;--amber:#875500;--red:#a12a39}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Arial,sans-serif}
+header{padding:34px 20px;background:linear-gradient(120deg,#fff,#fff0f4);border-bottom:1px solid var(--line)}
+.wrap,main,.progressin{max-width:1080px;margin:auto}.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--pink);background:var(--rose);border-radius:30px;padding:4px 10px}
+h1{font-size:clamp(26px,4vw,38px);line-height:1.15;margin:12px 0;color:#20243a}h2{font-size:22px;margin:0 0 12px;color:#20243a}h3{font-size:17px;margin:18px 0 8px;color:#20243a}
+.muted{color:var(--muted)}main{padding:24px 16px 55px}.intro,.section{background:white;border:1px solid var(--line);border-radius:14px;padding:21px;margin:17px 0}.intro{border-left:4px solid var(--pink)}
+.section-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap;margin-bottom:12px}
+.item{border-top:1px solid var(--line);padding:12px 0}.item:first-of-type{border-top:0}.item label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}.item input{margin-top:5px;accent-color:var(--pink);width:17px;height:17px;flex:none}.detail{margin:3px 0 0 27px;color:var(--muted);font-size:13px}
+.bad{color:var(--red)}.warn{color:var(--amber)}table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px}th,td{text-align:left;vertical-align:top;padding:10px;border-bottom:1px solid var(--line)}th{background:#faf7f8;color:#20243a}td:first-child{font-weight:700;width:24%}
+.note{padding:13px;border:1px solid #f0dfb9;background:#fff9ed;border-radius:10px;font-size:13px;color:#684900}
+.progress{position:sticky;top:0;background:#ffffffed;backdrop-filter:blur(8px);padding:10px 16px;border-bottom:1px solid var(--line);z-index:5}.progressin{display:flex;gap:12px;align-items:center}.bar{height:8px;background:#eee;border-radius:20px;overflow:hidden;flex:1}.fill{height:100%;width:0;background:var(--pink);transition:width .2s}.count{font-size:12px;color:var(--muted);white-space:nowrap}
+ol{padding-left:22px}li{margin:7px 0}footer{text-align:center;color:var(--muted);font-size:12px;padding:20px}
+@media(max-width:650px){.section,.intro{padding:15px}table{display:block;overflow-x:auto}}@media print{.progress{display:none}.section{break-inside:avoid}}
+</style></head>
+<body>
+<header><div class="wrap"><span class="tag">5-page PDF review</span><h1>About Us — Content Audit Checklist</h1><p class="muted">Dr. Noopur Patel | Breast Cancer Surgeon | Surgical Breast Oncology | Duplicate meaning, copy clarity, visible text issues and page-wise review.</p></div></header>
+<div class="progress"><div class="progressin"><b>Review progress</b><div class="bar"><div class="fill" id="fill"></div></div><span class="count" id="count">0 / 0 checked</span></div></div>
+<main>
+<div class="intro"><b>Overall finding:</b> The page has a strong sequence, but the doctor’s expertise, personalised care, multidisciplinary approach, credentials and patient-support message are repeated across several sections. The biggest practical issue visible in the PDF is a broken doctor image on page 1 (the image area displays alt text instead of the photo). No obvious major spelling mistake is clearly legible in the screenshots; several phrases can still be improved for natural English and consistency.</div>
+
+<section class="section"><span class="tag">A — High priority findings</span><h2>Fix these before publishing</h2>
+<div class="item"><label><input type="checkbox"><span><strong class="bad">Fix the broken doctor portrait on page 1.</strong> The “Meet Dr. Noopur Patel” image area appears blank and shows the alt text “Dr. Noopur Patel, Associate Consultant in Surgical Breast Oncology”.</span></label><p class="detail">Upload/restore the correct image, check the image URL and responsive source, and confirm the photo loads on desktop and mobile. Keep meaningful alt text for accessibility.</p></div>
+<div class="item"><label><input type="checkbox"><span><strong class="bad">Check the cropped treatment cards in the hero visual on page 1.</strong> The visible labels appear cut off (for example, “stectomy” and “Breast Recon…”).</span></label><p class="detail">This may be a screenshot/layout crop rather than missing source text. Check the live card width, image crop, title wrapping and mobile breakpoint.</p></div>
+<div class="item"><label><input type="checkbox"><span><strong>Verify doctor credentials and fellowship wording.</strong> The PDF uses MBBS, MS, FIBD and “Fellowship in Breast Surgical Oncology”.</span></label><p class="detail">Confirm the exact degree/fellowship title, awarding institution, acronym and sequence with the doctor. Do not infer what FIBD expands to from this PDF.</p></div>
+<div class="item"><label><input type="checkbox"><span><strong>Verify all hospital and clinical-protocol claims.</strong> Page 4 repeats “Verified Hospital Protocol at Marengo CIMS” and “NCCN Guidelines Compliant”.</span></label><p class="detail">Confirm that the hospital has approved these statements and that each claim is accurate for the described service/process. Remove any unverified badge.</p></div>
+<div class="item"><label><input type="checkbox"><span><strong>Verify the OPD schedule and contact information.</strong> Page 4 and page 5 show contact/timing information.</span></label><p class="detail">Confirm the phone number, email, address, Mon–Sat schedule and both time slots directly with the clinic. Test tap-to-call, email and map links.</p></div>
+</section>
+
+<section class="section"><span class="tag">B — Duplicate meaning / overlap</span><h2>Sections that communicate similar things</h2>
+<table><thead><tr><th>Repeated idea</th><th>Where it appears</th><th>Recommendation</th></tr></thead><tbody>
+<tr><td>Doctor expertise and credentials</td><td>Page 1 “Meet Dr. Noopur Patel”; qualification strip (MBBS, MS, FIBD, Associate Consultant); page 2 “Professional Experience & Growth”; page 3 “Academic Lineage & Credentials”; page 5 qualification strip and footer description.</td><td>Make page 1 the main concise doctor profile and credentials location. Page 2 journey should describe career milestones rather than repeat degree names. Page 3 can hold detailed training/mentorship history. On page 5, keep only a compact credential summary or remove the duplicate strip.</td></tr>
+<tr><td>Personalised / patient-centred care</td><td>Page 1 introduction; page 1 “More Than Treatment. A Partnership in Your Health”; page 2 Mission, Values and “Expertise. Empathy. Better Outcomes”; page 5 CTA.</td><td>Keep the emotional promise in the hero/approach section. Mission and values should be concise organisational principles. The differentiator section should focus on concrete services or capabilities, not repeat “compassionate/personalised/patient-centred” wording.</td></tr>
+<tr><td>Evidence-based care and latest technology</td><td>Page 1 Meet the Doctor text; page 1 approach cards “Advanced Surgical Care” and “Accurate Diagnosis”; page 2 “Use of Latest Diagnostic & Surgical Technology”; page 4 “Advanced Diagnostic Technology”; page 4 Evidence-Based Care section.</td><td>Use the page 2 differentiator section for a short summary. Keep page 4 facilities focused on actual equipment/rooms. Explain evidence-based clinical decision-making once in the governance section.</td></tr>
+<tr><td>Multidisciplinary care / tumor board</td><td>Page 2 values/what makes us different/journey; page 3 “Multidisciplinary Team & Tumor Board” with four gallery cards; page 4 “Multidisciplinary Tumor Board Staging”.</td><td>Keep the full explanation and real meeting/gallery evidence on page 3. Page 4 governance card can be reduced to a short policy/process statement or removed if it repeats the same board process.</td></tr>
+<tr><td>Patient education and communication</td><td>Page 2 Mission and Values; page 2 “Clear Communication & Patient Education”; page 4 “Evidence-Based Surgical Counseling”; page 5 CTA invitation.</td><td>Keep patient education as one clear value/differentiator. The counselling card should explain the practical counselling process (options, benefits, risks and questions), not restate the general value.</td></tr>
+<tr><td>Ongoing support / journey</td><td>Page 1 approach; page 2 “Support Through Every Step of Your Journey”; page 2 dedicated clinical practice; page 5 “Have a Breast Health Concern?” CTA.</td><td>Use “journey” language once. Explain the actual care stages (consultation, diagnosis, treatment planning, surgery and follow-up) only if the clinic can substantiate them.</td></tr>
+<tr><td>Oncoplastic and reconstructive surgery</td><td>Page 1 hero visual and doctor profile; page 2 “Specialised in Breast Surgery & Oncoplastic Techniques” and “Natural-Looking Reconstructive Options”; page 5 footer procedure links.</td><td>Keep the detailed explanation on the Treatments page. On About Us, use one concise specialty statement and link to the service details. Do not imply that every patient is suitable for reconstruction.</td></tr>
+<tr><td>Clinical consultation / case planning</td><td>Page 1 “Detailed Consultation”; page 3 “Case Planning Session” and “Comprehensive Clinical Consultation”; page 4 Evidence-Based Surgical Counseling and Structured Second Opinions.</td><td>Give each item a distinct purpose: consultation = patient assessment; case planning = MDT discussion; counselling = treatment options and consent; second opinion = independent review. Avoid similar generic captions.</td></tr>
+<tr><td>Clinic environment and comfort</td><td>Page 2 image of a consultation/waiting space; page 2 “Expertise. Empathy…” includes patient-first approach; page 4 “A Safe, Comfortable and Modern Clinic” with reception, consultation suite and recovery lounge.</td><td>Keep the facilities details on page 4. Remove or replace the generic waiting-room image on page 2 if it does not add a separate story.</td></tr>
+<tr><td>Repeated appointment prompts</td><td>Header Book Appointment; page 1 hero Book an Appointment; page 3 Request MDT Case Review; page 4 Check OPD Schedule; page 5 Book Appointment and Call Now; footer contact.</td><td>Repeated appointment access is useful UX, not necessarily duplicate content. Standardise the primary button label and destination. Keep “Request MDT Case Review” only if it is a real service for an appropriate audience.</td></tr>
+<tr><td>Repeated hospital/contact information</td><td>Top utility bar; page 4 OPD consultation information; page 5 CTA and footer hospital contact.</td><td>Keep repeated contact details for convenience, but use one approved format for hospital name, full address, phone, email and clinic timings.</td></tr>
+</tbody></table>
+<div class="item"><label><input type="checkbox"><span><b>Decide the primary home for each repeated message.</b> Keep one full explanation and use a short teaser/link in other sections.</span></label></div>
+</section>
+
+<section class="section"><span class="tag">C — Spelling & English copy review</span><h2>Suggested wording improvements</h2>
+<table><thead><tr><th>Current wording</th><th>Suggested wording</th><th>Page</th></tr></thead><tbody>
+<tr><td>“Dedicated to Women’s Health. Today and Always.”</td><td>Keep if this is the approved brand tagline. It is a stylistic phrase, not a spelling error.</td><td>1</td></tr>
+<tr><td>“At Dr. Noopur Patel’s clinic, we believe every woman deserves accurate diagnosis, advanced treatment and compassionate care for all breast health concerns — in a safe, supportive and empowering environment.”</td><td>“Dr. Noopur Patel provides breast health assessment and surgical care with an emphasis on clear communication, evidence-informed decisions and compassionate support.”</td><td>1</td></tr>
+<tr><td>“Meet Your Doctor” / “Meet Dr. Noopur Patel”</td><td>Both are correct. Keep one consistent heading style; the section title can simply be “Meet Dr. Noopur Patel”.</td><td>1</td></tr>
+<tr><td>“More Than Treatment. A Partnership in Your Health.”</td><td>“More Than Treatment: A Partnership in Your Health” (more natural punctuation; optional).</td><td>1</td></tr>
+<tr><td>“With oncological precision, modern equipment, and highest patient safety standards.”</td><td>“With oncological precision, modern equipment and high standards of patient safety.”</td><td>2</td></tr>
+<tr><td>“To be a trusted centre for breast health, known for clinical excellence, advanced surgical techniques and a patient-centred approach.”</td><td>Grammatically acceptable. Consider shortening to avoid repeating the same promise in the differentiator section.</td><td>2</td></tr>
+<tr><td>“Use of Latest Diagnostic & Surgical Technology”</td><td>“Use of the Latest Diagnostic and Surgical Technology” or “Advanced Diagnostic and Surgical Technology”.</td><td>2</td></tr>
+<tr><td>“Support Through Every Step of Your Journey”</td><td>“Support Throughout Your Care Journey” (shorter; optional).</td><td>2</td></tr>
+<tr><td>“Professional Experience & Growth”</td><td>“Professional Journey & Development” (optional, clearer for the milestone cards).</td><td>2</td></tr>
+<tr><td>“Continued Learning”</td><td>“Continuing Professional Development” (if that is what the card describes).</td><td>2</td></tr>
+<tr><td>“Surgical Training, Mentorship & Lineage”</td><td>“Surgical Training, Mentorship and Professional Development” (avoid “lineage” unless it has a specific intended meaning).</td><td>3</td></tr>
+<tr><td>“No breast cancer is treated in isolation.”</td><td>“Breast cancer care is planned collaboratively by a multidisciplinary team.”</td><td>3</td></tr>
+<tr><td>“Every cancer case is thoroughly evaluated with surgical oncologists, medical oncologists, radiation oncologists, radiologists, and pathologists at Marengo CIMS Hospital.”</td><td>“Cases are reviewed by the relevant specialists at Marengo CIMS Hospital, as clinically appropriate.” Use only if this accurately reflects the real process.</td><td>3</td></tr>
+<tr><td>“A Safe, Comfortable and Modern Clinic”</td><td>“A Safe, Comfortable and Modern Clinical Environment” (optional; confirm the facilities shown belong to the clinic/hospital).</td><td>4</td></tr>
+<tr><td>“Evidence-Based Care & Patient-First Ethics”</td><td>“Evidence-Based Care and Ethical, Patient-Centred Practice” (more natural wording).</td><td>4</td></tr>
+<tr><td>“Structured Second Opinions”</td><td>“Second-Opinion Consultations” (clearer if this is the actual service offered).</td><td>4</td></tr>
+<tr><td>“Have a Breast Health Concern?”</td><td>Correct as written. Keep the CTA paragraph concise and avoid listing symptoms already described elsewhere.</td><td>5</td></tr>
+<tr><td>“Morning: 10:00 AM – 2:00 PM / Evening: 2:00 PM – 6:00 PM (Mon–Sat)”</td><td>Use one consistent style: “Monday–Saturday: 10:00 AM–2:00 PM and 2:00 PM–6:00 PM.” Verify the schedule first.</td><td>4–5</td></tr>
+</tbody></table>
+<div class="note"><b>Spelling verdict:</b> No definite major spelling error is clearly visible in this PDF’s small screenshots. Most entries above are grammar, clarity, consistency or tone improvements. The broken portrait and clipped card text are visual/layout issues, not spelling mistakes.</div>
+</section>
+
+<section class="section"><span class="tag">D — Page-wise checklist</span><h2>Page 1 — Hero, doctor profile and approach</h2>
+<div class="item"><label><input type="checkbox"><span>Restore the missing doctor portrait and test image loading at all screen sizes.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Check the hero visual crop so “Mastectomy” and “Breast Reconstruction” labels are not cut off.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Shorten the hero paragraph; avoid repeating compassionate, personalised, evidence-based care in the next sections.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Keep the doctor biography factual and concise. Confirm “Breast Surgeon & Oncoplastic Surgeon”, training at Max Healthcare and clinical practice at Marengo CIMS.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Check that the four credential cards use exact approved degree/fellowship names and consistent capitalisation.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Consider removing one of the three approach cards if it repeats the same consultation, surgery and diagnosis story shown elsewhere.</span></label></div>
+</section>
+
+<section class="section"><span class="tag">E — Page-wise checklist</span><h2>Page 2 — Mission, values, differentiators and career journey</h2>
+<div class="item"><label><input type="checkbox"><span>Reduce overlap between Mission, Vision and Values. Keep each to one or two concise statements.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Make “What Makes Us Different” specific and evidence-based; avoid generic claims that repeat the mission and values.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Review whether the waiting-room image adds value here or belongs only in the facilities section on page 4.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Rewrite career journey cards as actual milestones, not repeated statements about expertise, multidisciplinary care and learning.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Confirm the FIBD specialisation card and exact fellowship description with the doctor.</span></label></div>
+</section>
+
+<section class="section"><span class="tag">F — Page-wise checklist</span><h2>Page 3 — Academic lineage and MDT gallery</h2>
+<div class="item"><label><input type="checkbox"><span>Make the “Surgical Training, Mentorship & Lineage” section factual: include named institutions/mentors only with approval and accurate details.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Use the MDT section as the main explanation of multidisciplinary case review.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Give each gallery card a distinct purpose: Tumor Board Meeting, Case Planning, Lymphedema Therapy & Rehabilitation, and Comprehensive Clinical Consultation.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Check whether the two tumor-board images show genuinely different sessions; avoid duplicate or near-identical photos.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Verify “NCCN Guidelines Compliant” badges and claims before displaying them.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Ensure every photo has accurate alt text, caption, permission and patient privacy clearance.</span></label></div>
+</section>
+
+<section class="section"><span class="tag">G — Page-wise checklist</span><h2>Page 4 — Facilities, governance and OPD</h2>
+<div class="item"><label><input type="checkbox"><span>Confirm that all facility photos accurately represent the actual clinic/hospital facilities available to patients.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Keep facilities descriptions about physical spaces and equipment; do not repeat the page 2 technology differentiator.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Review the four governance cards. The MDT staging card repeats page 3’s MDT section; consider removing or reframing it.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Remove repeated “Verified Hospital Protocol at Marengo CIMS” badges unless each card has a separately verified basis.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Verify claims about confidentiality, second opinions, counselling and hospital protocols with the clinic/hospital.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Confirm hospital name, address, OPD timings, registration number and Check OPD Schedule destination.</span></label></div>
+</section>
+
+<section class="section"><span class="tag">H — Page-wise checklist</span><h2>Page 5 — CTA, credentials and footer</h2>
+<div class="item"><label><input type="checkbox"><span>Keep the final appointment CTA, but avoid repeating the same full introductory promise from page 1.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Consider removing the second full credential strip because qualifications already appear on page 1; retain a compact footer credential line if needed.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Check that the footer About paragraph adds a short brand summary rather than repeating the full biography.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Verify phone, email, hospital address, city, state and PIN code; test all contact links.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Check footer navigation labels and ensure each link opens a unique, relevant page/section.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Have the medical disclaimer and NMC regulatory reference reviewed by the appropriate qualified reviewer before publication.</span></label></div>
+</section>
+
+<section class="section"><span class="tag">I — Recommended cleaner structure</span><h2>Suggested About Us page flow</h2>
+<ol>
+<li><b>Hero:</b> one clear brand promise, specialty and appointment CTA.</li>
+<li><b>Meet Dr. Noopur Patel:</b> concise biography, verified qualifications and current role.</li>
+<li><b>Clinical approach:</b> three concrete principles, without repeating the mission and values.</li>
+<li><b>Mission, vision and values:</b> short statements; remove overlapping claims.</li>
+<li><b>Professional journey:</b> verified training, fellowship, clinical practice and mentorship milestones.</li>
+<li><b>Multidisciplinary care:</b> one detailed explanation plus authentic, consented MDT gallery.</li>
+<li><b>Facilities:</b> actual rooms, equipment and patient amenities only.</li>
+<li><b>Clinical governance:</b> counselling, privacy and second-opinion processes that are verified.</li>
+<li><b>Contact / appointment:</b> one clear CTA with consistent OPD and contact details.</li>
+</ol>
+<div class="note"><b>Important:</b> This is a content and visual-copy audit of the supplied PDF, not a medical, legal or regulatory certification. All credentials, hospital affiliations, NCCN/NMC references, clinical claims, patient photos and OPD details need confirmation from the doctor or hospital before publishing.</div>
+</section>
+<footer>Prepared from the 5-page About Us PDF supplied in this conversation. Visual review includes the broken image and clipped card labels visible in the page screenshots.</footer>
+</main>
+<script>
+const boxes=[...document.querySelectorAll('input[type=checkbox]')],fill=document.getElementById('fill'),count=document.getElementById('count');
+function update(){const n=boxes.filter(b=>b.checked).length;fill.style.width=(n/boxes.length*100)+'%';count.textContent=n+' / '+boxes.length+' checked'}boxes.forEach(b=>b.addEventListener('change',update));update();
+</script></body></html>

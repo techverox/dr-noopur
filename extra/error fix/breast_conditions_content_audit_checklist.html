@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Breast Conditions Page — Content Audit Checklist</title>
+<style>
+:root{--ink:#283047;--muted:#667085;--pink:#a51f4b;--rose:#fff0f4;--line:#e7e8ee;--bg:#f6f7fb;--green:#16845b;--amber:#8a5700}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Arial,sans-serif}
+header{padding:34px 20px;background:linear-gradient(120deg,#fff,#fff0f4);border-bottom:1px solid var(--line)}.wrap,main,.progressin{max-width:1050px;margin:auto}.tag{display:inline-block;font-size:11px;font-weight:bold;letter-spacing:.07em;text-transform:uppercase;color:var(--pink);background:var(--rose);border-radius:30px;padding:4px 10px}h1{font-size:clamp(26px,4vw,38px);line-height:1.15;margin:12px 0;color:#20243a}h2{font-size:22px;margin:0 0 12px;color:#20243a}h3{font-size:17px;margin:18px 0 8px;color:#20243a}.muted{color:var(--muted)}main{padding:24px 16px 55px}.section,.intro{background:white;border:1px solid var(--line);border-radius:14px;padding:21px;margin:17px 0}.intro{border-left:4px solid var(--pink)}.item{border-top:1px solid var(--line);padding:12px 0}.item:first-of-type{border-top:0}.item label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}.item input{margin-top:5px;accent-color:var(--pink);width:17px;height:17px;flex:none}.detail{margin:3px 0 0 27px;color:var(--muted);font-size:13px}.bad{color:#a12a39}.warn{color:var(--amber)}table{border-collapse:collapse;width:100%;font-size:14px;margin:10px 0}th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#faf7f8;color:#20243a}td:first-child{font-weight:bold;width:25%}.note{padding:13px;border:1px solid #f0dfb9;background:#fff9ed;border-radius:10px;font-size:13px;color:#684900}.progress{position:sticky;top:0;background:#ffffffed;backdrop-filter:blur(8px);padding:10px 16px;border-bottom:1px solid var(--line);z-index:4}.progressin{display:flex;gap:12px;align-items:center}.bar{height:8px;background:#eee;border-radius:20px;overflow:hidden;flex:1}.fill{height:100%;width:0;background:var(--pink)}.count{font-size:12px;color:var(--muted);white-space:nowrap}ol{padding-left:22px}li{margin:7px 0}footer{text-align:center;color:var(--muted);font-size:12px;padding:20px}
+@media(max-width:650px){.section{padding:15px}table{display:block;overflow-x:auto}}@media print{.progress{display:none}.section{break-inside:avoid;box-shadow:none}}
+</style></head><body>
+<header><div class="wrap"><span class="tag">3-page PDF review</span><h1>Breast Conditions — Content Audit</h1><p class="muted">Dr. Noopur Patel | Surgical Breast Oncology | Page-wise repetition, spelling, copy clarity and quality checklist.</p></div></header>
+<div class="progress"><div class="progressin"><b>Review progress</b><div class="bar"><div class="fill" id="fill"></div></div><span class="count" id="count">0 / 0 checked</span></div></div>
+<main>
+<div class="intro"><b>Overall finding:</b> The page structure is logical, but the eight condition cards, anatomy/tissue section, six warning signs, educational guides and FAQs partly cover the same subjects. The biggest clear text error is the heading <b>“Ielpful Guides & Resources”</b> on page 2; it should be <b>“Helpful Guides & Resources”.</b> Medical statements and percentages need clinical verification before publication.</div>
+
+<section class="section"><span class="tag">A — Spelling & wording</span><h2>Visible corrections</h2>
+<table><thead><tr><th>Current text</th><th>Recommended correction</th><th>Page</th></tr></thead><tbody>
+<tr><td class="bad">Ielpful Guides & Resources</td><td><b>Helpful Guides & Resources</b></td><td>2</td></tr>
+<tr><td>Breast Condition Categories We Manage</td><td><b>Breast Conditions We Manage</b> (more natural heading; optional)</td><td>1</td></tr>
+<tr><td>“8 Breast Condition Categories We Manage”</td><td><b>8 Common Breast Conditions We Evaluate & Manage</b> (only if “common” is clinically appropriate)</td><td>1</td></tr>
+<tr><td>“Breast Self-Examination Guide”</td><td><b>Breast Self-Examination Guide</b> — wording is acceptable; keep hyphenation consistent wherever repeated.</td><td>2</td></tr>
+<tr><td>“Triple Assessment Diagnostic Standard”</td><td><b>Triple Assessment for Breast Diagnosis</b> (clearer, subject to doctor approval)</td><td>1</td></tr>
+<tr><td>“Direct OPD: +91…”</td><td><b>Call for OPD Appointments: +91…</b> (if this number is used for appointment calls)</td><td>1</td></tr>
+<tr><td>“Simple & Complex Cysts”</td><td><b>Simple and Complex Breast Cysts</b> (clearer label)</td><td>1</td></tr>
+<tr><td>“Mastitis & Abscess”</td><td><b>Mastitis and Breast Abscess</b> (clearer label)</td><td>1</td></tr>
+<tr><td>“When Should You Schedule an Evaluation?”</td><td>Correct as written. Keep the same title case style across section headings.</td><td>2</td></tr>
+<tr><td>“Have a Breast Symptom Evaluated Promptly”</td><td>Correct as written; optional alternative: <b>Get a Breast Symptom Evaluated Promptly</b>.</td><td>3</td></tr>
+</tbody></table>
+<div class="note"><b>Spelling scope:</b> The PDF is a small-text screenshot. “Ielpful” is the clearly visible spelling/letter error. Other suggestions above are copy/clarity improvements, not confirmed spelling mistakes. Review the original webpage text for punctuation and tiny-print issues.</div>
+</section>
+
+<section class="section"><span class="tag">B — Duplicate meaning & overlap</span><h2>Sections that repeat similar information</h2>
+<table><thead><tr><th>Overlap</th><th>Where repeated</th><th>What to change</th></tr></thead><tbody>
+<tr><td>Breast lumps / benign conditions</td><td>Page 1 cards: Fibroadenoma, Palpable Breast Lump, Simple & Complex Cysts, Breast Cancer; page 2 FAQ “Are all breast lumps cancerous?”; warning sign “New palpable lump or focal thickening”.</td><td>Keep the cards as condition-specific summaries. Keep the warning sign as a short symptom alert. FAQ should answer the question in one concise paragraph and link to the lump/condition detail, rather than repeating card descriptions.</td></tr>
+<tr><td>Nipple discharge</td><td>Page 1 Nipple Discharge card; page 2 warning sign about spontaneous nipple discharge; page 2 FAQ “What causes spontaneous nipple discharge?”</td><td>Card = what it is and how it is assessed. Warning sign = when to seek assessment. FAQ = common possible causes and why evaluation matters. Avoid using the same full explanation in all three places.</td></tr>
+<tr><td>Breast pain / mastalgia</td><td>Page 1 Breast Pain card; page 2 FAQ “When should I see a breast specialist for breast pain?”; warning signs include persistent tenderness.</td><td>Keep the card as the condition overview. Keep the FAQ focused on persistence, associated changes and when to seek medical advice. Mention pain in the warning list only as one brief symptom context.</td></tr>
+<tr><td>Triple assessment</td><td>Page 1 hero image caption “Triple Assessment Diagnostic Standard”; anatomy/tissue content references diagnosis; page 2 FAQ asks what triple assessment is; FAQ answer describes clinical exam, imaging and biopsy.</td><td>Explain the three components fully in one dedicated FAQ or a short diagnostic-process section. Hero caption should be a short label and link to that explanation, not repeat the full concept.</td></tr>
+<tr><td>Early evaluation / prompt consultation</td><td>Page 1 intro says thorough evaluation; page 2 warning signs and evaluation CTA; page 2 “When Should You Schedule an Evaluation?”; page 3 CTA “Have a Breast Symptom Evaluated Promptly”.</td><td>Keep the warning signs as the main educational list. Use the evaluation panel as a short next-step CTA. The bottom CTA can remain for conversion, but use a different concise message and same booking destination.</td></tr>
+<tr><td>Breast self-examination</td><td>Page 2 warning signs list; Educational Guide “Breast Self-Examination Guide”; page 2 FAQ/education context may also direct users to self-checking.</td><td>Guide should explain awareness and how to notice changes, not imply self-examination replaces screening or clinical evaluation. Warning list should not repeat the guide’s instructions.</td></tr>
+<tr><td>Mammography / imaging</td><td>Page 1 triple assessment caption includes mammogram; page 2 guide “Mammogram: What to Expect”; triple assessment FAQ includes mammography and ultrasound.</td><td>Use the guide for preparation and what happens during mammography. Keep the FAQ definition of triple assessment brief and link to the mammography guide for detail.</td></tr>
+<tr><td>Biopsy</td><td>Page 2 guide “Understanding Breast Biopsies”; page 1 triple assessment caption; page 2 triple assessment FAQ includes core needle biopsy.</td><td>Let the biopsy guide explain biopsy types and procedure. In the FAQ, state only that biopsy may be recommended when indicated, then link to the guide.</td></tr>
+<tr><td>General breast health / lifestyle</td><td>Page 1 introduction and anatomy section; page 2 “Lifestyle Tips for Breast Health”; page 3 closing CTA and footer brand description.</td><td>Keep lifestyle guidance in its own guide. Keep anatomy section focused on anatomy and tissue changes. Remove broad generic “breast health” claims from unrelated sections.</td></tr>
+<tr><td>Appointment CTA</td><td>Page 1 Book Clinical Consultation and Direct OPD; page 2 Request Confidential Appointment; page 3 Book Appointment and Call Now.</td><td>Repeated CTAs are useful. Standardise primary wording to “Book an Appointment” and make every button use the same verified booking route. Keep the direct phone option as a secondary CTA.</td></tr>
+<tr><td>Clinic address / contact details</td><td>Page 1 header and page 3 CTA/footer include Marengo CIMS Hospital, Ahmedabad; page 3 phone/email/timings.</td><td>Repetition is acceptable for trust and convenience. Use exactly the same approved hospital name, address, phone, email and OPD hours in every location.</td></tr>
+</tbody></table>
+<div class="item"><label><input type="checkbox"><span><b>Choose one main location for each full explanation</b> and use short summaries/links in the other sections.</span></label></div>
+</section>
+
+<section class="section"><span class="tag">C — Page-wise checklist</span><h2>Page 1 — Hero, condition cards and anatomy</h2>
+<div class="item"><label><input type="checkbox"><span>Review hero paragraph: it repeats broad “comprehensive/evidence-based evaluation” positioning used elsewhere. Keep the hero focused on what this page covers.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Check whether “8 Breast Condition Categories We Manage” accurately describes all eight cards; some entries are symptoms or imaging findings, not disease categories.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Review the “100% benign” label above Fibroadenoma. Avoid absolute wording that could be misread as a guarantee about an individual lump; have the doctor approve the exact clinical phrasing.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Review the “Triple Assessment Diagnostic Standard” caption and ensure it accurately describes the clinic’s diagnostic pathway.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Check “Microcalcifications” card: clarify that these are imaging findings and that their significance depends on imaging pattern and clinical assessment.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Review the anatomy section’s “10–15% of breast cancers begin in the lobules” statement. Confirm the statistic and its source with the doctor or remove the percentage if it is not essential.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Ensure the anatomy section adds useful anatomy context and does not repeat the condition-card descriptions.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Confirm each Learn More button opens the matching condition detail, not a generic or duplicate page.</span></label></div>
+</section>
+
+<section class="section"><span class="tag">D — Page-wise checklist</span><h2>Page 2 — Warning signs, guides and FAQs</h2>
+<div class="item"><label><input type="checkbox"><span class="bad">Correct “Ielpful Guides & Resources” to “Helpful Guides & Resources”.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Review all six warning signs with the doctor; ensure the wording is medically accurate, readable and not alarmist.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Keep the “When Should You Schedule an Evaluation?” panel concise; avoid restating all six warning signs already listed.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Ensure the four educational guides have distinct scopes: self-examination/awareness, mammography process, biopsy process, and lifestyle guidance.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Do not imply that breast self-examination replaces age/risk-appropriate screening or a clinician’s evaluation.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Check the FAQ “Are all breast lumps cancerous?”: it overlaps with the Fibroadenoma, Cysts and Palpable Breast Lump cards. Keep answer concise and link to those cards.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Check the breast pain FAQ: avoid repeating the Breast Pain card word-for-word.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Check the nipple discharge FAQ: keep it distinct from the warning-sign bullet and Nipple Discharge card.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Check the triple assessment FAQ: explain clinical examination, imaging and tissue sampling when indicated; link to the biopsy/mammography guides for detail.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Test all FAQ expand/collapse controls and ensure no answer is clipped below the fold.</span></label></div>
+</section>
+
+<section class="section"><span class="tag">E — Page-wise checklist</span><h2>Page 3 — Bottom CTA and footer</h2>
+<div class="item"><label><input type="checkbox"><span>Keep the bottom CTA, but avoid repeating the same full “prompt evaluation” message from the page 2 evaluation panel.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Confirm the doctor image and name are correct and that the CTA links to the intended appointment channel.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Verify phone number, email, hospital name, address, PIN code and OPD timings.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Footer “Breast Conditions & Symptoms” and “Screening & Diagnostic Modalities” can link to the relevant page sections; ensure these are not duplicate pages with copied content.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Verify the NMC guideline reference, date and disclaimer language with qualified compliance review. The PDF does not independently establish regulatory correctness.</span></label></div>
+<div class="item"><label><input type="checkbox"><span>Test all footer links, social icons, WhatsApp button, call button and Back to Top.</span></label></div>
+</section>
+
+<section class="section"><span class="tag">F — Recommended structure</span><h2>How to make this page clearer</h2>
+<ol>
+<li><b>Hero:</b> one short introduction to breast conditions and a clear appointment action.</li>
+<li><b>Eight condition cards:</b> concise definitions and links to unique condition detail pages.</li>
+<li><b>Breast anatomy:</b> one focused explanation of breast tissue, ducts and lobules.</li>
+<li><b>Six warning signs:</b> concise signs that warrant medical evaluation.</li>
+<li><b>Evaluation panel:</b> short instruction on when to seek professional assessment.</li>
+<li><b>Educational guides:</b> four distinct resources with no duplicated paragraphs.</li>
+<li><b>FAQs:</b> answer common questions briefly and link to the relevant card or guide.</li>
+<li><b>Final CTA:</b> one concise appointment prompt with verified contact details.</li>
+</ol>
+<div class="note"><b>Clinical review required:</b> The PDF contains medical statements, percentages, diagnostic descriptions and symptom advice. This audit flags copy overlap and items needing verification; it does not certify their medical accuracy. Do not change clinical meaning without Dr. Noopur Patel’s approval.</div>
+</section>
+<footer>Prepared from the 3-page PDF supplied in this conversation. Content and copy audit only; not a medical or legal certification.</footer>
+</main>
+<script>
+const boxes=[...document.querySelectorAll('input[type=checkbox]')],fill=document.getElementById('fill'),count=document.getElementById('count');
+function update(){let n=boxes.filter(b=>b.checked).length;fill.style.width=(n/boxes.length*100)+'%';count.textContent=n+' / '+boxes.length+' checked'}boxes.forEach(b=>b.addEventListener('change',update));update();
+</script></body></html>
