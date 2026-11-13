@@ -25,62 +25,94 @@ export const metadata: Metadata = {
     "Comprehensive guide to benign and malignant breast conditions. Learn about breast lumps, fibroadenoma, pain, discharge, and cancer symptoms with Dr. Noopur Patel.",
 };
 
-const CONDITIONS_CATEGORIES = [
+interface ConditionCategory {
+  id: string;
+  title: string;
+  tag: string;
+  badgeColor: string;
+  desc: string;
+}
+
+interface ConditionSection {
+  groupName: string;
+  groupSubtitle: string;
+  items: ConditionCategory[];
+}
+
+const CONDITION_GROUPS: ConditionSection[] = [
   {
-    id: "breast-cancer",
-    title: "Breast Cancer",
-    tag: "Oncological Care",
-    badgeColor: "bg-rose-100 text-[#88213B] border-rose-200",
-    desc: "Malignant cellular changes requiring comprehensive staging, oncoplastic conservation, or mastectomy with multidisciplinary coordination.",
+    groupName: "1. Benign (Non-Cancerous) Conditions",
+    groupSubtitle: "Over 80% of breast lumps and changes are benign. We provide accurate diagnosis and conservative, scar-conscious management.",
+    items: [
+      {
+        id: "fibroadenoma",
+        title: "Fibroadenoma",
+        tag: "Benign Tumor",
+        badgeColor: "bg-emerald-50 text-emerald-800 border-emerald-200",
+        desc: "Smooth, mobile, non-cancerous glandular tumors common in young women. Managed safely through observation or daycare minimally invasive excision.",
+      },
+      {
+        id: "breast-cysts",
+        title: "Simple & Complex Cysts",
+        tag: "Fluid-Filled",
+        badgeColor: "bg-blue-50 text-blue-800 border-blue-200",
+        desc: "Benign fluid collections that often fluctuate with menstrual cycles. Evaluated via high-resolution ultrasound and aspirated if painful.",
+      },
+      {
+        id: "mastitis-infection",
+        title: "Mastitis & Abscess",
+        tag: "Infection Care",
+        badgeColor: "bg-orange-50 text-orange-800 border-orange-200",
+        desc: "Inflammatory or bacterial breast tissue infections occurring during lactation or independently. Managed with targeted antibiotics and drainage.",
+      },
+    ],
   },
   {
-    id: "fibroadenoma",
-    title: "Fibroadenoma",
-    tag: "100% Benign",
-    badgeColor: "bg-emerald-50 text-emerald-800 border-emerald-200",
-    desc: "Smooth, mobile, non-cancerous glandular tumors common in young women. Managed safely through observation or daycare excision.",
+    groupName: "2. Malignant Conditions (Breast Cancer)",
+    groupSubtitle: "Comprehensive, evidence-based surgical oncology tailored to patient staging and tumor biology.",
+    items: [
+      {
+        id: "breast-cancer",
+        title: "Invasive Breast Carcinoma & DCIS",
+        tag: "Surgical Oncology",
+        badgeColor: "bg-rose-100 text-[#88213B] border-rose-200",
+        desc: "Malignant cellular changes requiring comprehensive staging, oncoplastic breast conservation (BCS), or mastectomy with multidisciplinary coordination.",
+      },
+      {
+        id: "calcifications",
+        title: "Microcalcifications (Imaging Finding)",
+        tag: "Radiological Finding",
+        badgeColor: "bg-indigo-50 text-indigo-800 border-indigo-200",
+        desc: "Tiny calcium specks detected on screening mammography. Evaluated morphologically by stereotactic assessment to identify any early pre-cancerous cellular changes.",
+      },
+    ],
   },
   {
-    id: "breast-pain",
-    title: "Breast Pain (Mastalgia)",
-    tag: "Symptom Care",
-    badgeColor: "bg-amber-50 text-amber-800 border-amber-200",
-    desc: "Cyclical or non-cyclical tenderness linked to hormonal shifts, muscular strain, or fibrocystic changes. Clinically evaluated for peace of mind.",
-  },
-  {
-    id: "nipple-discharge",
-    title: "Nipple Discharge",
-    tag: "Diagnostic Focus",
-    badgeColor: "bg-purple-50 text-purple-800 border-purple-200",
-    desc: "Clear, milky, or blood-stained discharge from ductal systems. Spontaneous or single-duct discharge receives specialized ductal assessment.",
-  },
-  {
-    id: "breast-lump",
-    title: "Palpable Breast Lump",
-    tag: "Triple Assessment",
-    badgeColor: "bg-rose-50 text-rose-800 border-rose-200",
-    desc: "Any newly detected focal firmness or thickening. Over 80% are non-malignant, but timely evaluation ensures accurate diagnosis.",
-  },
-  {
-    id: "breast-cysts",
-    title: "Simple & Complex Cysts",
-    tag: "Fluid-Filled",
-    badgeColor: "bg-blue-50 text-blue-800 border-blue-200",
-    desc: "Benign fluid collections that fluctuate with monthly menstrual cycles. Easily diagnosed by ultrasound and drained if symptomatic.",
-  },
-  {
-    id: "mastitis-infection",
-    title: "Mastitis & Abscess",
-    tag: "Infection Care",
-    badgeColor: "bg-orange-50 text-orange-800 border-orange-200",
-    desc: "Inflammatory or bacterial breast tissue infections occurring during lactation or independently. Managed with antibiotics and drainage.",
-  },
-  {
-    id: "calcifications",
-    title: "Microcalcifications",
-    tag: "Radiological Finding",
-    badgeColor: "bg-indigo-50 text-indigo-800 border-indigo-200",
-    desc: "Tiny calcium specks detected on screening mammography. Analyzed morphologically to distinguish benign deposits from early changes.",
+    groupName: "3. Common Symptoms & Changes (Diagnostic Evaluation)",
+    groupSubtitle: "Recognizing changes early through triple assessment gives clarity and prompt relief.",
+    items: [
+      {
+        id: "breast-lump",
+        title: "Palpable Breast Lump",
+        tag: "Triple Assessment",
+        badgeColor: "bg-rose-50 text-rose-800 border-rose-200",
+        desc: "Any newly detected focal firmness or thickening in the breast or armpit. Comprehensive triple assessment clarifies benign versus malignant etiology.",
+      },
+      {
+        id: "breast-pain",
+        title: "Breast Pain (Mastalgia)",
+        tag: "Symptom Evaluation",
+        badgeColor: "bg-amber-50 text-amber-800 border-amber-200",
+        desc: "Cyclical or non-cyclical tenderness linked to hormonal shifts, muscular strain, or fibrocystic changes. Clinically evaluated for reassurance and relief.",
+      },
+      {
+        id: "nipple-discharge",
+        title: "Nipple Discharge",
+        tag: "Ductal Assessment",
+        badgeColor: "bg-purple-50 text-purple-800 border-purple-200",
+        desc: "Clear, milky, or blood-stained discharge from ductal openings. Spontaneous or single-duct discharge receives specialized diagnostic assessment.",
+      },
+    ],
   },
 ];
 
@@ -212,45 +244,60 @@ export default function BreastConditionsPage() {
         </section>
 
         {/* =========================================================================
-            SECTION 02: 8 CONDITION CATEGORIES GRID
+            SECTION 02: 3 CATEGORIES (BENIGN, MALIGNANT, SYMPTOMS)
             ========================================================================= */}
         <section className="w-full py-14 lg:py-20 bg-white border-b border-[#F5E6EA]" id="categories">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="text-center max-w-3xl mx-auto mb-14">
               <span className="text-xs font-bold tracking-widest uppercase text-[#D84C70] block mb-2">
-                CLINICAL SPECIALITIES
+                CLINICAL EVALUATION &amp; SPECIALTIES
               </span>
               <h2 className="font-serif text-2xl sm:text-4xl font-bold text-slate-900">
-                8 Breast Condition Categories We Manage
+                Breast Conditions We Evaluate &amp; Manage
               </h2>
               <p className="text-slate-600 text-xs sm:text-base mt-2">
-                Clear clinical explanations for common concerns, from routine benign findings to complex oncology.
+                Clear clinical distinction between benign conditions, oncological care, and diagnostic symptom assessments.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {CONDITIONS_CATEGORIES.map((item) => (
-                <div
-                  key={item.id}
-                  className="bg-[#FAF7F8] hover:bg-white rounded-3xl border border-[#F0D5DC] hover:border-[#D84C70]/60 p-5 sm:p-6 transition-all duration-300 shadow-2xs hover:shadow-lg hover:shadow-rose-950/5 flex flex-col justify-between group"
-                >
-                  <div className="space-y-3">
-                    <div className="inline-block px-2.5 py-1 rounded-full text-[10.5px] font-bold border uppercase tracking-wider">
-                      <span className={item.badgeColor.replace(/bg-[\w-]+/g, "").replace(/text-[\w-]+/g, "")}>
-                        {item.tag}
-                      </span>
-                    </div>
-                    <h3 className="font-serif text-lg font-bold text-slate-900 group-hover:text-[#88213B] transition-colors">
-                      {item.title}
+            <div className="space-y-12">
+              {CONDITION_GROUPS.map((group, groupIdx) => (
+                <div key={groupIdx} className="space-y-4">
+                  <div className="border-b border-rose-100 pb-2">
+                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-slate-900">
+                      {group.groupName}
                     </h3>
-                    <p className="text-xs text-slate-600 leading-relaxed">
-                      {item.desc}
+                    <p className="text-xs sm:text-sm text-slate-500 mt-1">
+                      {group.groupSubtitle}
                     </p>
                   </div>
 
-                  <div className="pt-4 mt-3 border-t border-[#F5E6EA] flex items-center justify-between text-xs font-semibold text-[#88213B]">
-                    <span>Learn More</span>
-                    <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    {group.items.map((item) => (
+                      <div
+                        key={item.id}
+                        className="bg-[#FAF7F8] hover:bg-white rounded-3xl border border-[#F0D5DC] hover:border-[#D84C70]/60 p-5 sm:p-6 transition-all duration-300 shadow-2xs hover:shadow-lg hover:shadow-rose-950/5 flex flex-col justify-between group"
+                      >
+                        <div className="space-y-3">
+                          <div className="inline-block px-2.5 py-1 rounded-full text-[10.5px] font-bold border uppercase tracking-wider">
+                            <span className={item.badgeColor.replace(/bg-[\w-]+/g, "").replace(/text-[\w-]+/g, "")}>
+                              {item.tag}
+                            </span>
+                          </div>
+                          <h4 className="font-serif text-lg font-bold text-slate-900 group-hover:text-[#88213B] transition-colors">
+                            {item.title}
+                          </h4>
+                          <p className="text-xs text-slate-600 leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+
+                        <div className="pt-4 mt-3 border-t border-[#F5E6EA] flex items-center justify-between text-xs font-semibold text-[#88213B]">
+                          <span>Learn More</span>
+                          <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}

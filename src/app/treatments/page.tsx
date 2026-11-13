@@ -30,8 +30,8 @@ const TREATMENT_CARDS = [
   {
     slot: 37,
     title: "Breast Cancer Surgery",
-    subtitle: "Complete oncological tumor clearance",
-    desc: "Primary surgical resection tailored to tumor size, biology, and margin clearance standards.",
+    subtitle: "Precision oncological resection",
+    desc: "Primary surgical resection tailored to tumor staging, biological markers, and margin clearance standards.",
   },
   {
     slot: 38,
@@ -49,7 +49,7 @@ const TREATMENT_CARDS = [
     slot: 40,
     title: "Mastectomy Options",
     subtitle: "Simple, skin-sparing & nipple-sparing",
-    desc: "Complete removal of breast glandular tissue indicated for multicentric disease or patient preference, with immediate reconstruction options.",
+    desc: "Complete removal of breast tissue when indicated for extensive disease, multicentricity, or genetic risk, with immediate or delayed reconstruction options when appropriate.",
   },
   {
     slot: 41,
@@ -149,7 +149,7 @@ export default function TreatmentsPage() {
                 </h1>
 
                 <p className="text-slate-600 text-sm sm:text-base lg:text-[17px] leading-relaxed max-w-2xl font-normal">
-                  Surgical precision aligned with oncoplastic aesthetics. From breast conservation to complex nodal surgery, every procedure is individualized for maximal oncological safety and quality of life.
+                  Surgical precision combined with oncoplastic principles. From breast-conserving surgery to complex axillary staging, every procedure is individualised to the patient’s clinical staging and oncological safety.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-3 pt-2">
@@ -221,15 +221,15 @@ export default function TreatmentsPage() {
                   <div className="space-y-2.5 pt-1">
                     <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Complete Tumor Clearance:</strong> Meticulous margin assessment ensuring no tumor cells remain.</span>
+                      <span><strong>Oncological Margin Assessment:</strong> Precise excision with microscopic clear margin confirmation.</span>
                     </div>
                     <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Tissue Rearrangement:</strong> Local glandular flaps fill the excision cavity, preventing breast depression.</span>
+                      <span><strong>Tissue Rearrangement:</strong> Local glandular flaps fill the excision cavity, supporting natural breast contours.</span>
                     </div>
                     <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Quick Recovery:</strong> Minimal post-operative downtime with early return to daily activities.</span>
+                      <span><strong>Structured Recovery:</strong> Monitored postoperative healing and dedicated clinical follow-up for each patient.</span>
                     </div>
                   </div>
                 </div>
