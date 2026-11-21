@@ -112,7 +112,7 @@ export default function BreastConditionsGrid() {
                     alt={cond.title}
                     fill
                     sizes="(max-width: 768px) 50vw, 350px"
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain p-2.5 group-hover:scale-105 transition-transform duration-300"
                   />
                   <span className="hidden sm:inline-block absolute top-2.5 right-2.5 text-[10px] font-bold uppercase tracking-wider text-[#88213B] bg-white/90 backdrop-blur-xs px-2 py-0.5 rounded-md border border-[#F5D2DB]">
                     {cond.badge}

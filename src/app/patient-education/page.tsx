@@ -32,36 +32,42 @@ const EDUCATION_TOPICS = [
     category: "Pathology Basics",
     readTime: "5 min",
     desc: "An overview of how abnormal cellular proliferation develops in breast ducts and lobules, and the role of ER, PR, and HER2 receptors.",
+    href: "/breast-conditions",
   },
   {
     title: "Understanding Breast Awareness & Monthly Checks",
     category: "Self-Care Protocol",
     readTime: "4 min",
     desc: "Learn how to become familiar with the natural look and feel of your breasts, so you can recognize any new or unusual changes promptly. (Note: Self-awareness complements, but does not replace, clinical mammography).",
+    href: "/screening-diagnosis",
   },
   {
     title: "Benign vs Malignant: Understanding Your Biopsy Report",
     category: "Diagnostic Guide",
     readTime: "6 min",
     desc: "A patient-friendly guide explaining common pathology terms like hyperplasia, atypia, in-situ, and invasive carcinoma.",
+    href: "/screening-diagnosis",
   },
   {
     title: "Preparing for Breast Surgery: What to Expect",
     category: "Surgical Care",
     readTime: "7 min",
     desc: "Pre-operative guidelines, anesthesia preparation, hospital stay essentials, and surgical drain management at Marengo CIMS Hospital.",
+    href: "/treatments",
   },
   {
     title: "Arm Mobility & Lymphedema Prevention Exercises",
     category: "Recovery & Rehab",
     readTime: "4 min",
     desc: "Safe physical therapy exercises to regain full shoulder range of motion and prevent arm swelling following axillary staging.",
+    href: "/treatments",
   },
   {
     title: "Nutrition & Lifestyle Support During Cancer Treatment",
     category: "Wellness & Survivorship",
     readTime: "5 min",
     desc: "Evidence-backed dietary strategies, hydration advice, and physical wellness habits to support your body during active therapy.",
+    href: "/about",
   },
 ];
 
@@ -223,9 +229,10 @@ export default function PatientEducationPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {EDUCATION_TOPICS.map((topic, idx) => (
-                <div
+                <Link
                   key={idx}
-                  className="bg-[#FAF7F8] hover:bg-white rounded-3xl border border-[#F0D5DC] hover:border-[#D84C70]/60 p-6 shadow-xs hover:shadow-lg transition-all flex flex-col justify-between group"
+                  href={topic.href}
+                  className="bg-[#FAF7F8] hover:bg-white rounded-3xl border border-[#F0D5DC] hover:border-[#D84C70]/60 p-6 shadow-xs hover:shadow-lg transition-all flex flex-col justify-between group cursor-pointer active:scale-[0.99]"
                 >
                   <div className="space-y-3">
                     <div className="flex items-center justify-between text-[11px] text-slate-500">
@@ -247,11 +254,11 @@ export default function PatientEducationPage() {
                     </p>
                   </div>
 
-                  <div className="pt-4 mt-3 border-t border-[#F5E6EA] flex items-center justify-between text-xs font-semibold text-[#88213B]">
-                    <span>Read Article</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  <div className="pt-4 mt-3 border-t border-[#F5E6EA] flex items-center justify-between text-xs font-semibold text-[#88213B] group-hover:text-[#D84C70]">
+                    <span>Read Full Guide</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

@@ -224,7 +224,7 @@ export default function BreastConditionsPage() {
                     slot={27}
                     fill
                     priority
-                    className="object-cover object-center"
+                    className="object-contain p-3 object-center"
                     sizes="(max-width: 1024px) 100vw, 500px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
@@ -349,7 +349,7 @@ export default function BreastConditionsPage() {
                     <SlotImage
                       slot={28}
                       fill
-                      className="object-cover object-center"
+                      className="object-contain p-3 object-center"
                       sizes="(max-width: 1024px) 100vw, 550px"
                     />
                   </div>

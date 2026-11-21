@@ -78,8 +78,8 @@ export const COMMUNITY_ACTIVITIES: CommunityActivityItem[] = [
     category: "screening-camps",
     categoryLabel: "Mammography Screening Camps",
     badge: "Early Detection Mission",
-    title: "Mobile Mammography Van (સંજીવની રથ)",
-    description: "Dedicated mobile screening bus 'સંજીવની રથ' clinical team bringing mammography and early breast cancer detection across Gujarat communities.",
+    title: "Mobile Mammography Van (Sanjivani Rath)",
+    description: "Dedicated mobile screening bus 'Sanjivani Rath' clinical team bringing mammography and early breast cancer detection across Gujarat communities.",
     image: "/images/doctor/user-updates/sanjivani-rath-pink-bus-screening.jpg",
   },
   {
@@ -89,7 +89,7 @@ export const COMMUNITY_ACTIVITIES: CommunityActivityItem[] = [
     badge: "Clinical Checkup",
     title: "Preventive Mammography Consultation Drive",
     description: "Personalized, confidential clinical examinations conducted by Dr. Noopur Patel for community women, offering clear clinical guidance.",
-    image: "/images/doctor/user-updates/md-camp-team-table-consultation.jpg",
+    image: "/images/doctor/user-updates/dr-noopur-yellow-consultation.jpg",
   },
   {
     id: "act-8",
@@ -300,7 +300,7 @@ export default function CommunityInitiativesSection() {
                 />
                 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
                 
                 {/* Zoom Icon */}
                 <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-slate-800 opacity-0 group-hover:opacity-100 transition-opacity shadow-sm">
@@ -314,7 +314,7 @@ export default function CommunityInitiativesSection() {
 
                 {/* Title Overlay */}
                 <div className="absolute bottom-2.5 left-3 right-3 text-white">
-                  <h3 className="font-serif text-xs sm:text-[13.5px] font-bold truncate drop-shadow leading-snug">
+                  <h3 className="font-serif text-xs sm:text-[13.5px] font-bold line-clamp-2 drop-shadow leading-snug">
                     {item.title}
                   </h3>
                 </div>

@@ -88,18 +88,21 @@ const MENTORS = [
 const MEMBERSHIPS = [
   {
     slot: 20,
+    acronym: "ASI",
     title: "Association of Surgeons of India (ASI)",
     badge: "Life Member",
     desc: "Official surgical fraternity promoting ethical surgical standards and continuing medical education.",
   },
   {
     slot: 21,
+    acronym: "IASO",
     title: "Indian Association of Surgical Oncology (IASO)",
     badge: "Active Fellow",
     desc: "National organization dedicated to advancement in evidence-based oncological surgery.",
   },
   {
     slot: 22,
+    acronym: "ABSI",
     title: "Association of Breast Surgeons of India (ABSI)",
     badge: "Specialist Member",
     desc: "Dedicated national association standardizing breast cancer care and oncoplastic guidelines.",
@@ -222,7 +225,7 @@ export default function ProfessionalJourneyPage() {
                       <div className="text-[11px] text-slate-500 mt-0.5">Foundational surgical training &amp; university honors</div>
                     </div>
                     <div className="p-3.5 rounded-2xl bg-white border border-[#F0D5DC]">
-                      <div className="text-xs font-bold text-slate-900">Fellowship in Breast Oncology (FIBD)</div>
+                      <div className="text-xs font-bold text-slate-900">Fellowship in Breast Surgical Oncology (FIBD)</div>
                       <div className="text-[11px] text-slate-500 mt-0.5">Max Healthcare Institute, New Delhi</div>
                     </div>
                     <div className="p-3.5 rounded-2xl bg-white border border-[#F0D5DC]">
@@ -370,33 +373,34 @@ export default function ProfessionalJourneyPage() {
               {MEMBERSHIPS.map((mem) => (
                 <div
                   key={mem.slot}
-                  className="bg-[#FAF7F8] rounded-3xl border border-[#F0D5DC] p-6 shadow-xs flex flex-col justify-between group hover:bg-white transition-all"
+                  className="bg-[#FAF7F8] rounded-3xl border border-[#F0D5DC] p-6 shadow-xs flex flex-col justify-between group hover:bg-white hover:border-[#D84C70]/50 hover:shadow-md transition-all"
                 >
                   <div className="space-y-4">
-                    <div className="relative w-28 h-28 mx-auto rounded-2xl overflow-hidden bg-white border border-[#F0D5DC] p-2">
-                      <SlotImage
-                        slot={mem.slot}
-                        fill
-                        className="object-contain p-2"
-                        sizes="120px"
-                      />
+                    {/* Official Medical Society Emblem Badge */}
+                    <div className="w-24 h-24 mx-auto rounded-2xl bg-gradient-to-br from-[#FFF5F7] via-white to-[#FCE8ED] border-2 border-[#F0D5DC] group-hover:border-[#D84C70] flex flex-col items-center justify-center p-3 shadow-2xs transition-colors">
+                      <div className="w-9 h-9 rounded-full bg-[#FCE8ED] flex items-center justify-center mb-1 text-[#88213B]">
+                        <ShieldCheck className="w-5 h-5 text-[#88213B]" />
+                      </div>
+                      <span className="font-serif font-black text-sm tracking-wider text-[#88213B]">
+                        {mem.acronym}
+                      </span>
                     </div>
+
                     <div className="text-center">
                       <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#FFF5F7] text-[#88213B] border border-[#F5CAD5] mb-2">
                         {mem.badge}
                       </span>
-                      <h4 className="font-serif text-base font-bold text-slate-900">
+                      <h4 className="font-serif text-base font-bold text-slate-900 leading-snug">
                         {mem.title}
                       </h4>
-                      <p className="text-xs text-slate-600 leading-relaxed mt-1.5">
+                      <p className="text-xs text-slate-600 leading-relaxed mt-2">
                         {mem.desc}
                       </p>
                     </div>
                   </div>
-                  <div className="pt-3 text-center border-t border-[#F5E6EA] mt-4">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                      Medical Association
-                    </span>
+                  <div className="pt-3 text-center border-t border-[#F5E6EA] mt-4 flex items-center justify-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                    <Award className="w-3.5 h-3.5 text-[#D84C70]" />
+                    <span>Official National Membership</span>
                   </div>
                 </div>
               ))}

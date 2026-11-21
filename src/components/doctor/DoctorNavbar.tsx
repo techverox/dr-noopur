@@ -163,7 +163,7 @@ export default function DoctorNavbar() {
               className="flex items-center gap-1.5 text-[#88213B] font-semibold hover:text-[#D84C70] transition-colors"
             >
               <HeartHandshake className="w-3.5 h-3.5 text-[#D84C70]" />
-              <span>Patient Guidance</span>
+              <span>Patient Feedback</span>
             </Link>
             <span className="text-slate-300">|</span>
             <a
@@ -462,10 +462,10 @@ export default function DoctorNavbar() {
                 >
                   <span className="flex items-center gap-2">
                     <HeartHandshake className="w-4 h-4 text-[#D84C70]" />
-                    <span>Patient Guidance &amp; Care</span>
+                    <span>Patient Feedback &amp; Stories</span>
                   </span>
                   <span className="text-[10px] font-bold text-[#88213B] bg-[#FFF0F3] px-2 py-0.5 rounded-full border border-[#F5D6DE]">
-                    NMC Compliant
+                    Share
                   </span>
                 </Link>
                 <Link

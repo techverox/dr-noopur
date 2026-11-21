@@ -22,19 +22,19 @@ export const TREATMENTS_6: TreatmentCardItem[] = [
   {
     title: "Mastectomy",
     subtitle: "Surgical removal of breast tissue when clinically appropriate.",
-    image: "/images/doctor/assets/treatment-mastectomy.png",
+    image: "/images/doctor/optimized/treatment-mastectomy-care.webp",
     href: "/mastectomy-ahmedabad",
   },
   {
     title: "Sentinel Lymph Node Biopsy",
     subtitle: "Evaluation of selected lymph nodes for accurate cancer staging.",
-    image: "/images/doctor/assets/treatment-oncoplastic.png",
+    image: "/images/doctor/optimized/treatment-sentinel-node.webp",
     href: "/sentinel-lymph-node-biopsy",
   },
   {
     title: "Oncoplastic Breast Surgery",
     subtitle: "Combines cancer removal with cosmetic breast reshaping techniques.",
-    image: "/images/doctor/assets/treatment-oncoplastic.png",
+    image: "/images/doctor/optimized/treatment-oncoplastic-surgical.webp",
     href: "/oncoplastic-breast-surgery-ahmedabad",
   },
   {

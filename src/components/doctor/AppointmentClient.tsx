@@ -146,21 +146,23 @@ export default function AppointmentClient({
 
               {/* Right Side: Doctor Visual */}
               <div className="lg:col-span-4 flex justify-center lg:justify-end">
-                <div className="relative w-[240px] h-[200px] rounded-2xl overflow-hidden border border-[#F5D6DE] shadow-sm bg-white">
-                  <SlotImage
-                    slot={45}
-                    src="/images/doctor/optimized/dr-noopur-patel-portrait-clinical.webp"
-                    alt="Dr. Noopur Patel, Breast Cancer Surgeon at Marengo CIMS Hospital"
-                    fill
-                    className="object-cover object-top"
-                    priority
-                    sizes="240px"
-                  />
-                  <div className="absolute bottom-2 left-2 right-2 bg-white/90 backdrop-blur-xs p-2 rounded-xl text-center border border-white/60">
-                    <p className="font-serif italic text-[11px] text-[#9B2846] font-semibold leading-tight">
+                <div className="w-[260px] sm:w-[280px] bg-white rounded-3xl overflow-hidden border border-[#F5D6DE] shadow-sm flex flex-col">
+                  <div className="relative w-full h-[220px] sm:h-[240px] overflow-hidden bg-rose-50/30">
+                    <SlotImage
+                      slot={45}
+                      src="/images/doctor/optimized/dr-noopur-patel-portrait-clinical.webp"
+                      alt="Dr. Noopur Patel, Breast Cancer Surgeon at Marengo CIMS Hospital"
+                      fill
+                      className="object-cover object-top"
+                      priority
+                      sizes="280px"
+                    />
+                  </div>
+                  <div className="p-3 bg-gradient-to-b from-white to-[#FFF5F7] text-center border-t border-[#F5CAD5]">
+                    <p className="font-serif italic text-xs text-[#88213B] font-bold leading-tight">
                       &ldquo;Early Detection Saves Lives&rdquo;
                     </p>
-                    <p className="text-[9.5px] text-slate-500 font-medium">
+                    <p className="text-[10px] text-slate-500 font-medium mt-0.5">
                       — Dr. Noopur Patel
                     </p>
                   </div>
