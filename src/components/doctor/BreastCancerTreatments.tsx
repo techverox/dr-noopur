@@ -40,7 +40,7 @@ export const TREATMENTS_6: TreatmentCardItem[] = [
   {
     title: "Axillary Lymph Node Surgery",
     subtitle: "Management of lymph nodes when required for complete clearance.",
-    image: "/images/doctor/assets/treatment-mastectomy.png",
+    image: "/images/doctor/assets/anatomy-diagram.png",
     href: "/axillary-lymph-node-dissection-ahmedabad",
   },
   {

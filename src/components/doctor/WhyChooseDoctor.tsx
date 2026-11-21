@@ -97,13 +97,22 @@ export default function WhyChooseDoctor({
           {/* 6th Card: Consultation Callout */}
           <div className="bg-gradient-to-br from-[#9B2846] to-[#7B1832] rounded-2xl p-6 text-white shadow-md flex flex-col justify-between">
             <div>
-              <div className="text-xs font-bold uppercase tracking-widest text-rose-200 mb-2">
+              <div 
+                style={{ color: '#FECDD3' }}
+                className="text-xs font-bold uppercase tracking-widest text-rose-200 mb-2"
+              >
                 SECOND OPINIONS WELCOME
               </div>
-              <h3 className="font-serif text-xl font-bold mb-3">
+              <h3 
+                style={{ color: '#FFFFFF' }}
+                className="font-serif text-xl font-bold text-white mb-3"
+              >
                 Need Clarity on a Recent Diagnosis?
               </h3>
-              <p className="text-xs sm:text-[13px] text-rose-100 leading-relaxed mb-6">
+              <p 
+                style={{ color: '#FFF1F3' }}
+                className="text-xs sm:text-[13px] text-rose-100 leading-relaxed mb-6"
+              >
                 If you have received an abnormal mammogram report or a recommendation for surgery, consult Dr. Noopur Patel for a detailed second opinion.
               </p>
             </div>
